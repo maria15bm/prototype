@@ -30,7 +30,6 @@ h1{
 	font-style: italic;
 	font-weight: 800;
 	margin: auto;
-	text-align: center;
 	color: #1D1E2C;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -66,6 +65,7 @@ button{
 }
 
 #log-sign-frm{
+	display: flex;
 	text-align: center;
 	margin: auto;
 }
@@ -105,6 +105,10 @@ button{
 	font-size: 14px;
 }
 
+#search-bar{
+	display: none;
+}
+
 /*----- section -----*/
 section{
 	background-color: #1D1E2C;
@@ -125,7 +129,22 @@ section{
   .col-t-11 {width: 91.66%;}
   .col-t-12 {width: 100%;}
 
-}
+  #show-menu{
+  	display: none;
+  }
+
+	#sign-btn{
+		display: block;
+	}
+
+	#nav-header-menu{
+		display: flex;
+	}
+
+	#log-sign-in-menu button{
+		display: none;
+	}
+
 
 @media only screen and (min-device-width: 769px) {
   /* For desktop: */
