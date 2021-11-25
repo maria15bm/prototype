@@ -112,7 +112,23 @@ header{
 }
 
 #search-bar{
-	background: rgba(196, 215, 242, 0.95);
+	display: flex;
+	text-align: center;
+	background-color: #1D1E2C;
+	padding: 10px;
+}
+
+#search-lupa{
+	margin: auto;
+	width: 31px;
+	height: 31px;
+}
+
+#search-input{
+	margin: auto;
+	width: 80%;
+	background-color: #FDFCEC;
+	border: 0px;
 }
 
 /*----- section -----*/
@@ -136,6 +152,8 @@ section{
   .col-t-12 {width: 100%;}
 
   header{
+  	display: flex;
+  	flex-wrap: wrap;
 	}
 
   #show-menu{
@@ -156,9 +174,15 @@ section{
 	}
 
 	#search-bar{
-		padding-right: 10px;
-		text-align: right;
+		padding: 0px;
+		background: rgba(196, 215, 242, 0.95);
 	}
+
+	#search-input{
+		display: none;
+	}
+
+
 
 
 @media only screen and (min-device-width: 769px) {
@@ -175,5 +199,18 @@ section{
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+
+
+  	#search-bar{
+  		padding-left: 6.00%;
+  		padding-right: 2.33%;
+  	}
+
+	  #search-input{
+			display: flex;
+			background-color: #1D1E2C;
+			width: 70%;
+
+		}
 
   }
