@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	// Show always the navigation menu for tablet and desktop
+	$(window).resize(function(){
+		if ($(window).width() > 601){
+			$('#nav-header-menu').show();
+		}
+	})
+	// In mobile version, a button shows and hides the navigation menu.
 	$('#show-menu').click(function() {
 		if ($('#nav-header-menu').is(':hidden')){
 			$('#nav-header-menu').show();
@@ -8,7 +15,7 @@ $(document).ready(function() {
 	})
 
 	// The images in the experiences are displayed using a photoroulette
-	$(".arr-left").click(function(){
+	$(".arr-right").click(function(){
 		let art = $(this).parent();
 		let objs = $(art).children('div');
 		var obj1 = $(objs).children('.obj1');
@@ -28,7 +35,7 @@ $(document).ready(function() {
 		obj5.addClass('obj4');
 	})
 
-	$(".arr-right").click(function(){
+	$(".arr-left").click(function(){
 		let art = $(this).parent();
 		let objs = $(art).children('div');
 		var obj1 = $(objs).children('.obj1');

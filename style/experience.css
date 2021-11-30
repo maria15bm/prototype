@@ -73,7 +73,6 @@ button{
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
-  line-height: 23px;
   text-align: center;
   color: #FDFCEC;
   cursor: pointer;
@@ -86,7 +85,8 @@ p{
   font-size: 14px;
   line-height: 18px;
   color: #FDFCEC;
-  margin: auto 20px;
+  text-align: left;
+  margin: auto;
 }
 
 /*------ HEADER -------*/
@@ -174,8 +174,14 @@ header{
 
 
 /*----- MAIN SECTION -----*/
-section{
+#main-sect{
   background-color: #1D1E2C;
+  display: inline-block;
+  text-align: center;
+}
+
+#main-img{
+  margin: auto;
 }
 
 #location-budget{
@@ -184,6 +190,7 @@ section{
 
 #interests{
   display: flex;
+  margin: auto;
 }
 
 .interest{
@@ -203,10 +210,25 @@ section{
   color: #1D1E2C;
 }
 
+#description{
+  display: inline-block;
+}
+
+#media{
+  display: inline-block;
+  margin: auto;
+}
+
 #images, #videos{
   display: flex;
   margin: 30px auto;
+  text-align: center;
 
+}
+
+#images div, #videos div{
+  display: flex;
+  margin: auto;
 }
 
 .arrow-img {
@@ -225,13 +247,17 @@ section{
   margin: auto;
 }
 
-
 .obj1{
   display: flex;
 }
 
 .obj2, .obj3, .obj4, .obj5{
   display: none;
+}
+
+#bottom-sect{
+  display: inline-block;
+  text-align: center;
 }
 
 #likes-coms{
@@ -271,6 +297,20 @@ section{
 #like-img{
   height: 32px;
   margin: auto;
+}
+
+#see-comments{
+  background: #FF958C;
+  border-radius: 50px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1D1E2C;
+  padding: 5px;
+  margin: 20px auto;
 }
 
 
@@ -360,6 +400,10 @@ footer{
   .col-t-11 {width: 91.66%;}
   .col-t-12 {width: 100%;}
   
+  h1{
+    margin-top: 30px;
+  }
+  
   /*HEADER*/
   header{
     display: flex;
@@ -394,13 +438,46 @@ footer{
 
   /*MAIN SECTION*/
 
+  #location-budget{
+  display: flex;
+  }
+
+  #location-budget h3{
+    margin: auto;
+  }
+
   .arrow-img{
-    display: block;
+    margin: 10px;
+  }
+
+  .arr-left{
+    margin: auto auto auto 5px;
+  }
+
+  .arr-right{
+    margin: auto 5px auto auto;
   }
 
   .arrow-img img {
-    height: 20px;
     margin: auto;
+    height: 50px;
+  }
+
+  .obj1, .obj2{
+    display: inline-block;
+    margin: auto;
+  }
+
+  .obj3, .obj4, .obj5{
+    display: none;
+  }
+
+  #send-btn{
+    height: 30px;
+  }
+
+  #comment-input{
+    font-size: 18px;
   }
 
 
@@ -431,7 +508,16 @@ footer{
       display: flex;
       background-color: #1D1E2C;
       width: 70%;
+    }
 
+    .obj1, .obj2, .obj3{
+      display: inline-block;
+      margin: auto;
+      width: 30%;
+    }
+
+    .obj4, .obj5{
+      display: none;
     }
 
   }
