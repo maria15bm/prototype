@@ -34,6 +34,37 @@ h2{
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+h1 {
+  font-family: Raleway, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FF958C;
+  padding: 15px;
+}
+
+h3{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FF958C;
+  text-align: center;
+}
+
+h4{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FDFCEC;
+  margin: auto;
+}
+
 button{
   background: #B6244F;
   border: 0.726744px solid #000000;
@@ -46,6 +77,16 @@ button{
   text-align: center;
   color: #FDFCEC;
   cursor: pointer;
+}
+
+p{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FDFCEC;
+  margin: auto 20px;
 }
 
 /*------ HEADER -------*/
@@ -131,18 +172,48 @@ header{
   border: 0px;
 }
 
+
 /*----- MAIN SECTION -----*/
 section{
   background-color: #1D1E2C;
 }
 
+#location-budget{
+  margin: 15px auto;
+}
+
+#interests{
+  display: flex;
+}
+
+.interest{
+  background: #FF958C;
+  border-radius: 22.1608px;
+  margin: 10px;
+}
+
+.interest p{
+  padding: 0px 10px;
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #1D1E2C;
+}
+
+#images, #videos{
+  display: flex;
+  margin: 30px auto;
+
+}
+
 .arrow-img {
   display: flex;
-  height: 20px;
   border: none;
   background: none;
   margin: auto;
-
 }
 
 .arrow-img:hover {
@@ -151,8 +222,57 @@ section{
 
 .arrow-img img{
   display: flex;
-  height: 20px;
+  margin: auto;
 }
+
+
+.obj1{
+  display: flex;
+}
+
+.obj2, .obj3, .obj4, .obj5{
+  display: none;
+}
+
+#likes-coms{
+  display: flex;
+  padding: 20px 4.11%;
+}
+
+#comment-frm{
+  background: #FDFCEC;
+  border-radius: 50px;
+  display: flex;
+  margin: auto;
+  padding: 5px;
+
+}
+
+#comment-input{
+  margin: auto;
+  background: transparent;
+  display:inline-block;
+  font-size: 24px;
+  border: 0px;
+}
+
+#comment-input:focus{
+  outline: none;
+}
+
+#send-btn{
+  margin: auto 5px auto auto;
+}
+
+#like-frm{
+  display: flex;
+}
+
+#like-img{
+  height: 32px;
+  margin: auto;
+}
+
 
 /*----- FOOTER -----*/
 .clearfix::after {
