@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/last_experiences.css">
+	<title>Travelust</title>
+</head>
+<body>
+	<header class="clearfix">
+		<div id='header-main' class='col-t-12 col-s-12 col-12'>
+			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
+			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
+			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
+			<nav class='col-s-5 col-3' id='log-sign-frm'>
+				<button class="col-t-5" id='sign-btn'>Sign up</button>
+				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+			</nav>
+		</div>	
+		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
+			<a href="#">Home</a>
+			<a href="">About</a>
+			<a href="">Experiences</a>
+			<a href="">Plan</a>
+			<a href="">Top users</a>
+			<nav id='log-sign-in-menu'>
+				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
+				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
+			</nav>
+		</nav>
+		<nav id='search-bar' class='col-t-3 col-4'>
+			<input type="text" id='search-input' name="search-input">
+			<img id='search-lupa' src="images/search_lupa.png">
+		</nav>	
+	</header>
+	<!-- MAIN SECTION -->
+	<section id="main-section">
+		<h1>Last Experiences</h1>
+		<nav id="filter-bar" class=" col-s-10 col-t-8 col-4">
+			<h5 class="col-s-2">filter</h5>
+			<!-- <img class="col-s-1" src="images/filter icon.png"> -->
+			<div class="col-s-10">
+				<input type="text" id="filter-input" class="col-s-10" name="filter-input">
+				<button id="add-filter-btn" class="col-s-2">add</button>
+			</div>
+		</nav>
+		<nav id=filters class="col-s-11">
+			<div class = filter>
+				<p>filter 1</p>
+				<button class="delete-filter">x</button>
+			</div>
+			<div class = filter>
+				<p>filter 2</p>
+				<button class="delete-filter">x</button>
+			</div>
+		</nav>
+		<section id="experiences">
+			<article class="experience-r experience col-11">
+				<img src="images/bali main img.png" class="col-s-12 col-t-9 col-4">
+				<div class="col-7">
+					<h3>Sacred Moneky Forest - Bali</h3>
+					<p class="col-s-11 col-12">Mandala Suci Wenara Wana, or well known as Ubud Monkey Forest, is the sanctuary and natural habitat of the Balinese long-tailed macaque. It is located at Padangtegal Ubud, Bali. About 1049 monkeys live in this sanctuary. They are divided into 6 groups, namely in front of main temple group, forest...</p>
+				</div>
+			</article>
+			<article class="experience-l experience col-11">
+				<div class="col-7">
+					<h3>City tour - Prague</h3>
+					<p class="col-s-11 col-12">Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval...</p>
+				</div>
+				<img src="images/prague main img.png" class="col-s-12 col-t-9 col-4">
+			</article>
+			<article class="experience-r experience col-11">
+				<img src="images/cies main img.png" class="col-s-12 col-t-9 col-4">
+				<div class="col-7">
+					<h3>Trip to the Cies Islands - Vigo</h3>
+					<p class="col-s-11 col-12">Natural paradise in the Vigo estuary, the Cíes Islands are part of the maritime-terrestrial Natural Park of the Atlantic Islands of Galicia. This archipelago is made up of three islands: North or Monteagudo, Del Medio or do Faro, and South or San...</p>
+				</div>
+			</article>
+		</section>
+	</section>
+	<!-- FOOTER -->
+	<footer class="clearfix">
+		<div id='footer-main' class='col-t-12 col-s-12 col-12'>
+			<img id='footer-logo' src="images/logo.png">
+			<h2 class='col-s-5' id='footer-title'>Travelust</h2>
+		</div>
+
+		<div id="footer-text" class='col-t-12 col-s-12 col-12'>
+			<p id="footer c">© 2021 Travelust</p>
+			<p id="privacy button">Privacy policy</p>
+		</div>
+
+		<div id="footer-images" class='col-t-16 col-s-16 col-16'>
+			<img class="images-app" src="images/youtube%202.png">
+			<img class=" images-app" src="images/twitter%201.png">
+			<img class="images-app" src="images/instagram%202.png">
+		</div>
+	</footer>
+</body>
+<script src="script/index.js"></script>
+</html>
