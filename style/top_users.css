@@ -23,11 +23,6 @@
 .col-s-11 {width: 91.66%;}
 .col-s-12 {width: 100%;}
 
-a{
-	text-decoration: none;
-	cursor: auto;
-}
-
 h2{
   font-family: 'Raleway', sans-serif;
   font-size: 32px;
@@ -54,22 +49,11 @@ h3{
   font-family: Raleway;
   font-style: italic;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 50px;
   color: #FF958C;
   text-align: center;
-  margin: 5px auto;
 }
 
-h4{
-  font-family: Raleway;
-  font-style: italic;
-  font-weight: normal;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: -0.02em;
-  color: #FDFCEC;
-  margin: auto;
-}
 
 button{
   background: #B6244F;
@@ -91,18 +75,9 @@ p{
   font-size: 14px;
   line-height: 18px;
   color: #FDFCEC;
+  text-align: left;
+  margin: auto;
   text-align: center;
-  margin: auto;
-}
-
-h5{
-	font-family: Raleway;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 18px;
-	text-align: center;
-  color: #FDFCEC;
-  margin: auto;
 }
 
 /*------ header -------*/
@@ -189,91 +164,38 @@ header{
 }
 
 /*----- MAIN SECTION -----*/
-#main-section{
+section{
 	background-color: #1D1E2C;
 }
 
-#filter-bar{
+.user{
 	display: flex;
-	text-align: center;
+	flex-wrap: wrap;
+	margin: auto;
+	padding-bottom: 35px;
+}
+
+.user h3, .user div{
+	display: block;
+	margin: 5px auto;
+}
+
+.pfp{
+	margin: auto;
+	display: block;
+}
+
+.pfp img{
 	margin: auto;
 }
 
-#filter-bar img{
-	margin: auto 5px;
-}
-
-#filter-bar div{
-	background-color: #FDFCEC;
-	display: flex;
-	margin: auto 5px;
-  padding: 2px;
-
-}
-
-#filter-input{
-  margin: auto;
-  background: transparent;
-  display:inline-block;
-  color: #1D1E2C;
-  font-size: 18px;
-  border: 0px;
-}
-
-#filter-input:focus{
-  outline: none;
-}
-
-#add-filter-btn{
-	font-size: 13px;
-	background: #FF958C;
-	border: 1px solid #1D1E2C;
-	box-sizing: border-box;
-}
-
-#filters{
+.img1{
 	display: flex;
 	margin: 10px auto;
 }
 
-.filter{
-	display: flex;
-	margin: auto 5px;
-}
-
-.delete-filter{
-	background: #FF958C;
-	border-color: transparent;
-  border-radius: 50px;
-  height: 13px;
-  width: 13px;
-  font-size: 9px;
-  font-style: normal;
-  font-weight: normal;
-  color: #1D1E2C;
-  margin: auto 5px;
-  cursor: pointer;
-}
-
-#experiences{
-	display: inline-block;
-}
-
-.experience{
-  display: flex;
-  margin: auto;
-  padding-bottom: 25px;
-}
-
-.experience div, .experience img{
-  margin: 5px auto;
-}
-
-.experience-l{
-  flex-direction: column;
-}
-.experience-r{
-  flex-direction: column-reverse;
+.img2{
+	display: none;
 }
 
 /*----- footer -----*/
@@ -393,8 +315,24 @@ footer{
 		display: none;
 	}
 
+	.user div{
+		display: block;
+		margin: auto;
+	}
 
+	.user h3 {
+		margin: auto;
+	}
 
+	.img1{
+		margin: 20px auto;
+	}
+
+	.img2{
+		display: flex;
+		margin: 20px auto;
+
+	}
 
 @media only screen and (min-device-width: 769px) {
   /* For desktop: */
@@ -411,15 +349,6 @@ footer{
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
-  	h3{
-  		font-size: 32px;
-  	}
-
-  	p{
-  		margin: 0px;
-  		font-size: 22px;
-  		line-height: 120%;
-  	}
 
   	#search-bar{
   		padding-left: 6.00%;
@@ -431,44 +360,6 @@ footer{
 			background-color: #1D1E2C;
 			width: 70%;
 
-		}
-
-		.filter{
-			margin: auto 10px;
-		}
-
-		.experience{
-			margin: 25px auto;
-			flex-direction: row;
-			border-color: #FF958C;
-			border-radius: 1px;
-			border-style: solid;
-			padding: 7px;
-		}
-
-		.experience:hover{
-			background-color: rgba(255, 149, 140, 0.5);
-			transition: 0.1s;
-		}
-
-		.experience div{
-			margin: 5px 15px;
-		}
-
-		.experience-l img{
-			margin-right: 5px;
-		}
-
-		.experience-r img{
-			margin-left: 5px;
-		}
-
-		.experience-l div h3, .experience-l div p{
-			text-align: left;
-		}
-
-		.experience-r div h3, .experience-r div p{
-			text-align: right;
 		}
 
   }
