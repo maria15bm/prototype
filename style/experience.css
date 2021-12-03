@@ -42,7 +42,7 @@ h1 {
   text-align: center;
   letter-spacing: -0.02em;
   color: #FF958C;
-  padding: 15px;
+  padding: 30px;
 }
 
 h3{
@@ -410,6 +410,10 @@ footer{
     flex-wrap: wrap;
   }
 
+  h1{
+    font-size: 35px;
+  }
+
   #show-menu{
     display: none;
   }
@@ -421,6 +425,10 @@ footer{
   #nav-header-menu{
     position: static;
     display: flex;
+  }
+
+  #nav-header-menu a{
+    font-size: 18px;
   }
 
   #log-sign-in-menu button{
@@ -499,26 +507,39 @@ footer{
   .col-12 {width: 100%;}
 
 
-    #search-bar{
-      padding-left: 6.00%;
-      padding-right: 2.33%;
-    }
+  header button{
+    font-size: 18px;
+    line-height: 28px;
+  }
 
-    #search-input{
-      display: flex;
-      background-color: #1D1E2C;
-      width: 70%;
-    }
+  h1{
+    font-size: 42px;
+  }
 
-    .obj1, .obj2, .obj3{
-      display: inline-block;
-      margin: auto;
-      width: 30%;
-    }
+  #nav-header-menu a{
+    font-size: 20px;
+  }
 
-    .obj4, .obj5{
-      display: none;
-    }
+  #search-bar{
+    padding-left: 6.00%;
+    padding-right: 2.33%;
+  }
+
+  #search-input{
+    display: flex;
+    background-color: #1D1E2C;
+    width: 70%;
+  }
+
+  .obj1, .obj2, .obj3{
+    display: inline-block;
+    margin: auto;
+    width: 30%;
+  }
+
+  .obj4, .obj5{
+    display: none;
+  }
 
   }
 

@@ -7,7 +7,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style/top_users.css">
+	<link rel="stylesheet" href="style/plan.css">
 	<title>Travelust</title>
 </head>
 <body>
@@ -20,13 +20,13 @@
 				<button class="col-t-5" id='sign-btn'>Sign up</button>
 				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
 			</nav>
-		</div>	
+		</div>
 		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
 			<a href="index.html">Home</a>
 			<a href="">About</a>
 			<a href="last_experiences.html">Experiences</a>
-			<a href="plan.html">Plan</a>
-			<a href="#">Top users</a>
+			<a href="#">Plan</a>
+			<a href="top_users.html">Top users</a>
 			<nav id='log-sign-in-menu'>
 				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
 				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
@@ -37,52 +37,33 @@
 			<img id='search-lupa' src="images/search_lupa.png">
 		</nav>	
 	</header>
-	<section class="col-s-12">
-		<h1>Top Users</h1>
-		<article class="user col-s-8 col-t-10">
-			<h3 class="col-s-6 col-t-4 col-1">1.</h3>
-			<div class="col-s-6 col-t-4 col-2">
-				<img class="pfp col-s-10 col-t-8 col-9" src="images/default_pfp.png">
-				<p>Name</p>
+	<section>
+		<h1>Planning</h1>
+		<article id="budget-frm" class="col-s-11 col-t-10 col-7">
+			<h3 class="col-s-5">Budget:</h3>
+			<div id="budget-params" class="col-s-7">
+				<div>
+					<h4 class="col-s-12">min:</h4>
+					<input type="text" name="min" class="col-s-10">
+					<h3 class="col-s-1">€</h3>
+				</div>
+				<div>
+					<h4 class="col-s-12">max:</h4>
+					<input type="text" name="max" class="col-s-10">
+					<h3 class="col-s-1">€</h3>
+				</div>
 			</div>
-			<div class="col-s-12 col-t-4 col-3">
-				<p>43 likes</p>
-				<p>8 experiences</p>
-			</div>
-			<article class="imgs col-s-11 col-6">
-				<img class="col-s-11 col-t-5 img1" src="images/user1_1.png">
-				<img class="col-s-11 col-t-5 img2" src="images/user1_2.png">
-			</article>
 		</article>
-		<article class="user col-s-8 col-t-10">
-			<h3 class="col-s-6 col-t-4 col-1">2.</h3>
-			<div class="col-s-6 col-t-4 col-2">
-				<img class="pfp col-s-10 col-t-8 col-9" src="images/default_pfp.png">
-				<p>Name</p>
+		<article id="interests-frm" class="col-s-11 col-t-10 col-7">
+			<h3 class="col-4">Interests:</h3>
+			<div class="col-8">
+				<h5>Separate the diferent interests using commas.</h5>
+				<input type="text" name="interests" class="col-s-10 col-12">
 			</div>
-			<div class="col-s-12 col-t-4 col-3">
-				<p>32 likes</p>
-				<p>9 experiences</p>
-			</div>
-			<article class="imgs col-s-12 col-6">
-				<img class="col-s-11 col-t-5 img1" src="images/user2_1.png">
-				<img class="col-s-11 col-t-5 img2" src="images/user2_2.png">
-			</article>
 		</article>
-		<article class="user col-s-8 col-t-10">
-			<h3 class="col-s-6 col-t-4 col-1">3.</h3>
-			<div class="col-s-6 col-t-4 col-2">
-				<img class="pfp col-s-10 col-t-8 col-9" src="images/default_pfp.png">
-				<p>Name</p>
-			</div>
-			<div class="col-s-12 col-t-4 col-3">
-				<p>27 likes</p>
-				<p>6 experiences</p>
-			</div>
-			<article class="imgs col-s-12 col-6">
-				<img class="col-s-11 col-t-5 img1" src="images/user3_1.png">
-				<img class="col-s-11 col-t-5 img2" src="images/user3_2.png">
-			</article>
+		<article id="destination-frm" class="col-s-11 col-t-10 col-7">
+			<h3 class="col-s-12 col-4">Destination:</h3>
+			<input class="col-s-10 col-8" type="text" name="destination" class="col-s-10">
 		</article>
 	</section>
 	<footer class="clearfix">

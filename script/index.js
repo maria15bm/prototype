@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	if ($(window).width() < 601){
+			$('#nav-header-menu').hide();
+	}
+
 	// Show always the navigation menu for tablet and desktop
 	$(window).resize(function(){
 		if ($(window).width() > 601){

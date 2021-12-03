@@ -49,11 +49,33 @@ h3{
   font-family: Raleway;
   font-style: italic;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 28px;
   color: #FF958C;
   text-align: center;
+  margin: auto;
 }
 
+h4{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: #FDFCEC;
+  margin: auto;
+  text-align: center;
+  transform: translate(-8.33%);
+}
+
+h5{
+	font-family: Raleway;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
+	text-align: center;
+	color: #FF958C;
+}
 
 button{
   background: #B6244F;
@@ -76,8 +98,7 @@ p{
   line-height: 18px;
   color: #FDFCEC;
   text-align: left;
-	margin: 5px auto;
-  text-align: center;
+  margin: auto;
 }
 
 /*------ header -------*/
@@ -166,46 +187,37 @@ header{
 /*----- MAIN SECTION -----*/
 section{
 	background-color: #1D1E2C;
-	padding-bottom: 30px;
-	display: block;
+	padding-bottom: 25%;
 }
 
-.user{
+section input{
+	background: #FDFCEC;
+	border-radius: 30px;
+	border: 0px;
+	margin: 5px auto;
+	font-size: 20px;
+}
+
+#budget-frm{
+	display: flex;
+	margin: auto;
+}
+
+#budget-params div{
 	display: flex;
 	flex-wrap: wrap;
-	margin: 30px auto;
-	padding: 10px;
-	background-color: rgba(196, 215, 242, 0.1);
-}
-
-.user h3, .user div{
-	display: block;
-	margin: auto;
-}
-
-.pfp{
-	margin: auto;
-	display: block;
-}
-
-.pfp img{
-	margin: auto;
-
-}
-
-.imgs{
-	display: flex;
+	text-align: right;
 	margin: 20px auto;
 }
 
-.img1{
-	display: flex;
-	margin: 10px auto;
+#destination-frm, #interests-frm{
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 20px;
 }
 
-.img2{
-	display: none;
-}
+
 
 /*----- footer -----*/
 .clearfix::after {
@@ -227,7 +239,6 @@ footer{
 }
 
 #footer-text{
-
 	width: 119px;
 	height: 49px;
 
@@ -248,12 +259,14 @@ footer{
 }
 
 #images-app{
+
 	width: 50px;
 	height: 50px;
 	margin: auto 10px;
 }
 
 #footer-title {
+
 	width: 382.99px;
 	height: 61.05px;
 
@@ -275,7 +288,6 @@ footer{
 	cursor: pointer;
 }
 
-
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
   .col-t-1 {width: 8.33%;}
@@ -294,10 +306,6 @@ footer{
   header{
   	display: flex;
   	flex-wrap: wrap;
-	}
-
-	p{
-		font-size: 16px;
 	}
 
 	h1{
@@ -334,25 +342,6 @@ footer{
 		display: none;
 	}
 
-	.user div{
-		display: block;
-		margin: auto;
-	}
-
-
-	.user h3 {
-		margin: auto;
-	}
-
-	.img1{
-		margin: auto;
-	}
-
-	.img2{
-		display: flex;
-		margin: auto;
-
-	}
 
 @media only screen and (min-device-width: 769px) {
   /* For desktop: */
@@ -369,10 +358,6 @@ footer{
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
-  p{
-  	font-size: 20px;
-  	margin: 10px auto;
-  }
   header button{
   	font-size: 18px;
     line-height: 28px;
@@ -395,11 +380,22 @@ footer{
 		display: flex;
 		background-color: #1D1E2C;
 		width: 70%;
-
 	}
 
-	.user{
-		background-color: transparent;
+	#budget-frm{
+		padding-bottom: 40px;
 	}
 
-  }
+	#destination-frm, #interests-frm{
+		text-align: right;
+		display: flex;
+		margin: auto;
+		padding-bottom: 40px;
+	}
+
+	#destination-frm h3, #interests-frm h3{
+		text-align: left;
+	}
+
+
+}

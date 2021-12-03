@@ -25,7 +25,7 @@
 
 a{
 	text-decoration: none;
-	cursor: auto;
+	cursor: pointer;
 }
 
 h2{
@@ -47,7 +47,7 @@ h1 {
   text-align: center;
   letter-spacing: -0.02em;
   color: #FF958C;
-  padding: 15px;
+  padding: 30px;
 }
 
 h3{
@@ -193,10 +193,14 @@ header{
 	background-color: #1D1E2C;
 }
 
+#main-section a{
+	cursor: auto;
+}
+
 #filter-bar{
 	display: flex;
 	text-align: center;
-	margin: auto;
+	margin: 30px auto;
 }
 
 #filter-bar img{
@@ -253,6 +257,7 @@ header{
   color: #1D1E2C;
   margin: auto 5px;
   cursor: pointer;
+  line-height: 10px;
 }
 
 #experiences{
@@ -367,6 +372,10 @@ footer{
   	flex-wrap: wrap;
 	}
 
+	h1{
+		font-size: 35px;
+	}
+
   #show-menu{
   	display: none;
   }
@@ -378,6 +387,10 @@ footer{
 	#nav-header-menu{
 		position: static;
 		display: flex;
+	}
+
+	#nav-header-menu a{
+		font-size: 18px;
 	}
 
 	#log-sign-in-menu button{
@@ -421,6 +434,19 @@ footer{
   		line-height: 120%;
   	}
 
+  	header button{
+  		font-size: 18px;
+  		line-height: 28px;
+  	}
+
+  	h1{
+  		font-size: 42px;
+  	}
+
+  	#nav-header-menu a{
+  		font-size: 20px;
+  	}
+
   	#search-bar{
   		padding-left: 6.00%;
   		padding-right: 2.33%;
@@ -435,6 +461,12 @@ footer{
 
 		.filter{
 			margin: auto 10px;
+		}
+
+		.delete-filter{
+			height: 18px;
+			width: 18px;
+			font-size: 14px;
 		}
 
 		.experience{
