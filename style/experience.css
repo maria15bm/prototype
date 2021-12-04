@@ -265,7 +265,7 @@ header{
   padding: 20px 4.11%;
 }
 
-#comment-frm{
+.comment-frm{
   background: #FDFCEC;
   border-radius: 50px;
   display: flex;
@@ -274,20 +274,22 @@ header{
 
 }
 
-#comment-input{
+.comment-input{
   margin: auto;
   background: transparent;
   display:inline-block;
-  font-size: 24px;
+  font-size: 20px;
   border: 0px;
+  color: #1D1E2C;
 }
 
-#comment-input:focus{
+.comment-input:focus{
   outline: none;
 }
 
-#send-btn{
+.send-btn{
   margin: auto 5px auto auto;
+  cursor: pointer;
 }
 
 #like-frm{
@@ -313,6 +315,77 @@ header{
   margin: 20px auto;
 }
 
+/*----- POP UP COMMENTS -----*/
+
+
+
+#pop-up-comments{
+  position: absolute;
+  background: #1D1E2C;
+  border: 7px solid #FF958C;
+  box-sizing: border-box;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, 0);
+}
+
+#comment-sect{
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 250px;
+  overflow: scroll;
+}
+
+#pop-up-comments div{
+  margin: auto;
+  display:  flex;
+}
+
+.close-btn{
+  background: #FF958C;
+  border-radius: 10px;
+  width: 30px;
+  margin: 10px;
+  float: right;
+  color: #1D1E2C;
+}
+
+#pop-up-comments h2{
+  font-family: Raleway, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FF958C;
+  padding: 30px;
+}
+
+#pop-up-comments h3{
+  margin: 10px auto;
+  text-align: right;
+}
+
+#pop-up-comments p{
+  font-size: 18px;
+  line-height: 20px;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.separator{
+  margin: 25px auto;
+}
+
+.comment{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#pop-up-comments .comment-frm{
+  margin: 20px auto;
+}
 
 /*----- FOOTER -----*/
 .clearfix::after {
@@ -355,14 +428,12 @@ footer{
 }
 
 #images-app{
-
   width: 50px;
   height: 50px;
   margin: auto 10px;
 }
 
 #footer-title {
-
   width: 382.99px;
   height: 61.05px;
 
@@ -480,11 +551,7 @@ footer{
     display: none;
   }
 
-  #send-btn{
-    height: 30px;
-  }
-
-  #comment-input{
+  .comment-input{
     font-size: 18px;
   }
 

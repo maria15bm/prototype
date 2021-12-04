@@ -38,6 +38,28 @@
 			<img id='search-lupa' src="images/search_lupa.png">
 		</nav>	
 	</header>
+	<!-- POP UP COMMENTS -->
+	<section id='pop-up-comments' class="col-s-11">
+		<button class="close-btn">x</button>
+		<h2>Comments</h2>
+		<section id="comment-sect">
+			<article class="comment col-s-11">
+				<p class="col-s-6">Name</p>
+				<h3 class="col-s-6">@user1</h3>
+				<p class="col-s-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+			<img class="separator col-s-11" src="images/separator_comments.png">
+			<article class="comment col-s-11">
+				<p class="col-s-6">Name</p>
+				<h3 class="col-s-6">@user1</h3>
+				<p class="col-s-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+		</section>
+		<section class="comment-frm col-s-9">
+			<input type="text" class='comment-input col-s-10 col-t-11 col-11' name="comments">
+			<img class="send-btn" src="images/send.png"  alt="send comment">
+		</section>
+	</section>
 	<!-- MAIN SECTION -->
 	<section id=main-sect>
 		<h1> Trip to the Cies Islands - Vigo </h1>
@@ -69,7 +91,7 @@
 	        </article>
 	        <article id="videos">
 		        <button type="button" class="arrow-img arr-right"><img src="images/left-arrow.png" alt=""></button>
-		        <div>
+		        <div class="col-s-8 col-t-9 col-10">
 			        <iframe id="vid1" class="obj1 col-s-12 col-t-5" src="https://www.youtube.com/embed/fX6Aj4tKzhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			        <iframe id="vid2" class="obj2 col-s-12 col-t-5" src="https://www.youtube.com/embed/2XjxZjzfwjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			        <iframe id="vid3" class="obj3 col-s-12 col-t-5" src="https://www.youtube.com/embed/w5WvDwFy3ZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -81,9 +103,9 @@
         </section>
         <section id="bottom-sect" class="col-s-12">
         	<article id="likes-coms" class="col-s-11">
-        		<div id="comment-frm" class="col-s-9">
-        			<input id='comment-input' type="text" class='col-s-9' name="comments">
-        			<img id="send-btn" src="images/send.png"  alt="send comment">
+        		<div class="col-s-9 comment-frm">
+        			<input type="text" class='comment-input col-s-10 col-t-11 col-11' name="comments">
+        			<img class="send-btn" src="images/send.png"  alt="send comment">
         		</div>
         		<div id='like-frm' class='col-s-2'>
         			<h4>14</h4>

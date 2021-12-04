@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$("#pop-up-comments").hide()
+
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
@@ -16,6 +18,15 @@ $(document).ready(function() {
 		} else {
 			$('#nav-header-menu').hide();
 		}
+	})
+
+	// A close button will close its pop up.
+	$(".close-btn").click(function(){
+		$(this).parent().hide()
+	})
+
+	$("#see-comments").click(function(){
+		$("#pop-up-comments").show()
 	})
 
 	// The images in the experiences are displayed using a photoroulette
@@ -57,5 +68,21 @@ $(document).ready(function() {
 		obj3.addClass('obj4');
 		obj4.addClass('obj5');
 		obj5.addClass('obj1');
+	})
+
+	/* Comments posting when chicking the send button. */
+	$(".send-btn").click(function(){
+		/* Check if sign up */
+		var comment_val = $(this).parent().children('input').val();
+		/* Get name and user from cookies. */
+		var user_val = 'userx'
+		var name_val = 'Name'
+		var newcomment = $("<article class='comment col-s-11'></article>");
+		var name = $("<p class='col-s-6'></p>").html(name_val);
+		var user = $("<h3 class='col-s-6'></h3>").html('@'+user_val);
+		var com_text = $("<p class='col-s-12'></p>").html(comment_val);
+		newcomment.append(name, user, com_text);
+		var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
+		$("#comment-sect").append(separator, newcomment);
 	})
 })
