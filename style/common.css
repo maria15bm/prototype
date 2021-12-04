@@ -58,6 +58,21 @@ h4{
   margin: auto;
 }
 
+h5{
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FF958C;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 button{
   background: #B6244F;
   border: 0.726744px solid #000000;
@@ -308,6 +323,19 @@ footer{
 		font-size: 22px;
 		line-height: 120%;
 	}
+
+  header button{
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h1{
+    font-size: 42px;
+  }
+
+  #nav-header-menu a{
+    font-size: 20px;
+  }
 
 	#search-bar{
 		padding-left: 6.00%;

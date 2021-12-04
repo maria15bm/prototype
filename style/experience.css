@@ -7,6 +7,7 @@
 */
 
 /*----- MAIN SECTION -----*/
+
 #main-sect{
   background-color: #1D1E2C;
   display: inline-block;
@@ -359,6 +360,11 @@
     display: flex;
     background-color: #1D1E2C;
     width: 70%;
+  }
+
+  .interest p{
+    font-size: 18px;
+    line-height: 32px;
   }
 
   .obj1, .obj2, .obj3{
