@@ -1,4 +1,5 @@
 *{
+  font-family: 'Raleway', sans-serif;
   margin: 0px;
 }
 /* For smartphones: */
@@ -17,7 +18,6 @@
 
 
 h2{
-  font-family: 'Raleway', sans-serif;
   font-size: 32px;
   line-height: 42px;
   font-style: italic;
@@ -28,7 +28,6 @@ h2{
 }
 
 h1 {
-  font-family: Raleway, sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 28px;
@@ -39,7 +38,6 @@ h1 {
 }
 
 h3{
-  font-family: Raleway;
   font-style: italic;
   font-weight: normal;
   font-size: 20px;
@@ -48,7 +46,6 @@ h3{
 }
 
 h4{
-  font-family: Raleway;
   font-style: italic;
   font-weight: normal;
   font-size: 32px;
@@ -59,7 +56,6 @@ h4{
 }
 
 h5{
-  font-family: Raleway;
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
@@ -77,7 +73,6 @@ button{
   background: #B6244F;
   border: 0.726744px solid #000000;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -87,7 +82,6 @@ button{
 }
 
 p{
-  font-family: Raleway;
   font-style: italic;
   font-weight: normal;
   font-size: 14px;
@@ -134,14 +128,13 @@ header{
 #nav-header-menu{
   position: absolute;
   top: 79px;
-  background: rgba(196, 215, 242, 0.95);
+  background: rgba(196, 215, 242, 0.9);
   padding: 10px 0px;
 }
 
 #nav-header-menu a{
   text-decoration: none;
   display: block;
-  font-family: Raleway;
   font-style: italic;
   font-weight: 800;
   font-size: 16px;
@@ -205,7 +198,6 @@ footer{
 	width: 119px;
 	height: 49px;
 
-	font-family: Raleway;
 	font-style: italic;
 	font-weight: normal;
 	font-size: 16px;
@@ -230,10 +222,8 @@ footer{
 
 #footer-title {
 
-	width: 382.99px;
 	height: 61.05px;
 
-	font-family: Raleway;
 	font-style: italic;
 	font-weight: 800;
 	font-size: 50.8721px;
@@ -291,7 +281,7 @@ footer{
 
 	#search-bar{
 		padding: 0px;
-		background: rgba(196, 215, 242, 0.95);
+		background: rgba(196, 215, 242, 0.9);
 	}
 
 	#search-input{
@@ -333,6 +323,16 @@ footer{
     font-size: 42px;
   }
 
+  #footer-title {
+    margin: auto auto auto 0px
+  }
+
+  #head-title {
+    font-weight: 800;
+    font-size: 50.8px;
+    margin: auto auto auto 10px
+  }
+
   #nav-header-menu a{
     font-size: 20px;
   }
@@ -348,4 +348,13 @@ footer{
 		width: 70%;
 
 	}
+
+  #logo, #footer-logo {
+  	width: 62.5px;
+  	height: 55px;
+  }
+
+  #footer-logo {
+    margin: auto 10px auto auto
+  }
 }
