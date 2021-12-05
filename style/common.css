@@ -173,7 +173,7 @@ header{
   border: 0px;
 }
 .modal{
-
+    display: none;
     position: absolute;
     width: 1012px;
     height: 803px;
@@ -184,7 +184,7 @@ header{
     box-sizing: border-box;
 }
 .modal-container-signup {
-
+    display: none;
     position: absolute;
     width: 1012px;
     height: 803px;

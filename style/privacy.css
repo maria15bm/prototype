@@ -1,0 +1,29 @@
+.privacy_text{
+
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22.9305px;
+    line-height: 27px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #FFFFFF;
+}
+.privacy_title{
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 22.9305px;
+    line-height: 27px;
+    padding: 20px;
+    text-align: left;
+
+    color: #FFFFFF;
+}
+
+section{
+    background-color: #1D1E2C;
+    padding-bottom: 10%;
+
+}
