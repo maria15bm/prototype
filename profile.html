@@ -37,74 +37,64 @@
 			<img id='search-lupa' src="images/search_lupa.png">
 		</nav>
 	</header>
-	<section id="main-sect" class="col-12">
-	<div id="profile" class="col-10 col-s-10">
-	  <img src="images/default_pfp.png" alt="default profile picture" id="pfp">
-			<button type="button" name="change-pfp" class="button-profile not-bot col-s-10">Change profile picture</button>
-			<div id="profile-data">
-				<article class="profile-art">
-					<p>
-						Name: <br>
-						Username: <br>
-						Email: <br>
-						Date of birth: <br>
-						<br id="br-interests">
-						Interests:
-					</p>
-					<button type="button" name="change-interests" class="button-profile">Modify profile</button>
-				</article>
-				<article class="profile-art">
-					<p>
-						Default name <br>
-						Default username <br>
-						Default email <br>
-						Default date of birth <br>
-					</p>
-					<div id="interests">
-						<div class="column">
-							<div class="interest">
-								<a href="#">Interest 1</a>
-							</div>
-							<div class="interest">
-								<a href="#">Interest 2</a>
-							</div>
-							<div class="interest">
-								<a href="#">Interest 3</a>
-							</div>
-						</div>
-						<div class="column">
-							<div class="interest">
-								<a href="#">Interest 4</a>
-							</div>
-							<div class="interest">
-								<a href="#">Interest 5</a>
-							</div>
-						</div>
+  <section id="main-sect" class="col-12">
+    <div id="profile" class="col-10 col-s-10">
+      <img src="images/default_pfp.png" alt="default profile picture" id="pfp">
+			<button type="button" name="change-pfp" class="big-button col-s-6 col-t-6 col-5" id="change-pfp">Change profile picture</button>
+			<div id="profile-data" class="col-10">
+				<p>Name:</p>
+				<p id="name" class="default">Default name</p>
+				<p>Username:</p>
+				<p id="username" class="default">Default username</p>
+				<p>Email:</p>
+				<p id="email" class="default">Default email</p>
+				<p>Date of birth:</p>
+				<p id="birth" class="default">Default date of birth</p>
+				<p id="interests-p">Interests:</p>
+				<div id="interests">
+					<div class="column">
+						<article class="interest">
+							<a href="#">Interest 1</a>
+						</article>
+						<article class="interest">
+							<a href="#">Interest 2</a>
+						</article>
+						<article class="interest">
+							<a href="#">Interest 3</a>
+						</article>
 					</div>
-					<button type="button" name="modify-profile" class="button-profile">Change interests</button>
-				</article>
+					<div class="column">
+						<article class="interest">
+							<a href="#">Interest 4</a>
+						</article>
+						<article class="interest">
+							<a href="#">Interest 5</a>
+						</article>
+					</div>
+				</div>
 			</div>
-			<button type="button" name="experiences" class="button-profile not-bot">My Experiences</button>
-	</div>
-	</section>
-	<!-- ----------FOOTER----------- -->
-	<footer class="clearfix">
-		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
-			<img id='footer-logo' src="images/logo.png">
-			<h2 id='footer-title'>Travelust</h2>
-		</div>
+			<div id="buttons">
+				<button type="button" name="modify-profile" class="big-button col-s-5 col-t-5" id="mod-but">Modify profile</button>
+				<button type="button" name="change-interests" class="big-button col-s-5 col-t-5" id="inter-but">Change interests</button>
+				<button type="button" name="experiences" class="big-button col-s-7 col-t-9" id="exp-but">My Experiences</button>
+			</div>
+    </div>
+  </section>
+  <footer class="clearfix">
+    <div id='footer-main' class='col-t-12 col-s-12 col-12'>
+      <img id='footer-logo' src="images/logo.png">
+      <h2 class='col-s-5 col-2' id='footer-title'>Travelust</h2>
+    </div>
 
-		<div id="footer-text" class='col-t-8 col-s-12'>
-			<div id="footer c">© 2021 Travelust</div>
-			<a href="privacy_policy.html">Privacy policy</a>
-		</div>
+    <div id="footer-text" class='col-t-12 col-s-12 col-12'>
+      <p id="footer c">© 2021 Travelust</p>
+      <p id="privacy button">Privacy policy</p>
+    </div>
 
-		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
-			<a href=""><img src="images/youtube%202.png"></a>
-			<a href=""><img src="images/twitter%201.png"></a>
-			<a href=""><img src="images/instagram%202.png"></a>
-		</div>
-	</footer>
-	<!-- ----------END FOOTER----------- -->
-</body>
+    <div id="footer-images" class='col-t-16 col-s-16 col-16'>
+      <img class="images-app" src="images/youtube%202.png">
+      <img class=" images-app" src="images/twitter%201.png">
+      <img class="images-app" src="images/instagram%202.png">
+    </div>
+  </footer>
 </html>
