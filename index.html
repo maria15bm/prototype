@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script/index.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
@@ -18,8 +19,31 @@
 			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
 			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
 			<nav class='col-s-5 col-3' id='log-sign-frm'>
-				<button class="col-t-5" id='sign-btn'>Sign up</button>
+				<button class="col-t-5" id='sign_btn'>Sign up</button>
+				<div class = "modal-container-signup" id="sign_popup">
+					<form class="modal">
+						<button class="id-button-close" id = "sigin_close">x</button>
+						<h3>Create a new account</h3>
+						<h1>Name</h1>
+						<input type = "text"  id="name">
+						<h1>Username</h1>
+						<input type = "text"  id="username">
+						<h1>Email address</h1>
+						<input type = "text"  id="email">
+						<h1>Password</h1>
+						<input type = "text"  id="password">
+						<h1>Confirm your password</h1>
+						<input type = "text"  id="password-confirm">
+						<h1>New interest</h1>
+						<input type = "text"  id="interest">
+						<button class="id-button" id = "select">Save selection</button>
+						<p>Terms acepted</p>
+						<p id="terms_show"></p>
+						<button class="id-button-submit" id = "submit_signin">Submit</button>
+					</form>
+				</div>
 				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+
 			</nav>
 		</div>
 		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
@@ -61,5 +85,4 @@
 	</footer>
 
 </body>
-<script src="script/index.js"></script>
 </html>

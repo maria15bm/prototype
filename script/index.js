@@ -1,3 +1,9 @@
+
+$("#sign-popup").hide()
+$('#sign-btn').click(function() {
+	$("#sign-popup").show()
+})
+
 $(document).ready(function() {
 	$("#pop-up-comments").hide()
 
@@ -86,3 +92,4 @@ $(document).ready(function() {
 		$("#comment-sect").append(separator, newcomment);
 	})
 })
+
