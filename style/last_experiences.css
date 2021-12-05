@@ -78,29 +78,6 @@
   line-height: 10px;
 }
 
-#experiences{
-	display: inline-block;
-}
-
-.experience{
-  display: flex;
-  margin: auto;
-  padding-bottom: 25px;
-}
-
-.experience div, .experience img{
-  margin: 5px auto;
-}
-
-.experience-l{
-  flex-direction: column;
-}
-.experience-r{
-  flex-direction: column-reverse;
-}
-
-
-
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
 
@@ -120,37 +97,9 @@
 		}
 
 		.experience{
-			margin: 25px auto;
-			flex-direction: row;
 			border-color: #FF958C;
 			border-radius: 1px;
 			border-style: solid;
-			padding: 7px;
-		}
-
-		.experience:hover{
-			background-color: rgba(255, 149, 140, 0.5);
-			transition: 0.1s;
-		}
-
-		.experience div{
-			margin: 5px 15px;
-		}
-
-		.experience-l img{
-			margin-right: 5px;
-		}
-
-		.experience-r img{
-			margin-left: 5px;
-		}
-
-		.experience-l div h3, .experience-l div p{
-			text-align: left;
-		}
-
-		.experience-r div h3, .experience-r div p{
-			text-align: right;
 		}
 
   }

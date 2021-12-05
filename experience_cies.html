@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/experience.css">
+	<title>Travelust</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="clearfix">
+		<div id='header-main' class='col-t-12 col-s-12 col-12'>
+			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
+			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
+			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
+			<nav class='col-s-5 col-3' id='log-sign-frm'>
+				<button class="col-t-5" id='sign-btn'>Sign up</button>
+				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+			</nav>
+		</div>
+		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
+			<a href="index.html">Home</a>
+			<a href="about_us.html">About</a>
+			<a href="last_experiences.html">Experiences</a>
+			<a href="plan.html">Plan</a>
+			<a href="top_users.html">Top users</a>
+			<nav id='log-sign-in-menu'>
+				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
+				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
+			</nav>
+		</nav>
+		<nav id='search-bar' class='col-t-3 col-4'>
+			<input type="text" id='search-input' name="search-input">
+			<img id='search-lupa' src="images/search_lupa.png">
+		</nav>
+	</header>
+	<!-- POP UP COMMENTS -->
+	<section id='pop-up-comments' class="col-s-11">
+		<button class="close-btn">x</button>
+		<h2>Comments</h2>
+		<section id="comment-sect">
+			<article class="comment col-s-11">
+				<p class="col-s-6">Name</p>
+				<h3 class="col-s-6">@user1</h3>
+				<p class="col-s-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+			<img class="separator col-s-11" src="images/separator_comments.png">
+			<article class="comment col-s-11">
+				<p class="col-s-6">Name</p>
+				<h3 class="col-s-6">@user1</h3>
+				<p class="col-s-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</article>
+		</section>
+		<section class="comment-frm col-s-9">
+			<input type="text" class='comment-input col-s-10 col-t-11 col-11' name="comments">
+			<img class="send-btn" src="images/send.png"  alt="send comment">
+		</section>
+	</section>
+	<!-- MAIN SECTION -->
+	<section id=main-sect>
+		<h1> Trip to the Cies Islands - Vigo </h1>
+		<img id='main-img' class="col-s-12 col-t-10 col-8" src="images/cies main img.png">
+		<div id='interests' class="col-s-12 col-t-11 col-9">
+			<div class="interest"><p>Islands</p></div>
+			<div class="interest"><p>Beach</p></div>
+		</div>
+		<article id='location-budget' class="col-s-12 col-t-11 col-8">
+			<h3>Location: Vigo - Spain</h3>
+			<h3>Approximate budget: 50€</h3>
+		</article>
+		<article id=description class='col-s-11 col-t-10 col-8'>
+			<p>Natural paradise in the Vigo estuary, the Cíes Islands are part of the maritime-terrestrial Natural Park of the Atlantic Islands of Galicia. This archipelago is made up of three islands: North or Monteagudo, Del Medio or do Faro, and South or San Martiño. The first two are linked by the sandy area of Playa de Rodas and a breakwater. The Cíes Islands were declared a Natural Park in 1980 and included in the National Park of the Atlantic Islands of Galicia created in 2002.<p/>
+			<br>
+			<p>The Cíes Islands promise the visitor an excellent excursion in a highly protected natural space to fully enjoy nature. In this unspoiled paradise we can highlight the Rodas Beach, awarded the title of “The Best Beach in the World” by the renowned British newspaper “The Guardian”. It is worth coming and touring the islands, visiting the beaches and enjoying nature in one of the few Virgin Paradises that we have left on earth.</p>
+		</article>
+		<section id="media" class="col-s-12 col-t-11 col-9">
+			<article id="images">
+	            <button type="button" class="arrow-img arr-right"><img src="images/left-arrow.png" alt=""></button>
+	            <div class="col-s-8 col-t-9 col-10">
+	              <img id='img1' class="obj1 ex-img col-s-12 col-t-5" src="images/cies_pic_1.png" alt="">
+	              <img id='img2' class="obj2 ex-img col-s-12 col-t-5" src="images/cies_pic_2.png" alt="">
+	              <img id='img3' class="obj3 ex-img col-s-12 col-t-5" src="images/cies_pic_3.png" alt="">
+	              <img id='img4' class="obj4 ex-img col-s-12 col-t-5" src="images/cies_pic_4.png" alt="">
+	              <img id='img5' class="obj5 ex-img col-s-12 col-t-5" src="images/cies_pic_5.png" alt="">
+	            </div>
+	            <button type="button" class="arrow-img arr-left"><img src="images/right-arrow.png" alt=""></button>
+	        </article>
+	        <article id="videos">
+		        <button type="button" class="arrow-img arr-right"><img src="images/left-arrow.png" alt=""></button>
+		        <div class="col-s-8 col-t-9 col-10">
+			        <iframe id="vid1" class="obj1 col-s-12 col-t-5" src="https://www.youtube.com/embed/fX6Aj4tKzhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid2" class="obj2 col-s-12 col-t-5" src="https://www.youtube.com/embed/2XjxZjzfwjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid3" class="obj3 col-s-12 col-t-5" src="https://www.youtube.com/embed/w5WvDwFy3ZM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid4" class="obj4 col-s-12 col-t-5" src="https://www.youtube.com/embed/Sh028LKdGZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid5" class="obj5 col-s-12 col-t-5" src="https://www.youtube.com/embed/yCEDeVb11HU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		        </div>
+		        <button type="button" class="arrow-img arr-left"><img src="images/right-arrow.png" alt=""></button>
+	      	</article>
+        </section>
+        <section id="bottom-sect" class="col-s-12">
+        	<article id="likes-coms" class="col-s-11">
+        		<div class="col-s-9 comment-frm">
+        			<input type="text" class='comment-input col-s-10 col-t-11 col-11' name="comments">
+        			<img class="send-btn" src="images/send.png"  alt="send comment">
+        		</div>
+        		<div id='like-frm' class='col-s-2'>
+        			<h4>14</h4>
+        			<img id="like-img" src="images/like.png" alt="like heart">
+        		</div>
+        	</article>
+        	<button id="see-comments" class="col-s-6 col-t-4 col-3">See comments</button>
+        </section>
+	</section>
+	<!-- ----------FOOTER----------- -->
+	<footer class="clearfix">
+		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
+			<img id='footer-logo' src="images/logo.png">
+			<h2 id='footer-title'>Travelust</h2>
+		</div>
+
+		<div id="footer-text" class='col-t-8 col-s-12'>
+			<div id="footer c">© 2021 Travelust</div>
+			<a href="privacy_policy.html">Privacy policy</a>
+		</div>
+
+		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
+			<a href=""><img src="images/youtube%202.png"></a>
+			<a href=""><img src="images/twitter%201.png"></a>
+			<a href=""><img src="images/instagram%202.png"></a>
+		</div>
+	</footer>
+	<!-- ----------END FOOTER----------- -->
+
+</body>
+<script src="script/index.js"></script>
+</html>

@@ -2,6 +2,8 @@
   font-family: 'Raleway', sans-serif;
   margin: 0px;
 }
+
+
 /* For smartphones: */
 .col-s-1 {width: 8.33%;}
 .col-s-2 {width: 16.66%;}
@@ -222,88 +224,113 @@ header{
 
 footer{
 	background-color: #C4D7F2;
-	display: block;
 }
 
 #footer-main{
-	background-color: #C4D7F2;
 	display: flex;
-	margin: auto;
+	margin-left: auto;
+    margin-right: auto;
 	height: 79px;
 }
 
 #footer-text{
-
-	width: 119px;
-	height: 49px;
-
 	font-style: italic;
 	font-weight: normal;
-	font-size: 16px;
-	line-height: 19px;
+	font-size: 20px;
 	text-align: center;
-	color: #000000;
+    color: #1D1E2C;
+    display: block;
+    margin: auto;
+}
+
+#footer-text a{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #1D1E2C;
+    display: block;
+    margin: auto;
 }
 
 #footer-images{
-	background-color: #C4D7F2;
 	display: flex;
-	margin: auto;
 	text-align: right;
+    float: right;
+    padding: 5px;
 }
 
-#images-app{
+#footer-images a{
+    margin: 5%;
+    width: 16%;
+}
 
-	width: 50px;
-	height: 50px;
-	margin: auto 10px;
+#footer-images img{
+    width: 100%;
 }
 
 #footer-title {
-
-	height: 61.05px;
-
+	height: 61px;
 	font-style: italic;
 	font-weight: 800;
-	font-size: 50.8721px;
+	font-size: 51px;
 	line-height: 60px;
 	text-align: center;
-
 	color: #1D1E2C;
-
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #footer-logo{
 	width: 32px;
 	height: 32px;
-	margin: auto 5px;
-	cursor: pointer;
+	margin: auto 5px auto auto;
 }
 
+/*------ TOP EXPERIENCES AND LAST EXPERIENCES -------*/
+#experiences{
+    display: inline-block;
+}
+
+.experience{
+    display: flex;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.experience div, .experience img{
+    margin: 5px auto;
+}
+
+.experience-l{
+    flex-direction: column;
+}
+.experience-r{
+    flex-direction: column-reverse;
+}
 
 @media only screen and (min-device-width: 601px) {
-  /* For tablets: */
-  .col-t-1 {width: 8.33%;}
-  .col-t-2 {width: 16.66%;}
-  .col-t-3 {width: 25%;}
-  .col-t-4 {width: 33.33%;}
-  .col-t-5 {width: 41.66%;}
-  .col-t-6 {width: 50%;}
-  .col-t-7 {width: 58.33%;}
-  .col-t-8 {width: 66.66%;}
-  .col-t-9 {width: 75%;}
-  .col-t-10 {width: 83.33%;}
-  .col-t-11 {width: 91.66%;}
-  .col-t-12 {width: 100%;}
+    /* For tablets: */
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
 
-  header{
-  	display: flex;
-  	flex-wrap: wrap;
-	}
+    /*----------------------HEADER------------------------------*/
+    header{
+    display: flex;
+    flex-wrap: wrap;
+    }
 
-  #show-menu{
-  	display: none;
-  }
+    #show-menu{
+    display: none;
+    }
 
 	#sign-btn{
 		display: block;
@@ -326,74 +353,101 @@ footer{
 	#search-input{
 		display: none;
 	}
+
 }
 
 @media only screen and (min-device-width: 769px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 
-	h3{
-		font-size: 32px;
-	}
+    h3{
+        font-size: 32px;
+    }
 
-	p{
-		margin: 0px;
-		font-size: 22px;
-		line-height: 120%;
-	}
+    p{
+        margin: 0px;
+        font-size: 22px;
+        line-height: 120%;
+    }
 
-  header button{
+    /*----------------------HEADER------------------------------*/
+    header button{
     font-size: 18px;
     line-height: 28px;
-  }
+    }
 
-  h1{
+    h1{
     font-size: 42px;
-  }
+    }
 
-  #footer-title {
-    margin: auto auto auto 0px
-  }
-
-  #head-title {
+    #head-title {
     font-weight: 800;
-    font-size: 50.8px;
+    font-size: 51px;
     margin: auto auto auto 10px
-  }
+    }
 
-  #nav-header-menu a{
+    #nav-header-menu a{
     font-size: 20px;
-  }
+    }
 
-	#search-bar{
-		padding-left: 6.00%;
-		padding-right: 2.33%;
-	}
+    #search-bar{
+        padding-left: 6.00%;
+        padding-right: 2.33%;
+    }
 
-  #search-input{
-		display: flex;
-		background-color: #1D1E2C;
-		width: 70%;
+    #search-input{
+        display: flex;
+        background-color: #1D1E2C;
+        width: 70%;
 
-	}
+    }
 
-  #logo, #footer-logo {
-  	width: 62.5px;
-  	height: 55px;
-  }
+    #logo, #footer-logo {
+        width: 63px;
+        height: 55px;
+    }
 
-  #footer-logo {
-    margin: auto 10px auto auto
-  }
+    /*----------------------EXPERIENCES------------------------------*/
+    .experience{
+        margin: 25px auto;
+        flex-direction: row;
+        padding: 7px;
+    }
+
+    .experience:hover{
+        background-color: rgba(255, 149, 140, 0.5);
+        transition: 0.1s;
+    }
+
+    .experience div{
+        margin: 5px 15px;
+    }
+
+    .experience-l img{
+        margin-right: 5px;
+    }
+
+    .experience-r img{
+        margin-left: 5px;
+    }
+
+    .experience-l div h3, .experience-l div p{
+        text-align: left;
+    }
+
+    .experience-r div h3, .experience-r div p{
+        text-align: right;
+    }
 }
+
