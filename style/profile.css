@@ -64,15 +64,6 @@ section{
 	margin: auto;
 }
 
-.interest {
-	width: 30%;
-	height: 22px;
-	background-color: #FDFCEC;
-	border-radius: 20px;
-	margin: 5px auto;
-	text-align: center;
-}
-
 .interest a {
 	color: black;
 	font-style: italic;

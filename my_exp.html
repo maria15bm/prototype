@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script/index.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/my_exp.css">
+	<link rel="stylesheet" href="style/button.css">
+	<title>Travelust</title>
+</head>
+<body>
+	<header class="clearfix">
+		<div id='header-main' class='col-t-12 col-s-12 col-12'>
+			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
+			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
+			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
+			<nav class='col-s-5 col-3' id='log-sign-frm'>
+				<button class="col-t-5" id='sign_btn'>Sign up</button>
+				<div class = "modal-container-signup" id="sign_popup">
+					<form class="modal">
+						<button class="id-button-close" id = "sigin_close">x</button>
+						<h3>Create a new account</h3>
+						<h1>Name</h1>
+						<input type = "text"  id="name">
+						<h1>Username</h1>
+						<input type = "text"  id="username">
+						<h1>Email address</h1>
+						<input type = "text"  id="email">
+						<h1>Password</h1>
+						<input type = "text"  id="password">
+						<h1>Confirm your password</h1>
+						<input type = "text"  id="password-confirm">
+						<h1>New interest</h1>
+						<input type = "text"  id="interest">
+						<button class="id-button" id = "select">Save selection</button>
+						<p>Terms acepted</p>
+						<p id="terms_show"></p>
+						<button class="id-button-submit" id = "submit_signin">Submit</button>
+					</form>
+				</div>
+				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+
+			</nav>
+		</div>
+		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
+			<a href="#">Home</a>
+			<a href="about_us.html">About</a>
+			<a href="last_experiences.html">Experiences</a>
+			<a href="plan.html">Plan</a>
+			<a href="top_users.html">Top users</a>
+			<nav id='log-sign-in-menu'>
+				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
+				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
+			</nav>
+		</nav>
+		<nav id='search-bar' class='col-t-3 col-4'>
+			<input type="text" id='search-input' name="search-input">
+			<img id='search-lupa' src="images/search_lupa.png">
+		</nav>
+	</header>
+	<section>
+		<div id="section">
+			<h2>My Experiences</h2>
+			<article class="exp-coll col-s-11" id="block-1">
+				<p id="no-experiences">You currently have no experiences. <br>
+				Add a new experience to begin your adventure</p>
+				<article class="general-exp" id="default-experience">
+					<div class="top-mark">
+						<img src="images/medal.png" alt="medal">
+					</div>
+					<div class="experience-col">
+						<div class="img-remove">
+							<img src="images/cies_pic_5.png" alt="">
+							<div class="remove-select">
+								<button type="button" name="remove-experience" class="remove" id="remove">x</button>
+								<label class="b-contain">
+									<input type="checkbox">
+									<div class="b-input"></div>
+								</label>
+							</div>
+						</div>
+						<h3 class="title-exp" id="default-tit">Default title</h3>
+						<article class="interests-exp">
+							<div class="interest" id="interest1">
+								<p>Interest 1</p>
+							</div>
+							<div class="interest" id="interest2">
+								<p>Interest 2</p>
+							</div>
+						</article>
+						<button type="button" name="comments-experience" class="big-button small" id="comments">See comments</button>
+					</div>
+				</article>
+			</article>
+			<button type="button" name="add-experience" id="add-exp" class="big-button col-s-7">Add Experience</button>
+			<button type="button" name="add-experience" id="new-coll" class="big-button col-s-7">New Collection</button>
+			<h2>My Collections</h2>
+			<article class="exp-coll" id="block-1">
+				<p id="no-collections">You currently have no collections. <br>
+				Create a new collection by selecting experiences</p>
+				<article class="experience-col col-s-8" id="default-collection">
+					<div class="img-remove">
+						<img src="images/cies_pic_5.png" alt="" class="side-img">
+						<img src="images/cies_pic_5.png" alt="" class="center-img">
+						<img src="images/cies_pic_5.png" alt="" class="side-img">
+						<div class="remove-select">
+							<button type="button" name="remove-collection" class="remove" id="remove-coll">x</button>
+						</div>
+					</div>
+					<h3 class="title-exp" id="default-tit">Default title</h3>
+					<p class="exp-p" id="experiences-inside">Default experience names</p>
+					<button type="button" name="comments-experience" class="big-button small" id="comments">See collection</button>
+				</article>
+			</article>
+		</div>
+	</section>
+
+	<footer class="clearfix">
+		<div id='footer-main' class='col-t-12 col-s-12 col-12'>
+			<img id='footer-logo' src="images/logo.png">
+			<h2 class='col-s-5' id='footer-title'>Travelust</h2>
+		</div>
+
+		<div id="footer-text" class='col-t-12 col-s-12 col-12'>
+			<p id="footer c">© 2021 Travelust</p>
+			<p id="privacy button">Privacy policy</p>
+		</div>
+
+		<div id="footer-images" class='col-t-16 col-s-16 col-16'>
+			<img class="images-app" src="images/youtube%202.png">
+			<img class=" images-app" src="images/twitter%201.png">
+			<img class="images-app" src="images/instagram%202.png">
+		</div>
+	</footer>
+
+</body>
+</html>

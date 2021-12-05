@@ -1,0 +1,160 @@
+/*Palette:
+- Oscuro: #1D1E2C
+- Azulito: #C4D7F2
+- Salmón: #FF958C
+- Piel de limón: #FDFCEC
+- Granate raro no sé: #B6244F
+*/
+#nav-header-menu {
+	display: none
+}
+/*----- MAIN SECTION -----*/
+
+#section {
+	background-color: #1D1E2C;
+	display: flex;
+	flex-direction: column;
+}
+
+#section h2 {
+	color: #FF958C;
+	text-align: center;
+}
+
+.exp-coll {
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	margin: 15px auto 25px;
+	height: 21vh;
+	background-color: rgba(255,255,255,0.02)
+}
+
+.exp-coll p {
+	font-size: 16px;
+	text-align: center;
+}
+
+.big-button {
+	margin: 10px auto
+}
+
+.general-exp {
+	margin: auto;
+	display: flex;
+	position: relative;
+}
+
+.top-mark {
+	position: absolute;
+	height: 55px;
+	width: 70px;
+	top: 50px;
+	left: 0px;
+	background-color: rgba(255, 149, 140, 0.75);
+	z-index: 3
+}
+
+.top-mark img {
+	height: 45px;
+	margin: 5px 0px 0px 20px
+}
+
+.experience-col {
+	background-color: #C4D7F2;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.img-remove {
+	display: inline-flex;
+	position: relative;
+}
+
+.img-remove img {
+	width: 70%;
+	margin: 20px auto auto;
+}
+
+.remove-select {
+	position: absolute;
+	right: 4px;
+	top: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.remove {
+	border: none;
+	width: 25px;
+	border-radius: 7px;
+	margin-bottom: 2px
+}
+
+h3 {
+	color: black
+}
+
+.interests-exp {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 0px;
+}
+
+.interest {
+	padding-top: 5px;
+	height: 25px;
+	width: 40%
+}
+
+.interest p {
+  color: black
+}
+
+.small {
+	height: 28px;
+	font-size: 16px;
+	width: 50%;
+	margin: auto;
+}
+
+#new-coll {
+	display: none
+}
+
+#no-experiences, #no-collections {
+	display: none
+}
+
+.center-img {
+	z-index: 3;
+	width: 70%
+}
+
+.side-img {
+	display: none
+}
+
+.exp-p {
+	color: black;
+	margin: 20px auto 10px
+}
+
+
+
+@media only screen and (min-device-width: 601px) {
+  /* For tablets: */
+	#block-1, #block-2 {
+		display: grid;
+		grid-template-areas: 'left right'
+	}
+}
+
+@media only screen and (min-device-width: 769px) {
+  /* For desktop: */
+	#block-1 {
+		display: grid;
+		grid-template-areas: 'left mid right'
+	}
+}
