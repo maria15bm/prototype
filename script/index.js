@@ -1,11 +1,8 @@
-
-$("#sign-popup").hide()
-$('#sign-btn').click(function() {
-	$("#sign-popup").show()
-})
+var filter_list = ["filter 1", "filter 2"];
 
 $(document).ready(function() {
-	$("#pop-up-comments").hide()
+	$("#pop-up-comments").hide();
+	$("#sign-popup").hide();
 
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
@@ -24,6 +21,11 @@ $(document).ready(function() {
 		} else {
 			$('#nav-header-menu').hide();
 		}
+	})
+
+	// esto va dentro del document ready
+	$('#sign-btn').click(function() {
+		$("#sign-popup").show();
 	})
 
 	// A close button will close its pop up.
@@ -90,6 +92,20 @@ $(document).ready(function() {
 		newcomment.append(name, user, com_text);
 		var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
 		$("#comment-sect").append(separator, newcomment);
+	})
+
+	/* Filter in las experiences. */
+	$("#add-filter-btn").click(function(){
+		if($("#filter-input").val()!== ""){
+			var value = $("#filter-input").val().toLowerCase();
+			filter_list.push(value);
+		    $(".experience").filter(function() {
+		    	for(var i = 0; i < filter_list.length; i++){
+		      		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
+		    	}
+			});
+			// agregar cosito del filtro + botón de borrar.
+		}
 	})
 })
 
