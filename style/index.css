@@ -11,6 +11,15 @@ section{
 	background-color: #1D1E2C;
 }
 
+.has-exp {
+	fill: #FF958C;
+	cursor: pointer;
+}
+
+.has-exp:hover {
+	fill: #B6244F
+}
+
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
@@ -21,4 +30,3 @@ section{
   /* For desktop: */
 
 }
-

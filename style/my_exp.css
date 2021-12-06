@@ -5,9 +5,6 @@
 - Piel de limón: #FDFCEC
 - Granate raro no sé: #B6244F
 */
-#nav-header-menu {
-	display: none
-}
 /*----- MAIN SECTION -----*/
 
 #section {
@@ -22,11 +19,14 @@
 }
 
 .exp-coll {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0,0,0,0.25) transparent;
+	scrollbar-border-radius: 20px;
 	overflow: scroll;
 	display: flex;
 	flex-direction: column;
 	margin: 15px auto 25px;
-	height: 21vh;
+	height: 30vh;
 	background-color: rgba(255,255,255,0.02)
 }
 
@@ -72,7 +72,7 @@
 	position: relative;
 }
 
-.img-remove img {
+.center-img, .img-title {
 	width: 70%;
 	margin: 20px auto auto;
 }
@@ -116,7 +116,7 @@ h3 {
 	height: 28px;
 	font-size: 16px;
 	width: 50%;
-	margin: auto;
+	margin: auto auto 10px;
 }
 
 #new-coll {
@@ -127,13 +127,9 @@ h3 {
 	display: none
 }
 
-.center-img {
-	z-index: 3;
-	width: 70%
-}
-
-.side-img {
-	display: none
+.side-img-1, .side-img-2 {
+	display: none;
+	margin: auto
 }
 
 .exp-p {
@@ -145,16 +141,48 @@ h3 {
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
-	#block-1, #block-2 {
+	h2 {
+		margin-top: 20px
+	}
+
+	#block-1, #block-2, .general-exp {
 		display: grid;
 		grid-template-areas: 'left right'
 	}
+
+	.general-exp {
+		grid-column-gap: 20px
+	}
+
+
 }
 
 @media only screen and (min-device-width: 769px) {
   /* For desktop: */
 	#block-1 {
 		display: grid;
-		grid-template-areas: 'left mid right'
+		grid-template-areas: 'left mid right';
+	}
+
+	.img-remove {
+		margin-top: 10px
+	}
+
+	.side-img-1, .side-img-2 {
+		display: block;
+		width: 20%;
+	}
+
+	.side-img-1 {margin-right: 0px}
+	.side-img-2 {margin-left: 0px}
+
+	.center-img {
+		z-index: 3;
+		width: 40%;
+		margin: auto 0px auto
+	}
+
+	.collection {
+		width: 90%
 	}
 }
