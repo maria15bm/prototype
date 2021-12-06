@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/messages.css">
+	<title>Travelust</title>
+</head>
+<body>
+	<header class="clearfix">
+		<div id='header-main' class='col-t-12 col-s-12 col-12'>
+			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
+			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
+			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
+			<nav class='col-s-5 col-3' id='log-sign-frm'>
+				<button class="col-t-5" id='sign-btn'>Sign up</button>
+				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+			</nav>
+		</div>
+		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
+			<a href="index.html">Home</a>
+			<a href="about_us.html">About</a>
+			<a href="last_experiences.html">Experiences</a>
+			<a href="#">Plan</a>
+			<a href="top_users.html">Top users</a>
+			<nav id='log-sign-in-menu'>
+				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
+				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
+			</nav>
+		</nav>
+		<nav id='search-bar' class='col-t-3 col-4'>
+			<input type="text" id='search-input' name="search-input">
+			<img id='search-lupa' src="images/search_lupa.png">
+		</nav>
+	</header>
+	<section>
+    <div id="your-chats" class="col-s-11 col-t-11 col-3">
+      <h3>Your chats</h3>
+      <div id="chats" class="">
+        <article class="chat-person" id="default-person">
+          <p class="date-chat" id="date-chat">Default date</p>
+          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+          <h4 class="name-chat" id="name-chat">Defaul name</h4>
+        </article>
+        <article class="chat-person" id="selected-chat">
+          <p class="date-chat" id="date-chat">Default date</p>
+          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+          <h4 class="name-chat" id="name-chat">Defaul name</h4>
+        </article>
+      </div>
+    </div>
+    <div id="chat" class="col-s-11 col-t-11 col-8">
+      <div id="title-chat">
+        <h3 id="main-chat">Default name</h3>
+        <img id="profile-chat" src="images/default_pfp.png" alt="default picture">
+      </div>
+      <hr id="horizontal">
+      <div id="in-messages">
+        <div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
+          <p class="message-date-small" id="message-date">Default date</p>
+          <p class="message-text">Default Message</p>
+        </div>
+        <div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
+          <p class="message-date-small" id="message-date">Default date</p>
+          <p class="message-text">Default Message</p>
+        </div>
+      </div>
+      <div class="col-s-9 comment-frm">
+        <input type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+        <img class="send-btn" src="images/send.png" alt="send message">
+      </div>
+    </div>
+	</section>
+	<!-- ----------FOOTER----------- -->
+	<footer class="clearfix">
+		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
+			<img id='footer-logo' src="images/logo.png">
+			<h2 id='footer-title'>Travelust</h2>
+		</div>
+
+		<div id="footer-text" class='col-t-8 col-s-12'>
+			<div id="footer c">© 2021 Travelust</div>
+			<a href="privacy_policy.html">Privacy policy</a>
+		</div>
+
+		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
+			<a href=""><img src="images/youtube%202.png"></a>
+			<a href=""><img src="images/twitter%201.png"></a>
+			<a href=""><img src="images/instagram%202.png"></a>
+		</div>
+	</footer>
+	<!-- ----------END FOOTER----------- -->
+
+</body>
+<script src="script/index.js"></script>
+</html>

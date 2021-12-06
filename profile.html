@@ -11,6 +11,64 @@
 	<title>Travelust</title>
 </head>
 <body>
+	<article class="popup col-s-10" id="change-pfp">
+		<div class="title-exit">
+			<h3>Change Profile picture</h3>
+			<button type="button" name="exit" class="exit-button">x</button>
+		</div>
+		<div class="inputs">
+			<div id="before-after">
+				<div id="pfpp-1-cont">
+					<img src="images/default_pfp.png" alt="current picture" id="pfpp-1">
+					<p>Current Picture</p>
+				</div>
+				<img src="images/right-arrow.png" alt="changes to" id="arrow">
+				<div id="pfpp-2-cont">
+					<img src="images/default_pfp.png" alt="new picture" id="pfpp-2">
+					<p>New Picture</p>
+				</div>
+			</div>
+			<form id="new-picture">
+				<input type="file" id="hidden" name="change picture"/>
+				<label for="hidden" id="input-label">Select file</label>
+				<button type="submit" name="change-pfp" id="submit-pfp" class="submit-but col-s-3">Submit</button>
+			</form>
+		</div>
+	</article>
+
+	<article class="popup col-s-10" id="modify-profile">
+		<div class="title-exit">
+			<h3>Modify Profile</h3>
+			<button type="button" name="exit" class="exit-button">x</button>
+		</div>
+		<div class="inputs">
+			<form id="change-things">
+				<label for="username">New Username</label>
+				<input type="text" name="username" value="" class="input-modify col-s-8" id="form-username">
+				<label for="email">New Email Address</label>
+				<input type="text" name="email" value="" class="input-modify col-s-8" id="form-email">
+				<label for="birth">New Birth Date</label>
+				<input type="date" name="birth" class="input-modify col-s-8" id="form-birth">
+				<label for="password">New Password</label>
+				<input type="password" name="password" value="" class="input-modify col-s-8" id="form-password">
+				<button type="submit" name="modify-prof" id="submit-mod" class="submit-but col-s-3">Submit</button>
+			</form>
+		</div>
+	</article>
+
+	<article class="popup col-s-10" id="change-interests">
+		<div class="title-exit">
+			<h3>Change Profile picture</h3>
+			<button type="button" name="exit" class="exit-button">x</button>
+		</div>
+		<div class="inputs">
+			<form id="change-things">
+
+				<button type="submit" name="change-ints" id="submit-mod" class="submit-but col-s-3">Submit</button>
+			</form>
+		</div>
+	</article>
+
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
 			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
@@ -40,7 +98,7 @@
   <section id="main-sect" class="col-12">
     <div id="profile" class="col-10 col-s-10">
       <img src="images/default_pfp.png" alt="default profile picture" id="pfp">
-			<button type="button" name="change-pfp" class="big-button col-s-6 col-t-6 col-5" id="change-pfp">Change profile picture</button>
+			<button type="button" name="change-pfp" class="big-button col-s-6 col-t-6 col-5" id="change-pfp-begin">Change profile picture</button>
 			<div id="profile-data" class="col-10">
 				<p>Name:</p>
 				<p id="name" class="default">Default name</p>
@@ -74,7 +132,7 @@
 				</div>
 			</div>
 			<div id="buttons">
-				<button type="button" name="modify-profile" class="big-button col-s-5 col-t-5" id="mod-but">Modify profile</button>
+				<button type="button" name="modify-profi" class="big-button col-s-5 col-t-5" id="mod-but">Modify profile</button>
 				<button type="button" name="change-interests" class="big-button col-s-5 col-t-5" id="inter-but">Change interests</button>
 				<button type="button" name="experiences" class="big-button col-s-7 col-t-9" id="exp-but">My Experiences</button>
 			</div>
@@ -98,3 +156,4 @@
     </div>
   </footer>
 </html>
+<script src="script/profile.js" charset="utf-8"></script>

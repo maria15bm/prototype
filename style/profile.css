@@ -76,6 +76,85 @@ section{
 	text-align: center;
 }
 
+/*----------POPUPS----------*/
+#change-pfp {
+	display: none;
+}
+
+#before-after {
+	margin: auto;
+	display: flex;
+}
+
+#pfpp-1, #pfpp-2 {
+	width: 100px;
+}
+
+#pfpp-1-cont {
+	margin: auto 0px auto auto;
+}
+
+#pfpp-2-cont {
+	margin: auto auto auto 0px
+}
+
+#pfpp-1-cont p, #pfpp-2-cont p {
+	margin: 7px auto;
+	text-align: center;
+	color: #FF958C
+}
+
+#arrow {
+	width: 15px;
+	margin: auto 20px
+}
+
+#new-picture {
+	display: flex;
+	flex-direction: column;
+}
+
+#hidden {
+	display: none
+}
+
+#input-label {
+	color: black;
+	font-style: italic;
+	background-color: white;
+	padding: 5px 120px;
+	border-radius: 20px;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+.submit-but {
+	margin: 20px auto;
+	border: none;
+	border-radius: 20px;
+	line-height: 30px
+}
+
+#change-things {
+	display: flex;
+	flex-flow: column;
+}
+
+.input-modify {
+	margin: auto 15% auto auto;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+#change-things label {
+	color: #FF958C;
+	font-style: italic;
+	line-height: 40px;
+	margin-left: 15%
+}
 
 
 @media only screen and (min-device-width: 601px) {
@@ -146,7 +225,7 @@ section{
 		width: 58.33%;
 	}
 
-	#change-pfp {
+	#change-pfp-begin {
 		width: 25%
 	}
 }

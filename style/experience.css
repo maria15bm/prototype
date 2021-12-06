@@ -98,33 +98,6 @@
   padding: 20px 4.11%;
 }
 
-.comment-frm{
-  background: #FDFCEC;
-  border-radius: 50px;
-  display: flex;
-  margin: auto;
-  padding: 5px;
-
-}
-
-.comment-input{
-  margin: auto;
-  background: transparent;
-  display:inline-block;
-  font-size: 20px;
-  border: 0px;
-  color: #1D1E2C;
-}
-
-.comment-input:focus{
-  outline: none;
-}
-
-.send-btn{
-  margin: auto 5px auto auto;
-  cursor: pointer;
-}
-
 #like-frm{
   display: flex;
 }

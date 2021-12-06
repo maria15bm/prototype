@@ -21,7 +21,6 @@
 .exp-coll {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(0,0,0,0.25) transparent;
-	scrollbar-border-radius: 20px;
 	overflow: scroll;
 	display: flex;
 	flex-direction: column;
