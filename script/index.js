@@ -2,6 +2,7 @@ var filter_list = ["filter 1", "filter 2"];
 
 $(document).ready(function() {
 	$("#pop-up-comments").hide();
+	$("#login-popup").hide();
 	$("#sign-popup").hide();
 
 	if ($(window).width() < 601){
@@ -23,8 +24,21 @@ $(document).ready(function() {
 		}
 	})
 
-	// esto va dentro del document ready
+	// log in and sign in pop ups
+	$('#log-btn').click(function() {
+		$("#login-popup").show();
+	})
 	$('#sign-btn').click(function() {
+		$("#sign-popup").show();
+	})
+	$(".exit-button").click(function(){
+		$(".exit-button").closest(".popup").css("display", "none");
+	})
+	// mobile version
+	$('#log-in-menu-btn').click(function() {
+		$("#login-popup").show();
+	})
+	$('#sign-in-menu-btn').click(function() {
 		$("#sign-popup").show();
 	})
 
@@ -137,56 +151,56 @@ function get_values() {
 }
 
 function setCookie(username, password, name, email, image,interests="", acepted, exdays) {
-	if  (getCookie(email) !== "") {
+	if (getCookie(email) !== "") {
 		//if mail does not exist
 		alert("Email allready registered");
-	}
-	else {
+	} else {
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
 		//two cookies one for all data and the other for the image
-		var cvalue = [username, password, name,image , interests, acepted];
+		var cvalue = [username, password, name, image, interests, acepted];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
 }
 
-function getCookie(cname) {
-	console.log(cname);
-	let name = cname + "=";
-	let ca = document.cookie.split(';');
-	for(let i = 0; i < ca.length; i++) {
-		let c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
+	function getCookie(cname) {
+		console.log(cname);
+		let name = cname + "=";
+		let ca = document.cookie.split(';');
+		for(let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				console.log(c.substring(name.length, c.length));
+				return c.substring(name.length, c.length);
+			}
 		}
-		if (c.indexOf(name) == 0) {
-			console.log(c.substring(name.length, c.length));
-			return c.substring(name.length, c.length);
-		}
+		// if cookie does not exist
+		return "";
 	}
-	// if cookie does not exist
-	return "";
-}
 
 //in log in
-function get_values2(){
-	var mail = $("#email_login").val();
-	const password = $("#password_login").val();
-	const value=getCookie(mail);
-	if (value !== "") {
-		let val = value.split(',');
-		//if log in is correct
-		if (val[1] === password) {
-			const username = val[0];
-			const profile = val[3];
-			//let profile= photo;
-			$("#username_").html(username);
-			$("#profile_").html(profile);
-			//hide main page
-			//show registered
+	function get_values2(){
+		var mail = $("#email_login").val();
+		const password = $("#password_login").val();
+		const value=getCookie(mail);
+		if (value !== "") {
+			let val = value.split(',');
+			//if log in is correct
+			if (val[1] === password) {
+				const username = val[0];
+				const profile = val[3];
+				//let profile= photo;
+				$("#username_").html(username);
+				$("#profile_").html(profile);
+				//hide main page
+				//show registered
+			}
+		}
+		else {
+			alert("Email not registered");
 		}
 	}
-		else {
-				alert("Email not registered");
-			}
-}

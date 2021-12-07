@@ -114,49 +114,6 @@ section{
 	flex-direction: column;
 }
 
-#hidden {
-	display: none
-}
-
-#input-label {
-	color: black;
-	font-style: italic;
-	background-color: white;
-	padding: 5px 120px;
-	border-radius: 20px;
-	margin: 10px auto;
-	cursor: pointer;
-}
-
-.submit-but {
-	margin: 20px auto;
-	border: none;
-	border-radius: 20px;
-	line-height: 30px
-}
-
-#change-things {
-	display: flex;
-	flex-flow: column;
-}
-
-.input-modify {
-	margin: auto 15% auto auto;
-	height: 30px;
-	padding-left: 10px;
-	border-radius: 20px;
-	border: none;
-	outline: none;
-}
-
-#change-things label {
-	color: #FF958C;
-	font-style: italic;
-	line-height: 40px;
-	margin-left: 15%
-}
-
-
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
 	#pfp{

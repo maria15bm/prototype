@@ -204,7 +204,6 @@ header{
     box-sizing: border-box;
 }
 .modal-container-signup {
-    display: none;
     position: absolute;
     width: 1012px;
     height: 803px;
@@ -390,6 +389,70 @@ footer{
   border: none;
   border-radius: 10px;
   color: black;
+}
+
+.input-modify {
+    margin: auto 15% auto auto;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.input-sign {
+    margin-left: 5%;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.profile-info label {
+    color: #FF958C;
+    font-style: italic;
+    line-height: 40px;
+    margin-left: 15%;
+}
+
+.profile-info {
+    display: flex;
+    flex-flow: column;
+}
+
+.submit-but {
+    margin: 20px auto;
+    border: none;
+    border-radius: 20px;
+    line-height: 30px
+}
+
+.inputs p{
+    color: #C4D7F2;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sign-info label {
+    color: #FF958C;
+    font-style: italic;
+    line-height: 40px;
+    margin-left: 3%;
+}
+
+#hidden {
+    display: none
+}
+
+#input-label {
+    color: black;
+    font-style: italic;
+    background-color: white;
+    padding: 5px 120px;
+    border-radius: 20px;
+    margin: 10px auto;
+    cursor: pointer;
 }
 
 @media only screen and (min-device-width: 601px) {
