@@ -200,9 +200,7 @@ function get_values() {
 			register = email;
 			console.log(register);
 			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
-			$("#sign-popup").hide();
-
-
+			delete_or_create_loged(email, exdays);
 		}
 	}
 }
@@ -219,6 +217,19 @@ function setCookie(username, password, name, email, image,birth ,interests="", a
 		//two cookies one for all data and the other for the image
 		var cvalue = [username, password, name, image,birth, interests, acepted];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
+}
+
+
+function delete_or_create_loged(email, exdays) {
+	if (getCookie("loged") !== "") {
+		//if loged exist
+		//borrar cookie
+	}
+	else {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
 		let loged = "loged";
 		document.cookie = loged + "=" + email + ";" + expires + ";path=/";
 	}
@@ -251,13 +262,10 @@ function get_values2(){
 		let val = value.split(',');
 		//if log in is correct
 		if (val[1] === password) {
+			delete_or_create_loged(email, exdays);
 			const username = val[0];
-			const profile = val[3];
 			//let profile= photo;
 			$("#username_").html(username);
-			$("#profile_").html(profile);
-			//hide main page
-			//show registered
 		}
 	}
 	else {
