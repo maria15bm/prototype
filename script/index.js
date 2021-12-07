@@ -1,5 +1,5 @@
 var filter_list = ["filter 1", "filter 2"];
-
+let register=""
 /* Updates the filter in last experiences using the values in filter_list*/
 function updateFilter() {
 	$(".experience").filter(function() {
@@ -30,12 +30,21 @@ function deleteFilter(filter){
 }
 
 $(document).ready(function() {
-	$("#pop-up-comments").hide();
-	$("#login-popup").hide();
-	$("#sign-popup").hide();
-	$("#registered").hide();
-	$("#logout").hide();
-
+	if (register ===""){
+		$("#pop-up-comments").hide();
+		$("#login-popup").hide();
+		$("#sign-popup").hide();
+		$("#registered").hide();
+		$("#logout").hide();
+	}
+	else{
+		$("#pop-up-comments").hide();
+		$("#login-popup").hide();
+		$("#sign-popup").hide();
+		$("#registered").show();
+		$("#main").hide();
+		$("#logout").hide();
+	}
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
@@ -184,10 +193,10 @@ function get_values() {
 		var passwregex = /^[a-z0-9]{0,8}$/;
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
+			register = email;
 			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
 			$("#sign-popup").hide();
-			$("#main").hide();
-			$("#registered").show();
+
 
 		}
 	}
