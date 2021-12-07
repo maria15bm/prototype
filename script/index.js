@@ -109,3 +109,84 @@ $(document).ready(function() {
 	})
 })
 
+
+// function in sign in to creaate cookie
+function get_values() {
+	const username = $("#username").val();
+	let password;
+	let password1 = $("#password").val();
+	let password2 = $("#password-confirm").val();
+	if (password1 !== password2){
+		alert("The passwords don't match")
+	}
+	else {
+		password = password1
+		const name = $("#name").val();
+		let email = $("#email").val();
+		let profile = "images/user.jpg";
+		const interested = $("#interested").val();
+		const terms = $("#Terms").val();
+		const exdays = 190;
+		//check pattern of the inputs
+		var passwregex = /^[a-z0-9]{0,8}$/;
+		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
+		if (password.match(passwregex) && email.match(emailregex)) {
+			setCookie(username, password, name, email, profile, interested, terms, exdays);
+		}
+	}
+}
+
+function setCookie(username, password, name, email, image,interests="", acepted, exdays) {
+	if  (getCookie(email) !== "") {
+		//if mail does not exist
+		alert("Email allready registered");
+	}
+	else {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+		//two cookies one for all data and the other for the image
+		var cvalue = [username, password, name,image , interests, acepted];
+		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	console.log(cname);
+	let name = cname + "=";
+	let ca = document.cookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			console.log(c.substring(name.length, c.length));
+			return c.substring(name.length, c.length);
+		}
+	}
+	// if cookie does not exist
+	return "";
+}
+
+//in log in
+function get_values2(){
+	var mail = $("#email_login").val();
+	const password = $("#password_login").val();
+	const value=getCookie(mail);
+	if (value !== "") {
+		let val = value.split(',');
+		//if log in is correct
+		if (val[1] === password) {
+			const username = val[0];
+			const profile = val[3];
+			//let profile= photo;
+			$("#username_").html(username);
+			$("#profile_").html(profile);
+			//hide main page
+			//show registered
+		}
+	}
+		else {
+				alert("Email not registered");
+			}
+}
