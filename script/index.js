@@ -1,9 +1,54 @@
 var filter_list = ["filter 1", "filter 2"];
 
-$(document).ready(function() {
-	$("#pop-up-comments").hide();
-	$("#sign-popup").hide();
+/* Updates the filter in last experiences using the values in filter_list*/
+function updateFilter() {
+	$(".experience").filter(function() {
+		if (filter_list.length>0){
+			for(var i = 0; i < filter_list.length; i++){
+		  		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
+			}
+		} else{
+			// If filter_list is empty, every experience is shown.
+			$(".experience").each(function(){
+				$(this).show();
+			});
+		}
 
+	})
+}
+
+/* Deletes a filter in last experiences */
+function deleteFilter(filter){
+	var value = $(filter).parent().children("p").html();
+	filter_list = filter_list.filter(function(item) {
+	    return item !== value
+	})
+	updateFilter();
+	console.log(filter_list);
+	$(filter).parent().remove();
+
+}
+
+
+
+
+
+$(document).ready(function() {
+	if (getCookie("loged") === ""){
+		$("#pop-up-comments").hide();
+		$("#login-popup").hide();
+		$("#sign-popup").hide();
+		$("#registered").hide();
+		$("#logout").hide();
+	}
+	else{
+		$("#pop-up-comments").hide();
+		$("#login-popup").hide();
+		$("#sign-popup").hide();
+		$("#registered").show();
+		$("#main").hide();
+		$("#logout").hide();
+	}
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
@@ -23,8 +68,27 @@ $(document).ready(function() {
 		}
 	})
 
-	// esto va dentro del document ready
+	// log in and sign in pop ups
+	$('#log-btn').click(function() {
+		$("#login-popup").show();
+		$('#submit-login').click(function() {
+			get_values2();
+		})
+	})
 	$('#sign-btn').click(function() {
+		$("#sign-popup").show();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
+	$(".exit-button").click(function(){
+		$(".exit-button").closest(".popup").css("display", "none");
+	})
+	// mobile version
+	$('#log-in-menu-btn').click(function() {
+		$("#login-popup").show();
+	})
+	$('#sign-in-menu-btn').click(function() {
 		$("#sign-popup").show();
 	})
 
@@ -94,23 +158,24 @@ $(document).ready(function() {
 		$("#comment-sect").append(separator, newcomment);
 	})
 
-	/* Filter in las experiences. */
+	/* Filter in last experiences. */
 	$("#add-filter-btn").click(function(){
 		if($("#filter-input").val()!== ""){
 			var value = $("#filter-input").val().toLowerCase();
 			filter_list.push(value);
-		    $(".experience").filter(function() {
-		    	for(var i = 0; i < filter_list.length; i++){
-		      		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
-		    	}
-			});
-			// agregar cosito del filtro + botón de borrar.
+			updateFilter();
+			var newfilter = $("<div class = filter></div>");
+			var newval = $("<p></p>").html(value);
+			var button = $("<button class='delete-filter'>x</button>");
+			button.attr('onclick', 'deleteFilter(this)');
+			newfilter.append(newval, button);
+			$("#filters").append(newfilter);
 		}
 	})
-});
+})
 
 
-// function in sign in to creaate cookie
+// function in sign in to create cookie
 function get_values() {
 	const username = $("#username").val();
 	let password;
@@ -123,6 +188,7 @@ function get_values() {
 		password = password1
 		const name = $("#name").val();
 		let email = $("#email").val();
+		let birth = $("#birth").val();
 		let profile = "images/user.jpg";
 		const interested = $("#interested").val();
 		const terms = $("#Terms").val();
@@ -131,14 +197,17 @@ function get_values() {
 		var passwregex = /^[a-z0-9]{0,8}$/;
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
-			setCookie(username, password, name, email, profile, interested, terms, exdays);
+			register = email;
+			console.log(register);
+			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
+			delete_or_create_loged(email, exdays);
 		}
 	}
 }
 
-function setCookie(username, password, name, email, image,interests="", acepted, exdays) {
-	if  (getCookie(email) !== "") {
-		//if mail does not exist
+function setCookie(username, password, name, email, image,birth ,interests="", acepted, exdays) {
+	if (getCookie(email) !== "") {
+		//if mail exist
 		alert("Email allready registered");
 	}
 	else {
@@ -146,8 +215,23 @@ function setCookie(username, password, name, email, image,interests="", acepted,
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
 		//two cookies one for all data and the other for the image
-		var cvalue = [username, password, name,image , interests, acepted];
+		var cvalue = [username, password, name, image,birth, interests, acepted];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
+}
+
+
+function delete_or_create_loged(email, exdays) {
+	if (getCookie("loged") !== "") {
+		//if loged exist
+		//borrar cookie
+	}
+	else {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+		let loged = "loged";
+		document.cookie = loged + "=" + email + ";" + expires + ";path=/";
 	}
 }
 
@@ -178,16 +262,13 @@ function get_values2(){
 		let val = value.split(',');
 		//if log in is correct
 		if (val[1] === password) {
+			delete_or_create_loged(email, exdays);
 			const username = val[0];
-			const profile = val[3];
 			//let profile= photo;
 			$("#username_").html(username);
-			$("#profile_").html(profile);
-			//hide main page
-			//show registered
 		}
 	}
 	else {
-			alert("Email not registered");
+		alert("Email not registered");
 	}
 }

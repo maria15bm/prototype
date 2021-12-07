@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="script/index.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
@@ -14,37 +13,15 @@
 </head>
 <body>
 	<!-- ----------HEADER----------- -->
+
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
 			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
 			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
 			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
 			<nav class='col-s-5 col-3' id='log-sign-frm'>
-				<button class="col-t-5" id='sign_btn'>Sign up</button>
-				<div class = "modal-container-signup" id="sign_popup">
-					<form class="modal">
-						<button class="id-button-close" id = "sigin_close">x</button>
-						<h3>Create a new account</h3>
-						<h1>Name</h1>
-						<input type = "text"  id="name">
-						<h1>Username</h1>
-						<input type = "text"  id="username">
-						<h1>Email address</h1>
-						<input type = "email"  id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
-						<h1>Password</h1>
-						<input type = "password"  id="password"  pattern="[a-z0-9]{0,8}">
-						<h1>Confirm your password</h1>
-						<input type = "password"  id="password-confirm"  pattern="[a-z0-9]{0,8}">
-						<h1>New interest</h1>
-						<input type = "text"  id="interest">
-						<button class="id-button" id = "select">Save selection</button>
-						<p>Terms acepted</p>
-						<p id="terms_show"></p>
-						<button class="id-button-submit" id = "submit_signin">Submit</button>
-					</form>
-				</div>
+				<button class="col-t-5" id='sign-btn'>Sign up</button>
 				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
-
 			</nav>
 		</div>
 		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
@@ -64,6 +41,78 @@
 		</nav>
 	</header>
 	<!-- ----------END HEADER----------- -->
+
+	<!-- ----------POP UPS----------- -->
+	<div id="main">
+		<article class="popup col-s-10" id="sign-popup">
+			<div class="title-exit">
+				<h3>Create new account</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="sign-info profile-info">
+					<!--<img src="images/default_pfp.png" alt="current picture">
+					<input type="file" id="hidden" class="input-sign col-s-3" name="change picture"/>
+					<label for="hidden" id="input-label">Select file</label>
+					<label for="interest">New interest</label>
+					<input type="text" name="interest" value="" class="input-sign col-s-3" id="interest">
+					<button>Add interest</button>-->
+					<label for="name">Name</label>
+					<input type="text" name="name" value="" class="input-sign col-s-6" id="name">
+					<label for="username">Username</label>
+					<input type="text" name="username" value="" class="input-sign col-s-6" id="username">
+					<label for="email">Email Address</label>
+					<input type="text" name="email" value="" class="input-sign col-s-6" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
+					<label for="birth">New Birth Date</label>
+					<input type="date" name="birth" class="input-sign col-s-6" id="birth">
+					<label for="password">Password</label>
+					<input type="password" name="password" value="" class="input-sign col-s-6" id="password" pattern="[a-z0-9]{0,8}">
+					<label for="password-confirm">Confirm Password</label>
+					<input type="password" name="password" value="" class="input-sign col-s-6" id="password-confirm" pattern="[a-z0-9]{0,8}">
+					<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
+				</form>
+			</div>
+		</article>
+
+		<article class="popup col-s-6" id="login-popup">
+			<div class="title-exit">
+				<h3>Log in</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="profile-info">
+					<label for="email">Email</label>
+					<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login">
+					<label for="password">Password</label>
+					<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}">
+					<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
+				</form>
+				<p>You don’t have an account? Click here to <button>sign up</button></p>
+			</div>
+		</article>
+	</div>
+	<div id="registered">
+		<img src="images/user.png">
+		<p id="username_show"></p>
+		<article class="popup col-s-10" id="profile-page">
+			//show profile page
+		</article>
+
+		<article class="popup col-s-6" id="logout-popup">
+			<div class="title-exit">
+				<h3>Log out</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="profile-info">
+					<p>Are you sure you want to log out?</p>
+					<button type="submit" id="stay" class="submit-but col-s-3">Stay signed</button>
+					<button type="submit" id="logout" class="submit-but col-s-3">Log out</button>
+				</form>
+			</div>
+		</article>
+	</div>
+	<!-- ---------- END POP UPS----------- -->
 
 	<!-- ----------MAP SECTION----------- -->
 	<section>
@@ -1014,3 +1063,4 @@
 	<!-- ----------END FOOTER----------- -->
 </body>
 </html>
+<script src="script/index.js" charset="utf-8"></script>
