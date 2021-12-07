@@ -84,7 +84,7 @@
 	flex-direction: column;
 }
 
-.remove {
+.remove, .remove-exp {
 	border: none;
 	width: 25px;
 	border-radius: 7px;
@@ -136,7 +136,130 @@ h3 {
 	margin: 20px auto 10px
 }
 
+/* --------POPUP------- */
+.popup {
+	z-index: 4;
+	display: none
+}
 
+.popup h3 {
+	color: #FF958C
+}
+
+#create-exp {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+	grid-template-areas: 'left right';
+}
+
+#create-exp label {
+	color: white;
+	width: 80px;
+	font-style: italic;
+	margin: auto;
+	text-align: justify;
+}
+
+#create-exp input, #create-exp select, #input-new-col {
+	height: 35px;
+	border: none;
+	border-radius: 20px;
+	background: white;
+	outline: none;
+	padding-left: 15px
+}
+
+.grid input {
+	margin: 10px auto;
+	margin-right: 20px
+}
+
+.label-in {
+	margin-right: 10px
+}
+
+.submit-but {
+	margin: 20px auto;
+	border: none;
+	border-radius: 20px;
+	line-height: 30px;
+	padding-bottom: 5px
+}
+
+#input-smaller {
+	display: flex;
+	margin: auto auto 10px;
+	flex-direction: column;
+}
+
+.sub-in {
+	margin: auto;
+	display: flex;
+	gap: 20px
+}
+
+#create-exp select {
+	margin-top: 10px
+}
+
+.hidden {
+	display: none
+}
+
+#input-label {
+	width: 66.6% !important;
+	height: 35px;
+	font-style: italic;
+	background-color: #FF958C;
+	border-radius: 20px;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+#input-label p{
+	padding-top: 8px;
+	text-align: center;
+	color: black;
+}
+
+#selected-exp {
+	margin: auto;
+}
+
+.small-title {
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px
+}
+
+#selected-experiences-p {
+	text-align: left;
+}
+
+#new-collection {
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto 0px;
+}
+
+.question {
+	color: white;
+	text-align: center;
+	font-size: 16px
+}
+
+.yes-no {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+}
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
@@ -183,5 +306,10 @@ h3 {
 
 	.collection {
 		width: 90%
+	}
+
+	.custom-file-upload p {
+		margin: auto;
+		font-size: 16px
 	}
 }

@@ -29,8 +29,10 @@
 				</div>
 			</div>
 			<form id="new-picture">
-				<input type="file" id="hidden" name="change picture"/>
-				<label for="hidden" id="input-label">Select file</label>
+				<label class="custom-file-upload" id="input-label">
+					<input type="file" class="hidden" name="change picture" id="new-pfp-in"/>
+				  Select Image
+				</label>
 				<button type="submit" name="change-pfp" id="submit-pfp" class="submit-but col-s-3">Submit</button>
 			</form>
 		</div>
@@ -42,7 +44,7 @@
 			<button type="button" name="exit" class="exit-button">x</button>
 		</div>
 		<div class="inputs">
-			<form id="change-things">
+			<form class="change-things">
 				<label for="username">New Username</label>
 				<input type="text" name="username" value="" class="input-modify col-s-8" id="form-username">
 				<label for="email">New Email Address</label>
@@ -58,12 +60,32 @@
 
 	<article class="popup col-s-10" id="change-interests">
 		<div class="title-exit">
-			<h3>Change Profile picture</h3>
+			<h3>Change Interests</h3>
 			<button type="button" name="exit" class="exit-button">x</button>
 		</div>
+		<div id="interests-remove">
+			<div class="interest-to-choose" id="default-interest">
+				<p>Interest 1</p>
+				<button type="button" name="button" class="big-button small">Delete Interest</button>
+			</div>
+		</div>
 		<div class="inputs">
-			<form id="change-things">
-
+			<form class="change-things">
+				<label for="inter" id="label-int">Choose an interest to add</label>
+				<select name="inter" id="new-interest" class="col-s-5">
+					<option selected disabled hidden></option>
+				  <option value="beach">Beach</option>
+				  <option value="exotic">Exotic</option>
+				  <option value="city">City</option>
+				  <option value="rurope">Europe</option>
+					<option value="africa">Africa</option>
+				  <option value="america">America</option>
+				  <option value="asia">Asia</option>
+					<option value="forest">Forest</option>
+				  <option value="islands">Islands</option>
+				  <option value="budhist">Budhist</option>
+					<option value="religious">Religious</option>
+				</select>
 				<button type="submit" name="change-ints" id="submit-mod" class="submit-but col-s-3">Submit</button>
 			</form>
 		</div>
@@ -111,21 +133,21 @@
 				<p id="interests-p">Interests:</p>
 				<div id="interests">
 					<div class="column">
-						<article class="interest">
+						<article class="interest" id="default-interest-profile">
 							<a href="#">Interest 1</a>
 						</article>
-						<article class="interest">
+						<article class="interest" id="int-2">
 							<a href="#">Interest 2</a>
 						</article>
-						<article class="interest">
+						<article class="interest" id="int-3">
 							<a href="#">Interest 3</a>
 						</article>
 					</div>
 					<div class="column">
-						<article class="interest">
+						<article class="interest" id="int-4">
 							<a href="#">Interest 4</a>
 						</article>
-						<article class="interest">
+						<article class="interest" id="int-5">
 							<a href="#">Interest 5</a>
 						</article>
 					</div>

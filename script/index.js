@@ -107,7 +107,7 @@ $(document).ready(function() {
 			// agregar cosito del filtro + botón de borrar.
 		}
 	})
-})
+});
 
 
 // function in sign in to creaate cookie
@@ -148,6 +148,7 @@ function setCookie(username, password, name, email, image,interests="", acepted,
 		//two cookies one for all data and the other for the image
 		var cvalue = [username, password, name,image , interests, acepted];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
 }
 
 function getCookie(cname) {
@@ -186,7 +187,7 @@ function get_values2(){
 			//show registered
 		}
 	}
-		else {
-				alert("Email not registered");
-			}
+	else {
+			alert("Email not registered");
+	}
 }

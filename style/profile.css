@@ -5,9 +5,6 @@
 - Piel de limón: #FDFCEC
 - Granate raro no sé: #B6244F
 */
-#nav-header-menu {
-	display:  none
-}
 /*----- MAIN SECTION -----*/
 section{
 	background-color: #1D1E2C;
@@ -24,6 +21,8 @@ section{
 	flex-direction: column;
 	margin: 3.5% auto;
 	overflow: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0,0,0,0.25) transparent;
 }
 
 #pfp {
@@ -77,7 +76,7 @@ section{
 }
 
 /*----------POPUPS----------*/
-#change-pfp {
+#change-pfp, #change-interests, .hidden, #modify-profile {
 	display: none;
 }
 
@@ -114,10 +113,6 @@ section{
 	flex-direction: column;
 }
 
-#hidden {
-	display: none
-}
-
 #input-label {
 	color: black;
 	font-style: italic;
@@ -132,10 +127,10 @@ section{
 	margin: 20px auto;
 	border: none;
 	border-radius: 20px;
-	line-height: 30px
+	line-height: 30px;
 }
 
-#change-things {
+.change-things {
 	display: flex;
 	flex-flow: column;
 }
@@ -149,13 +144,46 @@ section{
 	outline: none;
 }
 
-#change-things label {
+.change-things label {
 	color: #FF958C;
 	font-style: italic;
 	line-height: 40px;
 	margin-left: 15%
 }
 
+#interests-remove {
+	overflow: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255,255,255,0.25) transparent;
+	display: grid;
+	grid-template-areas: 'left mid right';
+}
+
+.interest-to-choose {
+	margin: auto;
+}
+
+.interest-to-choose p {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 5px
+}
+
+.interest-to-choose .small {
+	padding-bottom: 5px;
+}
+
+#new-interest {
+	border: none;
+	border-radius: 20px;
+	height: 30px;
+	padding-left: 10px;
+	margin: auto;
+}
+
+#label-int {
+	margin: 20px auto 0px;
+}
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
