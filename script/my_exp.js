@@ -12,9 +12,11 @@ $(document).ready(function() {
   })
 
   $(".remove-exp").click(function () {
-    var experience_to_del = $(this).closest(".general-exp").attr("id");
     $("#delete-exp").css("display", "block");
-    return experience_to_del;
+  })
+
+  $(".remove").click(function () {
+    $("#delete-coll").css("display", "block");
   })
 
   $("#add-exp").click(function () {
@@ -26,7 +28,6 @@ $(document).ready(function() {
   })
 
   $(".b-input").click(function () {
-    $("#new-coll").css("display", "block
-    ")
+    $("#new-coll").css("display", "block")
   })
 });
