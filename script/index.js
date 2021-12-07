@@ -1,5 +1,34 @@
 var filter_list = ["filter 1", "filter 2"];
 
+/* Updates the filter in last experiences using the values in filter_list*/
+function updateFilter() {
+	$(".experience").filter(function() {
+		if (filter_list.length>0){
+			for(var i = 0; i < filter_list.length; i++){
+		  		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
+			}
+		} else{
+			// If filter_list is empty, every experience is shown.
+			$(".experience").each(function(){
+				$(this).show();
+			});
+		}
+		
+	})
+}
+
+/* Deletes a filter in last experiences */
+function deleteFilter(filter){
+	var value = $(filter).parent().children("p").html();
+	filter_list = filter_list.filter(function(item) {
+	    return item !== value
+	})
+	updateFilter();
+	console.log(filter_list);
+	$(filter).parent().remove();
+
+}
+
 $(document).ready(function() {
 	$("#pop-up-comments").hide();
 	$("#login-popup").hide();
@@ -108,17 +137,18 @@ $(document).ready(function() {
 		$("#comment-sect").append(separator, newcomment);
 	})
 
-	/* Filter in las experiences. */
+	/* Filter in last experiences. */
 	$("#add-filter-btn").click(function(){
 		if($("#filter-input").val()!== ""){
 			var value = $("#filter-input").val().toLowerCase();
 			filter_list.push(value);
-		    $(".experience").filter(function() {
-		    	for(var i = 0; i < filter_list.length; i++){
-		      		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
-		    	}
-			});
-			// agregar cosito del filtro + botón de borrar.
+			updateFilter();
+			var newfilter = $("<div class = filter></div>");
+			var newval = $("<p></p>").html(value);
+			var button = $("<button class='delete-filter'>x</button>");
+			button.attr('onclick', 'deleteFilter(this)');
+			newfilter.append(newval, button);
+			$("#filters").append(newfilter);
 		}
 	})
 })
