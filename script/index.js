@@ -29,8 +29,11 @@ function deleteFilter(filter){
 
 }
 
+
+
+
+
 $(document).ready(function() {
-	console.log(register);
 	if (getCookie("loged") === ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
