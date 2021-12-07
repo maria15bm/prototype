@@ -13,6 +13,7 @@
 </head>
 <body>
 	<!-- ----------HEADER----------- -->
+
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
 			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
@@ -42,52 +43,75 @@
 	<!-- ----------END HEADER----------- -->
 
 	<!-- ----------POP UPS----------- -->
-	<article class="popup col-s-10" id="sign-popup">
-		<div class="title-exit">
-			<h3>Create new account</h3>
-			<button type="button" name="exit" class="exit-button">x</button>
-		</div>
-		<div class="inputs">
-			<form class="sign-info profile-info">
-				<!--<img src="images/default_pfp.png" alt="current picture">
-				<input type="file" id="hidden" class="input-sign col-s-3" name="change picture"/>
-				<label for="hidden" id="input-label">Select file</label>
-				<label for="interest">New interest</label>
-				<input type="text" name="interest" value="" class="input-sign col-s-3" id="interest">
-				<button>Add interest</button>-->
-				<label for="name">Name</label>
-				<input type="text" name="name" value="" class="input-sign col-s-6" id="name">
-				<label for="username">Username</label>
-				<input type="text" name="username" value="" class="input-sign col-s-6" id="username">
-				<label for="email">Email Address</label>
-				<input type="text" name="email" value="" class="input-sign col-s-6" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
-				<label for="birth">New Birth Date</label>
-				<input type="date" name="birth" class="input-sign col-s-6" id="birth">
-				<label for="password">Password</label>
-				<input type="password" name="password" value="" class="input-sign col-s-6" id="password" pattern="[a-z0-9]{0,8}">
-				<label for="password-confirm">Confirm Password</label>
-				<input type="password" name="password" value="" class="input-sign col-s-6" id="password-confirm" pattern="[a-z0-9]{0,8}">
-				<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
-			</form>
-		</div>
-	</article>
+	<div id="main">
+		<article class="popup col-s-10" id="sign-popup">
+			<div class="title-exit">
+				<h3>Create new account</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="sign-info profile-info">
+					<!--<img src="images/default_pfp.png" alt="current picture">
+					<input type="file" id="hidden" class="input-sign col-s-3" name="change picture"/>
+					<label for="hidden" id="input-label">Select file</label>
+					<label for="interest">New interest</label>
+					<input type="text" name="interest" value="" class="input-sign col-s-3" id="interest">
+					<button>Add interest</button>-->
+					<label for="name">Name</label>
+					<input type="text" name="name" value="" class="input-sign col-s-6" id="name">
+					<label for="username">Username</label>
+					<input type="text" name="username" value="" class="input-sign col-s-6" id="username">
+					<label for="email">Email Address</label>
+					<input type="text" name="email" value="" class="input-sign col-s-6" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
+					<label for="birth">New Birth Date</label>
+					<input type="date" name="birth" class="input-sign col-s-6" id="birth">
+					<label for="password">Password</label>
+					<input type="password" name="password" value="" class="input-sign col-s-6" id="password" pattern="[a-z0-9]{0,8}">
+					<label for="password-confirm">Confirm Password</label>
+					<input type="password" name="password" value="" class="input-sign col-s-6" id="password-confirm" pattern="[a-z0-9]{0,8}">
+					<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
+				</form>
+			</div>
+		</article>
 
-	<article class="popup col-s-6" id="login-popup">
-		<div class="title-exit">
-			<h3>Log in</h3>
-			<button type="button" name="exit" class="exit-button">x</button>
-		</div>
-		<div class="inputs">
-			<form class="profile-info">
-				<label for="email">Email</label>
-				<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login">
-				<label for="password">Password</label>
-				<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}">
-				<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
-			</form>
-			<p>You don’t have an account? Click here to <button>sign up</button></p>
-		</div>
-	</article>
+		<article class="popup col-s-6" id="login-popup">
+			<div class="title-exit">
+				<h3>Log in</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="profile-info">
+					<label for="email">Email</label>
+					<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login">
+					<label for="password">Password</label>
+					<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}">
+					<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
+				</form>
+				<p>You don’t have an account? Click here to <button>sign up</button></p>
+			</div>
+		</article>
+	</div>
+	<div id="registered">
+		<img src="images/user.png">
+		<p id="username_show"></p>
+		<article class="popup col-s-10" id="profile-page">
+			//show profile page
+		</article>
+
+		<article class="popup col-s-6" id="logout-popup">
+			<div class="title-exit">
+				<h3>Log out</h3>
+				<button type="button" name="exit" class="exit-button">x</button>
+			</div>
+			<div class="inputs">
+				<form class="profile-info">
+					<p>Are you sure you want to log out?</p>
+					<button type="submit" id="stay" class="submit-but col-s-3">Stay signed</button>
+					<button type="submit" id="logout" class="submit-but col-s-3">Log out</button>
+				</form>
+			</div>
+		</article>
+	</div>
 	<!-- ---------- END POP UPS----------- -->
 
 	<!-- ----------MAP SECTION----------- -->
