@@ -1,5 +1,5 @@
 var filter_list = ["filter 1", "filter 2"];
-let register=""
+
 /* Updates the filter in last experiences using the values in filter_list*/
 function updateFilter() {
 	$(".experience").filter(function() {
@@ -30,7 +30,8 @@ function deleteFilter(filter){
 }
 
 $(document).ready(function() {
-	if (register ===""){
+	console.log(register);
+	if (getCookie("loged") === ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
@@ -194,6 +195,7 @@ function get_values() {
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
 			register = email;
+			console.log(register);
 			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
 			$("#sign-popup").hide();
 
@@ -214,7 +216,8 @@ function setCookie(username, password, name, email, image,birth ,interests="", a
 		//two cookies one for all data and the other for the image
 		var cvalue = [username, password, name, image,birth, interests, acepted];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
-
+		let loged = "loged";
+		document.cookie = loged + "=" + email + ";" + expires + ";path=/";
 	}
 }
 
