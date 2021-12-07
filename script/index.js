@@ -71,12 +71,21 @@ $(document).ready(function() {
 	// log in and sign in pop ups
 	$('#log-btn').click(function() {
 		$("#login-popup").show();
+		$("#sign-popup").hide();
 		$('#submit-login').click(function() {
 			get_values2();
 		})
 	})
 	$('#sign-btn').click(function() {
 		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
+	$('#link-sign').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
 		$('#submit-sign').click(function() {
 			get_values();
 		})
@@ -87,9 +96,17 @@ $(document).ready(function() {
 	// mobile version
 	$('#log-in-menu-btn').click(function() {
 		$("#login-popup").show();
+		$("#sign-popup").hide();
+		$('#submit-login').click(function() {
+			get_values2();
+		})
 	})
 	$('#sign-in-menu-btn').click(function() {
 		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
 	})
 
 	// A close button will close its pop up.

@@ -173,14 +173,6 @@ section{
 	padding-bottom: 5px;
 }
 
-#new-interest {
-	border: none;
-	border-radius: 20px;
-	height: 30px;
-	padding-left: 10px;
-	margin: auto;
-}
-
 #label-int {
 	margin: 20px auto 0px;
 }

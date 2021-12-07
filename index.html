@@ -25,7 +25,7 @@
 			</nav>
 		</div>
 		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
-			<a href="#">Home</a>
+			<a href="index.html">Home</a>
 			<a href="about_us.html">About</a>
 			<a href="last_experiences.html">Experiences</a>
 			<a href="plan.html">Plan</a>
@@ -44,36 +44,62 @@
 
 	<!-- ----------POP UPS----------- -->
 	<div id="main">
-		<article class="popup col-s-10" id="sign-popup">
+		<!-- ----------SIGN UP----------- -->
+		<article class="popup col-s-7" id="sign-popup">
 			<div class="title-exit">
 				<h3>Create new account</h3>
 				<button type="button" name="exit" class="exit-button">x</button>
 			</div>
-			<div class="inputs">
-				<form class="sign-info profile-info">
-					<!--<img src="images/default_pfp.png" alt="current picture">
-					<input type="file" id="hidden" class="input-sign col-s-3" name="change picture"/>
-					<label for="hidden" id="input-label">Select file</label>
-					<label for="interest">New interest</label>
-					<input type="text" name="interest" value="" class="input-sign col-s-3" id="interest">
-					<button>Add interest</button>-->
+			<form class="sign-info profile-info" id="signup-popup">
+				<div id="left" class="col-s-8">
 					<label for="name">Name</label>
-					<input type="text" name="name" value="" class="input-sign col-s-6" id="name">
+					<input type="text" name="name" value="" class="input-sign col-s-8" id="name">
 					<label for="username">Username</label>
-					<input type="text" name="username" value="" class="input-sign col-s-6" id="username">
+					<input type="text" name="username" value="" class="input-sign col-s-8" id="username">
 					<label for="email">Email Address</label>
-					<input type="text" name="email" value="" class="input-sign col-s-6" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
+					<input type="text" name="email" value="" class="input-sign col-s-8" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]">
 					<label for="birth">New Birth Date</label>
-					<input type="date" name="birth" class="input-sign col-s-6" id="birth">
+					<input type="date" name="birth" class="input-sign col-s-8" id="birth">
 					<label for="password">Password</label>
-					<input type="password" name="password" value="" class="input-sign col-s-6" id="password" pattern="[a-z0-9]{0,8}">
+					<input type="password" name="password" value="" class="input-sign col-s-8" id="password" pattern="[a-z0-9]{0,8}">
 					<label for="password-confirm">Confirm Password</label>
-					<input type="password" name="password" value="" class="input-sign col-s-6" id="password-confirm" pattern="[a-z0-9]{0,8}">
-					<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
-				</form>
-			</div>
+					<input type="password" name="password" value="" class="input-sign col-s-8" id="password-confirm" pattern="[a-z0-9]{0,8}">
+				</div>
+				<div id="right" class="col-s-3">
+					<img src="images/default_pfp.png" alt="current picture" class="col-s-6">
+					<input type="file" id="hidden" class="input-sign" name="change picture">
+					<label for="hidden" id="input-label">Select picture</label>
+					<label for="interest">Interests</label>
+					<div id="interests-remove">
+						<div class="interest-to-choose" id="default-interest">
+							<p>Interest 1</p>
+						</div>
+					</div>
+					<form class="profile-info">
+						<label for="inter">Choose an interest to add</label>
+						<select name="inter" id="new-interest" class="col-s-5">
+							<option selected disabled hidden></option>
+							<option value="beach">Beach</option>
+							<option value="exotic">Exotic</option>
+							<option value="city">City</option>
+							<option value="europe">Europe</option>
+							<option value="africa">Africa</option>
+							<option value="america">America</option>
+							<option value="asia">Asia</option>
+							<option value="forest">Forest</option>
+							<option value="islands">Islands</option>
+							<option value="budhist">Budhist</option>
+							<option value="religious">Religious</option>
+						</select>
+						<button id="interest-btn">Add interest</button>
+					</form>
+				</div>
+			</form>
+			<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
 		</article>
+		<!-- ----------END SIGN UP----------- -->
 
+		<!-- ----------LOG IN----------- -->
 		<article class="popup col-s-6" id="login-popup">
 			<div class="title-exit">
 				<h3>Log in</h3>
@@ -87,9 +113,10 @@
 					<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}">
 					<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
 				</form>
-				<p>You don’t have an account? Click here to <button>sign up</button></p>
+				<p>You don’t have an account?<button id="link-sign"> Click here to sign up</button></p>
 			</div>
 		</article>
+		<!-- ----------END LOG IN----------- -->
 	</div>
 	<div id="registered">
 		<img src="images/user.png">

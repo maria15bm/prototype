@@ -89,7 +89,7 @@ button{
 	font-size: 21.8px;
 	color: black;
 	background-color: #FF958C;
-  margin: auto;
+    margin: auto;
 }
 
 .interest {
@@ -354,7 +354,7 @@ footer{
 /*--------POPUPS---------*/
 .popup {
   border: 6px solid #FF958C;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -421,6 +421,20 @@ footer{
     flex-flow: column;
 }
 
+#left {
+    display: flex;
+    flex-flow: column;
+}
+
+#right {
+    display: flex;
+    flex-flow: column;
+}
+
+#signup-popup{
+    flex-flow: row;
+}
+
 .submit-but {
     margin: 20px auto;
     border: none;
@@ -446,13 +460,51 @@ footer{
 }
 
 #input-label {
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
     color: black;
-    font-style: italic;
-    background-color: white;
-    padding: 5px 120px;
-    border-radius: 20px;
-    margin: 10px auto;
+    background-color: #FF958C;
+    margin: auto;
+    padding: 1px;
     cursor: pointer;
+}
+
+#submit-sign{
+    text-align: center;
+}
+
+#link-sign{
+    color: #C4D7F2;
+    background-color: #1D1E2C;
+    border: none;
+    text-decoration: underline;
+}
+
+#right img{
+    align-self: center;
+}
+
+#inputs p{
+    color: #C4D7F2;
+    font-size: 14px;
+}
+
+#new-interest {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    padding-left: 10px;
+    margin: auto;
+}
+
+#interest-btn{
+    border: none;
+    border-radius: 20px;
+    font-size: 21.8px;
+    color: black;
+    background-color: #FF958C;
+    margin: auto;
 }
 
 @media only screen and (min-device-width: 601px) {
