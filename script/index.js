@@ -41,6 +41,8 @@ $(document).ready(function() {
 		$("#registered-bts").hide();
 		$("#logout-popup").hide();
 		$('#messages-popup').hide();
+		$("#prf-out-in-menu").hide();
+		$("#log-sign-in-menu").show();
 	}
 	else{
 		$("#pop-up-comments").hide();
@@ -52,6 +54,8 @@ $(document).ready(function() {
 		$("#main-bts").hide();
 		$("#logout-popup").hide();
 		$('#messages-popup').hide();
+		$("#prf-out-in-menu").show();
+		$("#log-sign-in-menu").hide();
 		show_username();
 		upload_data_profile();
 
@@ -107,13 +111,29 @@ $(document).ready(function() {
 			location.reload();
 		})
 	})
+
+	$('#log-out-btn-in-menu').click(function (){
+		$("#logout-popup").show();
+		$("#stay").click(function() {
+			$("#logout-popup").hide();
+		})
+		$("#logout").click(function() {
+			delete_or_create_loged("");
+			location.reload();
+		})
+	})
 	$('#image_mes').click(function () {
 		$('#messages-popup').show();
 	})
+
 	$('#profile-btn').click(function (){
 		window.location="profile.html"
-
 	})
+
+	$('#profile-btn-in-menu').click(function (){
+		window.location="profile.html"
+	})
+	
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();

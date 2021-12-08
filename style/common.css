@@ -157,27 +157,30 @@ header{
 
 #registered-bts{
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
-#registered-bts div{
+#registered-bts img{
+  width: 40px;
+}
+
+#pfp-user{
   margin: auto;
-  display: block;
+  display: flex;
+}
+
+#prf-out{
+  display: none;
 }
 
 #registered-bts button{
   margin: 5px auto;
 }
 .text_username {
-    width: 135px;
-    height: 22px;
-    left: 928px;
-    top: 30px;
-
     font-family: Raleway;
     font-style: italic;
     font-weight: normal;
-    font-size: 21.8023px;
+    font-size: 18px;
     line-height: 26px;
     text-align: center;
 
@@ -186,10 +189,6 @@ header{
 }
 
 .image_message{
-    width: 54px;
-    height: 33px;
-    left: 874px;
-    top: 25px;
     margin:auto;
     cursor: pointer;
 }
@@ -213,12 +212,12 @@ header{
   margin: 5px auto;
 }
 
-#log-sign-in-menu{
+#log-sign-in-menu, #prf-out-in-menu{
   text-align: center;
   margin: 10px auto;
 }
 
-#log-sign-in-menu button{
+#log-sign-in-menu button, #prf-out-in-menu button{
   font-size: 14px;
 }
 
@@ -234,6 +233,7 @@ header{
   width: 31px;
   height: 31px;
 }
+
 
 #search-input{
   margin: auto;
@@ -692,15 +692,29 @@ p#date-chat {
 	#sign-btn{
 		display: block;
 	}
+  #registered-bts img{
+    width: 50px;
+    margin: auto;
+  }
+
+  .text_username{
+    font-size: 20px;
+    margin: auto 5%;
+  }
 
 	#nav-header-menu{
 		position: static;
 		display: flex;
 	}
 
-	#log-sign-in-menu button{
+	#log-sign-in-menu button, #prf-out-in-menu button{
 		display: none;
 	}
+
+  #prf-out{
+    display: block;
+    margin: auto 10px;
+  }
 
 	#search-bar{
 		padding: 0px;
@@ -757,29 +771,26 @@ p#date-chat {
 
     /*----------------------HEADER------------------------------*/
     header button{
-    font-size: 18px;
-    line-height: 28px;
+      font-size: 18px;
+      line-height: 28px;
     }
 
     h1{
-    font-size: 42px;
+      font-size: 42px;
     }
 
     #head-title {
-    font-weight: 800;
-    font-size: 51px;
-    margin: auto auto auto 10px
+      font-weight: 800;
+      font-size: 51px;
+      margin: auto auto auto 10px
     }
 
     #nav-header-menu a{
-    font-size: 20px;
+      font-size: 20px;
     }
 
-    #registered-bts div{
-      margin: auto;
-      display: flex;
-      
-    }
+
+
 
     #search-bar{
         padding-left: 6.00%;
