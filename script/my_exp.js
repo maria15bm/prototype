@@ -1,6 +1,5 @@
 let selected = [];
 let selected_img = [];
-let yes_no = 3;
 
 $(document).ready(function() {
   $("#exp-but").click(function() {
@@ -25,27 +24,18 @@ $(document).ready(function() {
     $("#yes-col").parents(".popup").hide();
   })
 
-  $(".remove-exp").click(function () {
-    $("#delete-exp").css("display", "block");
-  })
-
-  $(".remove").click(function () {
-    $("#delete-coll").css("display", "block");
-  })
-
   $("#add-exp").click(function () {
-    $("#add-experiencee").css("display", "block");
+    $("#add-experiencee").show();
   })
 
   $("#new-coll").click(function () {
     let p = "";
     selected.forEach(item => p += item + "<br />");
     $("#create-col").children("#selected-exp").children("#selected-experiences-p").html(p);
-    $("#create-col").css("display", "block");
+    $("#create-col").show();
   })
 
   var e = new Event("look", {"cancelable":true})
-
   $("#create-exp").submit(function (e) {
   	e.preventDefault();
     var name = $("input[name='name']", this).val();
@@ -160,8 +150,14 @@ function showAddColl (input) {
 }
 
 var inputt = "";
-function delete_exp_coll (input) {
-    inputt = input
+function delete_exp (input) {
+    inputt = input;
+    $("#delete-exp").show();
+}
+
+function delete_coll (input) {
+    inputt = input;
+    $("#delete-coll").show();
 }
 
 var $store_default = "";
@@ -170,26 +166,24 @@ var $store_default_coll = "";
 function delete_good_exp (){
   $store_default = $(inputt).parents(".general-exp")
   var num_exps = $("#block-1").children().length;
-  if (num_exps === 1) {
+  console.log(num_exps)
+  if (num_exps == 2) {
     $("#block-1").css("grid-template-areas", "'mid'");
-    $("no-experiences").css("display", "block");
+    console.log($("no-experiences"));
+    $("#no-experiences").css("display", "block");
   }
-  if (num_exps > 1 && screen.width > 601) {
+  if (num_exps > 3 && screen.width > 601) {
     $("#block-1").css("grid-template-areas", "'left right'");
   }
-
   $(inputt).parents(".general-exp").remove();
-
 }
 
 function delete_good_coll (){
   $store_default_coll = $(inputt).parents(".general-exp")
   var num_exps = $("#block-2").children().length;
-  if (num_exps === 1) {
+  if (num_exps === 2) {
     $("#block-2").css("grid-template-areas", "'mid'");
     $("#no-collections").css("display", "block");
   }
-
   $(inputt).parents(".collection").remove();
-
 }
