@@ -22,20 +22,20 @@
 		<div class="inputs">
 			<form id="create-exp">
 				<div class="grid">
-					<label for="name">Name</label>
+					<label class="exp-label" for="name">Name</label>
 					<input type="text" name="name" value="" class="input-exp col-s-11 col-t-11 col-11" id="form-name">
-					<label for="Description">Description</label>
+					<label class="exp-label" for="Description">Description</label>
 					<input type="text" name="description" value="" class="input-exp col-s-11 col-t-11 col-11" id="form-description">
-					<label for="location">Location</label>
+					<label class="exp-label" for="location">Location</label>
 					<input type="text" name="location" class="input-exp col-s-11 col-t-11 col-11" id="form-location">
 				</div>
 				<div id="input-smaller">
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-1-1">
-						<label for="budget">Budget</label>
+						<label class="exp-label" for="budget">Budget</label>
 						<input type="number" name="budget" value="" class="input-exp col-s-6 col-t-6 col-6" id="form-budget">
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-2-2">
-						<label for="inter1" class="label-int">Interest 1</label>
+						<label class="exp-label" for="inter1" class="label-int">Interest 1</label>
 						<select name="inter1" id="new-interest-1" class="col-s-7 col-t-7 col-7">
 							<option selected disabled hidden></option>
 							<option value="beach">Beach</option>
@@ -52,7 +52,7 @@
 						</select>
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-3-3">
-						<label for="inter2" class="label-int">Interest 2</label>
+						<label class="exp-label" for="inter2" class="label-int">Interest 2</label>
 						<select name="inter2" id="new-interest-2" class="col-s-7 col-t-7 col-7">
 							<option selected disabled hidden></option>
 							<option value="beach">Beach</option>
@@ -69,9 +69,8 @@
 						</select>
 					</div>
 				</div>
-				<label for="image" class="custom-file-upload col-s-10 col-t-10 col-10" id="input-label">
-					<input id="image-input-exp" type="file" class="hidden" name="image"/>
-				  <p class="col-s-7 col-t-7 col-7">Select Image</p>
+					<input type="file" id="hidden-input" class="input-sign" name="change picture">
+					<label for="hidden" id="input-label-hidden">Select picture</label>
 				</label>
 				<button type="submit" name="add-experience" class="submit-but col-s-3 col-t-3 col-3">Submit</button>
 			</form>
@@ -467,10 +466,11 @@
 		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
 			<img id='footer-logo' src="images/logo.png">
 			<h2 id='footer-title'>Travelust</h2>
-			<div id="footer-text" class='col-t-8 col-s-12'>
-				<div id="footer c">© 2021 Travelust</div>
-				<a href="privacy_policy.html">Privacy policy</a>
-			</div>
+		</div>
+
+		<div id="footer-text" class='col-t-8 col-s-12'>
+			<div id="footer c">© 2021 Travelust</div>
+			<a href="privacy_policy.html">Privacy policy</a>
 		</div>
 
 		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
