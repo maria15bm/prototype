@@ -39,7 +39,7 @@
 }
 
 .general-exp {
-	margin: auto;
+	margin: 0px auto auto ;
 	display: flex;
 	position: relative;
 }
@@ -122,7 +122,17 @@ h3 {
 	display: none
 }
 
-#no-experiences, #no-collections {
+#block-1 {
+	display: grid;
+	grid-template-areas: 'left right';
+	grid-column-gap: 20px
+}
+
+#no-collections {
+	display: block;
+}
+
+#default-collection, #no-experiences {
 	display: none
 }
 
@@ -267,9 +277,8 @@ h3 {
 		margin-top: 20px
 	}
 
-	#block-1, #block-2, .general-exp {
+	#block-2, .general-exp {
 		display: grid;
-		grid-template-areas: 'left right'
 	}
 
 	.general-exp {
@@ -281,9 +290,8 @@ h3 {
 
 @media only screen and (min-device-width: 769px) {
   /* For desktop: */
-	#block-1 {
-		display: grid;
-		grid-template-areas: 'left mid right';
+	p {
+		margin: auto;
 	}
 
 	.img-remove {
