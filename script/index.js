@@ -53,6 +53,7 @@ $(document).ready(function() {
 		$("#logout-popup").hide();
 		$('#messages-popup').hide();
 		show_username();
+		upload_data_profile();
 
 	}
 	if ($(window).width() < 601){
@@ -111,6 +112,7 @@ $(document).ready(function() {
 	})
 	$('#profile-btn').click(function (){
 		window.location="profile.html"
+
 	})
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
@@ -284,7 +286,11 @@ function get_values() {
 		let email = $("#email").val();
 		let birth = $("#birth").val();
 		let profile = "images/user.jpg";
-		const interested = $("#interested").val();
+		const interest1= $("#interest-1").val();
+		const interest2 = $("#interest-2").val();
+		const interest3 = $("#interest-3").val();
+		const interest4 = $("#interest-4").val();
+		const interest5 = $("#interest-5").val();
 		const exdays = 190;
 		//check pattern of the inputs
 		var passwregex = /^[a-z0-9]{0,8}$/;
@@ -296,9 +302,11 @@ function get_values() {
 			else {
 				register = email;
 				console.log(register);
-				setCookie(username, password, name, email, profile, birth, interested, exdays);
-				delete_or_create_loged(email);
-				location.reload();
+				if (setCookie(username, password, name, email, profile, birth, interest1, interest2,interest3, interest4, interest5, exdays) === true){
+					delete_or_create_loged(email);
+
+					location.reload();
+				}
 			}
 		}
 		else{
@@ -307,24 +315,28 @@ function get_values() {
 	}
 }
 
-function setCookie(username, password, name, email, image,birth ,interests="", exdays) {
+function setCookie(username, password, name, email, image,birth ,interest1="",interest2="",interest3="",interest4="",interest5="", exdays) {
 	if (getCookie(email) == "") {
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
 		//two cookies one for all data and the other for the image
-		var cvalue = [username, password, name, image,birth, interests];
+		var cvalue = [username, password, name, image,birth,interest1, interest2,interest3,interest4,interest5];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+		return true;
+
 	}
 	else{
 		alert("Email allready registered, log in");
-		location.reload();
+		return false;
+
 	}
 }
 function show_username(){
-	let val=check_loged("loged")
+	let val=check_loged("loged");
 	let values=getCookie(val);
-	$("#username_show").html(values[0]);
+	let data = values.split(",");
+	$("#username_show").html(data[0]);
 }
 
 function check_loged(loged) {
@@ -380,6 +392,7 @@ function get_values2(){
 				//if log in is correct
 				if (val[1] === password) {
 					delete_or_create_loged(mail);
+
 					location.reload();
 				} else {
 					alert("Password not correct");
@@ -390,4 +403,21 @@ function get_values2(){
 			alert("Format incorrect");
 		}
 	}
+}
+
+function upload_data_profile() {
+	let val=check_loged("loged");
+	let values=getCookie(val);
+	let cookie = values.split(",");
+	$("#name_prof").html(cookie[2]);
+	$("#username_prof").html(cookie[0]);
+	$("#email_prof").html(val);
+	$("#birth_prof").html(cookie[4]);
+	$("#int-1").children("a").html(cookie[5]);
+	$("#int-2").children("a").html(cookie[6]);
+	$("#int-3").children("a").html(cookie[7]);
+	$("#int-4").children("a").html(cookie[8]);
+	$("#int-5").children("a").html(cookie[9]);
+	console.log($("#name_prof").html());
+	console.log("a");
 }
