@@ -1,5 +1,6 @@
 let selected = [];
 let selected_img = [];
+let yes_no = 3;
 
 $(document).ready(function() {
   $("#exp-but").click(function() {
@@ -10,16 +11,21 @@ $(document).ready(function() {
     $(".exit-button").parents(".popup").hide();
   })
 
-  $("#no-but-exp").click(function () {
-    $("#no-but-exp").parents(".popup").hide();
-  })
-
   $("#no-but-coll").click(function () {
     $("#no-but-coll").parents(".popup").hide();
   })
 
-  $(".remove-exp").click(function () {
+  $("#yes-exp").click(function (){
+    delete_good_exp();
+    $("#yes-exp").parents(".popup").hide();
+  })
 
+  $("#yes-col").click(function (){
+    delete_good_coll();
+    $("#yes-col").parents(".popup").hide();
+  })
+
+  $(".remove-exp").click(function () {
     $("#delete-exp").css("display", "block");
   })
 
@@ -58,7 +64,10 @@ $(document).ready(function() {
     }
 
     var $experience = $("#default-experience").clone();
-    var num_exps = $(".general-exp").length;
+    if ($experience.length === 0) {
+      $experience = $store_default;
+    }
+    var num_exps = $("#block-1").length;
     if (num_exps > 1 && screen.width > 601) {
       $("#block-1").css("grid-template-areas", "'left right'");
     }
@@ -70,13 +79,15 @@ $(document).ready(function() {
     $experience.css("width", "90%");
     $experience.children("div.top-mark").hide();
     $child.children("h3.title-exp").html(name);
-    $child.children(".interests-exp").children("#interest-11").children("#inter-1").html(int1);
-    $child.children(".interests-exp").children("#interest-12").children("#inter-2").html(int2);
+    $child.children(".interests-exp").children(".interest-1").children(".inter-1").html(int1);
+    $child.children(".interests-exp").children(".interest-2").children(".inter-2").html(int2);
     $child.children(".img-remove").children(".img-title").attr("src", imageURL);
 
-    $experience.appendTo("#block-1");
+    $("#block-1").append($experience);
     $("#no-experiences").hide();
     $("#add-experiencee").hide();
+
+    console.log($experience);
   })
 
   $("#new-collection").submit(function (e) {
@@ -120,11 +131,13 @@ $(document).ready(function() {
 
     $collection.appendTo("#block-2");
     $("#no-collections").hide();
+    $("#create-col").hide();
   })
+
 });
 
 function showAddColl (input) {
-  var name = $(input).parents(".experience-col").children("#default-tit").text();
+  var name = $(input).parents(".experience-col").children(".default-tit").text();
   var image = $(input).parents(".img-remove").children(".img-title").attr("src");
   var importname = 1;
   selected.forEach((item, i) => {
@@ -146,10 +159,42 @@ function showAddColl (input) {
   }
 }
 
-function delete_exp () {
-    $("#delete-exp").show();
+var inputt = "";
+function delete_exp_coll (input) {
+    inputt = input
 }
 
-function delete_coll () {
-    $("#delete-coll").show();
+var $store_default = "";
+var $store_default_coll = "";
+
+function delete_good_exp (){
+  $store_default = $(inputt).parents(".general-exp")
+  var num_exps = $("#block-1").length;
+  if (num_exps === 1) {
+    $("#block-1").css("grid-template-areas", "'mid'");
+    $("no-experiences").show();
+  }
+  if (num_exps > 1 && screen.width > 601) {
+    $("#block-1").css("grid-template-areas", "'left right'");
+  }
+
+  $(inputt).parents(".general-exp").remove();
+
+}
+
+function delete_good_coll (){
+  $store_default_coll = $(inputt).parents(".general-exp")
+  var num_exps = $("#block-2").length;
+  if (num_exps === 1) {
+    $("#block-2").css("grid-template-areas", "'mid'");
+    $("#no-collections").css("display", "block");
+  }
+
+  if (num_exps === 2) {
+    $("#block-2").css("grid-template-areas", "'mid'");
+    $("#no-collections").css("display", "block");
+  }
+
+  $(inputt).parents(".collection").remove();
+
 }

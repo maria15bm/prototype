@@ -128,11 +128,7 @@ h3 {
 	grid-column-gap: 20px
 }
 
-#no-collections {
-	display: block;
-}
-
-#default-collection, #no-experiences {
+#no-experiences, #no-collections {
 	display: none
 }
 
