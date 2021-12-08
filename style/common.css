@@ -494,11 +494,12 @@ footer{
     font-style: italic;
 }
 
-#hidden {
+#hidden, #hidden-input {
     display: none
 }
 
-#input-label {
+#input-label, #input-label-hidden {
+    width: 66.6% !important;
     border: none;
     border-radius: 15px;
     font-size: 14px;
@@ -508,6 +509,8 @@ footer{
     margin: 10px auto;
     padding: 5px 10px;
     cursor: pointer;
+    text-align: center;
+    font-style: italic;
 }
 
 #submit-sign{
@@ -665,7 +668,7 @@ footer{
   height: 30px
 }
 
-p#date-chat {
+p.date-chat {
   text-align: center;
 }
 

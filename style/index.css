@@ -20,6 +20,9 @@ section{
 	fill: #B6244F
 }
 
+#experiences ul{
+	list-style-type: none;
+}
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */

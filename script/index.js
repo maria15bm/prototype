@@ -265,6 +265,12 @@ $(document).ready(function() {
 		}
 	});
 
+	// the top experiences can be sorted (drag and drop)
+	/*let sortable = document.getElementById("experiences");
+	$( function() {
+		$(sortable).sortable();
+	} );*/
+
 	// The images in the experiences are displayed using a photoroulette
 	$(".arr-right").click(function(){
 		let art = $(this).parent();
