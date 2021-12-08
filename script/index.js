@@ -156,6 +156,35 @@ $(document).ready(function() {
 		})
 	})
 
+	$(".exit-button").click(function(){
+    var $id = $(".exit-button").closest(".popup").css("display", "none");
+  })
+
+  $("#change-pfp-begin").click(function () {
+    $("#change-pfp").css("display", "block");
+  })
+
+  $("#mod-but").click(function () {
+    $("#modify-profile").css("display", "block");
+  })
+
+  $("#inter-but").click(function () {
+    $("#change-interests").css("display", "block");
+  })
+
+  $('#new-pfp-in').on('input', function() {
+    var pic = document.getElementById('new-pfp-in').files[0];
+    pic = URL.createObjectURL(pic);
+    $("#pfpp-2").prop("src", pic);
+  });
+
+  var e = new Event("look", {"cancelable":true});
+  $("#new-picture").submit(function(e) {
+		var pic = document.getElementById('new-pfp-in').files[0];
+    pic = URL.createObjectURL(pic);
+    $("#change-pfp").hide();
+  })
+
 	// A close button will close its pop up.
 	$(".close-btn").click(function(){
 		$(this).parent().hide()
