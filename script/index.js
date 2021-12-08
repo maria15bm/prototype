@@ -32,7 +32,7 @@ function deleteFilter(filter){
 
 
 $(document).ready(function() {
-	if (getCookie("loged") === ""){
+	if (check_loged("loged") === ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
@@ -263,7 +263,6 @@ function get_values() {
 		let birth = $("#birth").val();
 		let profile = "images/user.jpg";
 		const interested = $("#interested").val();
-		const terms = $("#Terms").val();
 		const exdays = 190;
 		//check pattern of the inputs
 		var passwregex = /^[a-z0-9]{0,8}$/;
@@ -271,34 +270,43 @@ function get_values() {
 		if (password.match(passwregex) && email.match(emailregex)) {
 			register = email;
 			console.log(register);
-			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
-			delete_or_create_loged(email, exdays);
+			setCookie(username, password, name, email, profile, birth, interested, exdays);
+			delete_or_create_loged(email);
+			location.reload();
 		}
 	}
 }
 
-function setCookie(username, password, name, email, image,birth ,interests="", acepted, exdays) {
-	if (getCookie(email) !== "") {
-		//if mail exist
-		alert("Email allready registered");
-	}
-	else {
+function setCookie(username, password, name, email, image,birth ,interests="", exdays) {
+	if (getCookie(email) == "") {
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
 		//two cookies one for all data and the other for the image
-		var cvalue = [username, password, name, image,birth, interests, acepted];
+		var cvalue = [username, password, name, image,birth, interests];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	else{
+		alert("Email allready registered");
 	}
 }
 
+function check_loged(loged) {
+	getCookie("loged")
+	let value = getCookie("loged");
+	let val = value.split(',');
+	return val[0];
+}
 
-function delete_or_create_loged(email, exdays) {
+function delete_or_create_loged(email) {
 	if (getCookie("loged") !== "") {
-		//if loged exist
-		//borrar cookie
+		let value = getCookie("loged");
+		let val = value.split(',');
+		val[0]= email;
 	}
 	else {
+		//create cookie loged
+		exdays = 50000;
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
@@ -334,13 +342,14 @@ function get_values2(){
 		let val = value.split(',');
 		//if log in is correct
 		if (val[1] === password) {
-			delete_or_create_loged(email, exdays);
+			delete_or_create_loged(mail);
 			const username = val[0];
 			//let profile= photo;
 			$("#username_").html(username);
+			location.reload();
 		}
 	}
 	else {
-		alert("Email not registered");
+		alert("Email not registered, sign in");
 	}
 }
