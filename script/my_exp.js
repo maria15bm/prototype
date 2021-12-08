@@ -1,17 +1,25 @@
+let selected = [];
+let selected_img = [];
+
 $(document).ready(function() {
   $("#exp-but").click(function() {
     window.location.href = "my_exp.html";
   })
 
   $(".exit-button").click(function(){
-    $(".exit-button").closest(".popup").css("display", "none");
+    $(".exit-button").parents(".popup").hide();
   })
 
-  $("no-but").click(function () {
-    $(".exit-button").closest(".popup").css("display", "none");
+  $("#no-but-exp").click(function () {
+    $("#no-but-exp").parents(".popup").hide();
+  })
+
+  $("#no-but-coll").click(function () {
+    $("#no-but-coll").parents(".popup").hide();
   })
 
   $(".remove-exp").click(function () {
+
     $("#delete-exp").css("display", "block");
   })
 
@@ -24,10 +32,124 @@ $(document).ready(function() {
   })
 
   $("#new-coll").click(function () {
+    let p = "";
+    selected.forEach(item => p += item + "<br />");
+    $("#create-col").children("#selected-exp").children("#selected-experiences-p").html(p);
     $("#create-col").css("display", "block");
   })
 
-  $(".b-input").click(function () {
-    $("#new-coll").css("display", "block")
+  var e = new Event("look", {"cancelable":true})
+
+  $("#create-exp").submit(function (e) {
+  	e.preventDefault();
+    var name = $("input[name='name']", this).val();
+    var description = $("input[name='description']", this).val();
+    var location = $("input[name='location']", this).val();
+    var budget = $("input[name='budget']", this).val();
+    var image = document.getElementById('image-input-exp').files[0];
+    var int1 = $('#new-interest-1').find(":selected").text();
+    var int2 = $('#new-interest-2').find(":selected").text();
+
+    if (image != null && name != "" && description != "" && location != "" && budget != 0 && int1 != "" && int2 != "") {
+      imageURL = URL.createObjectURL(image);
+    }
+    else {
+      return -1;
+    }
+
+    var $experience = $("#default-experience").clone();
+    var num_exps = $(".general-exp").length;
+    if (num_exps > 1 && screen.width > 601) {
+      $("#block-1").css("grid-template-areas", "'left right'");
+    }
+    if (num_exps > 2 && screen.width > 769) {
+      $("#block-1").css("grid-template-areas", "'left mid right'");
+    }
+    var $child = $experience.children("div.experience-col");
+    $experience.prop("id", "experience-" + num_exps);
+    $experience.css("width", "90%");
+    $experience.children("div.top-mark").hide();
+    $child.children("h3.title-exp").html(name);
+    $child.children(".interests-exp").children("#interest-11").children("#inter-1").html(int1);
+    $child.children(".interests-exp").children("#interest-12").children("#inter-2").html(int2);
+    $child.children(".img-remove").children(".img-title").attr("src", imageURL);
+
+    $experience.appendTo("#block-1");
+    $("#no-experiences").hide();
+    $("#add-experiencee").hide();
+  })
+
+  $("#new-collection").submit(function (e) {
+    e.preventDefault();
+    var name = $("input[name='coll-name']", this).val();
+    if (name === "" || selected.length === 0) {
+      return -1;
+    }
+
+    var num_colls = $(".general-exp").length;
+    if (num_colls > 1 && screen.width > 601) {
+      $("#block-2").css("grid-template-areas", "'left right'");
+    }
+
+    var $collection = $("#default-collection").clone();
+    $collection.prop("id", "collection-" + num_colls);
+    var $images = $collection.children(".img-remove");
+    console.log(selected_img.length);
+    if (selected_img.length >= 3) {
+      $images.children(".center-img").attr("src", selected_img[0]);
+      $images.children(".side-img-2").attr("src", selected_img[1]);
+      $images.children(".side-img-1").attr("src", selected_img[2]);
+    }
+    if (selected_img.length == 2) {
+      $images.children(".center-img").attr("src", selected_img[0]);
+      $images.children(".side-img-2").attr("src", selected_img[1]);
+      $images.children(".side-img-1").hide();
+      $images.children(".center-img").css("margin", "auto 0px auto auto");
+    }
+    if (selected_img.length == 1) {
+      $images.children(".center-img").attr("src", selected_img[0]);
+      $images.children(".side-img-1").hide();
+      $images.children(".side-img-2").hide();
+      $images.children(".center-img").css("margin", "auto");
+    }
+
+    $collection.children(".title-exp").html(name);
+    let p = "";
+    selected.forEach(item => p += item + "<br />");
+    $collection.children("#experiences-inside").html(p);
+
+    $collection.appendTo("#block-2");
+    $("#no-collections").hide();
   })
 });
+
+function showAddColl (input) {
+  var name = $(input).parents(".experience-col").children("#default-tit").text();
+  var image = $(input).parents(".img-remove").children(".img-title").attr("src");
+  var importname = 1;
+  selected.forEach((item, i) => {
+    if (item === name) {
+      importname = 0;
+      selected = selected.filter(item2 => item2 !== item);
+      selected_img = selected_img.filter(item2 => item2 !== item)
+    }
+  });
+  if (importname === 1) {
+    selected.push(name);
+    selected_img.push(image);
+  }
+  if (selected.length != 0){
+    $("#new-coll").show();
+  }
+  else {
+    $("#new-coll").hide();
+  }
+}
+
+function delete_exp () {
+    $("#delete-exp").show();
+}
+
+function delete_coll () {
+    $("#delete-coll").show();
+}
