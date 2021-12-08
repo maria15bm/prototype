@@ -67,7 +67,7 @@ $(document).ready(function() {
     if ($experience.length === 0) {
       $experience = $store_default;
     }
-    var num_exps = $("#block-1").length;
+    var num_exps = $("#block-1").children().length;
     if (num_exps > 1 && screen.width > 601) {
       $("#block-1").css("grid-template-areas", "'left right'");
     }
@@ -97,7 +97,7 @@ $(document).ready(function() {
       return -1;
     }
 
-    var num_colls = $(".general-exp").length;
+    var num_colls = $("#block-2").children().length;
     if (num_colls > 1 && screen.width > 601) {
       $("#block-2").css("grid-template-areas", "'left right'");
     }
@@ -169,10 +169,10 @@ var $store_default_coll = "";
 
 function delete_good_exp (){
   $store_default = $(inputt).parents(".general-exp")
-  var num_exps = $("#block-1").length;
+  var num_exps = $("#block-1").children().length;
   if (num_exps === 1) {
     $("#block-1").css("grid-template-areas", "'mid'");
-    $("no-experiences").show();
+    $("no-experiences").css("display", "block");
   }
   if (num_exps > 1 && screen.width > 601) {
     $("#block-1").css("grid-template-areas", "'left right'");
@@ -184,13 +184,8 @@ function delete_good_exp (){
 
 function delete_good_coll (){
   $store_default_coll = $(inputt).parents(".general-exp")
-  var num_exps = $("#block-2").length;
+  var num_exps = $("#block-2").children().length;
   if (num_exps === 1) {
-    $("#block-2").css("grid-template-areas", "'mid'");
-    $("#no-collections").css("display", "block");
-  }
-
-  if (num_exps === 2) {
     $("#block-2").css("grid-template-areas", "'mid'");
     $("#no-collections").css("display", "block");
   }
