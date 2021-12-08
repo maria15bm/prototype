@@ -191,6 +191,7 @@ header{
     left: 874px;
     top: 25px;
     margin:auto;
+    cursor: pointer;
 }
 
 #nav-header-menu{

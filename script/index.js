@@ -40,6 +40,7 @@ $(document).ready(function() {
 		$("#registered").hide();
 		$("#registered-bts").hide();
 		$("#logout-popup").hide();
+		$('#messages-popup').hide();
 	}
 	else{
 		$("#pop-up-comments").hide();
@@ -50,6 +51,7 @@ $(document).ready(function() {
 		$("#main").hide();
 		$("#main-bts").hide();
 		$("#logout-popup").hide();
+		$('#messages-popup').hide();
 		show_username();
 
 	}
@@ -103,6 +105,12 @@ $(document).ready(function() {
 			delete_or_create_loged("");
 			location.reload();
 		})
+	})
+	$('#image_mes').click(function () {
+		$('#messages-popup').show();
+	})
+	$('#profile-btn').click(function (){
+		window.location="profile.html"
 	})
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
