@@ -20,8 +20,17 @@
 			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
 			<h2 class='col-s-5 col-6' id='head-title'>Travelust</h2>
 			<nav class='col-s-5 col-3' id='log-sign-frm'>
-				<button class="col-t-5" id='sign-btn'>Sign up</button>
-				<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+				<div id="main-bts">
+					<button class="col-t-5" id='sign-btn'>Sign up</button>
+					<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
+				</div>
+				<div id="registered-bts">
+					<img src="images/email%201.png">
+					<p class="col-s-8" id="username_show"></p>
+					<img src="images/user.png">
+					<button class="col-t-5" id='profile-btn'>Profile</button>
+					<button class="col-s-10 col-t-5" id='log-out-btn'>Log out</button>
+				</div>
 			</nav>
 		</div>
 		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
@@ -81,7 +90,7 @@
 					<img src="images/default_pfp.png" alt="current picture" class="col-s-6">
 					<input type="file" id="hidden" class="input-sign" name="change picture">
 					<label for="hidden" id="input-label">Select picture</label>
-					<!--<label for="interest">Interests</label>
+					<label for="interest">Interests</label>
 					<div id="interests-remove">
 						<div class="interest-to-choose" id="default-interest">
 							<p>Interest 1</p>
@@ -104,7 +113,6 @@
 							<option value="religious">Religious</option>
 						</select>
 						<button id="interest-btn">Add interest</button>
-					-->
 					</form>
 				</div>
 			</form>
@@ -132,11 +140,6 @@
 		<!-- ----------END LOG IN----------- -->
 	</div>
 	<div id="registered">
-		<img src="images/user.png">
-		<p id="username_show"></p>
-		<article class="popup col-s-10" id="profile-page">
-			//show profile page
-		</article>
 
 		<article class="popup col-s-6" id="logout-popup">
 			<div class="title-exit">

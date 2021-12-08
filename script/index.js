@@ -38,6 +38,7 @@ $(document).ready(function() {
 		$("#sign-popup").hide();
 		$("#please-popup").hide();
 		$("#registered").hide();
+		$("#registered-bts").hide();
 		$("#logout").hide();
 	}
 	else{
@@ -47,6 +48,7 @@ $(document).ready(function() {
 		$("#please-popup").hide();
 		$("#registered").show();
 		$("#main").hide();
+		$("#main-bts").hide()
 		$("#logout").hide();
 	}
 	if ($(window).width() < 601){
@@ -88,6 +90,16 @@ $(document).ready(function() {
 		$("#login-popup").hide();
 		$('#submit-sign').click(function() {
 			get_values();
+		})
+	})
+	$('#log-out-btn').click(function (){
+		$("#logout-popup").show();
+		$("#stay").click(function() {
+			$("#logout-popup").hide();
+		})
+		$("#logout").click(function() {
+			delete_or_create_loged("");
+			location.reload();
 		})
 	})
 	$('#link-sign').click(function() {
