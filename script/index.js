@@ -36,6 +36,7 @@ $(document).ready(function() {
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
+		$("#please-popup").hide();
 		$("#registered").hide();
 		$("#logout").hide();
 	}
@@ -43,6 +44,7 @@ $(document).ready(function() {
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
+		$("#please-popup").hide();
 		$("#registered").show();
 		$("#main").hide();
 		$("#logout").hide();
@@ -91,6 +93,22 @@ $(document).ready(function() {
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
+	$('#log-please-btn').click(function() {
+		$("#login-popup").show();
+		$("#sign-popup").hide();
+		$("#please-popup").hide();
+		$('#submit-login').click(function() {
+			get_values2();
+		})
+	})
+	$('#sign-please-btn').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$("#please-popup").hide();
 		$('#submit-sign').click(function() {
 			get_values();
 		})
@@ -190,7 +208,10 @@ $(document).ready(function() {
 			newcomment.append(name, user, com_text);
 			var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
 			$("#comment-sect").append(separator, newcomment);
-		} // else showear el popup ese del login o signup
+		} else {
+			$("#please-popup").show();
+			$("#pop-up-comments").hide();
+		}
 	})
 
 	/* Filter in last experiences. */

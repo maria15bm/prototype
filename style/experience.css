@@ -122,8 +122,20 @@
 }
 
 /*----- POP UP COMMENTS -----*/
+#please-btns{
+  display: flex;
+  padding: 2%;
+  align-self: center;
+  width: 50%;
+}
 
+.please-btn{
+  margin: 2%;
+}
 
+#please-popup p{
+  text-align: center;
+}
 
 #pop-up-comments{
   position: absolute;
