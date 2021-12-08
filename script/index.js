@@ -52,7 +52,7 @@ $(document).ready(function() {
 		$("#main-bts").hide();
 		$("#logout-popup").hide();
 		$('#messages-popup').hide();
-		show_username_profile();
+		show_username();
 		upload_data_profile();
 
 	}
@@ -186,6 +186,21 @@ $(document).ready(function() {
 	update_image(pic);
 	$("#change-pfp").hide();
   })
+
+	$("#form-profile-info").submit(function (e) {
+		e.preventDefault();
+		var new_username = $("#form-username").value();
+		var new_email = $("#form-email").value();
+		var new_birth = $("#form-birth").value();
+		var new_password = $("#form-password").value();
+
+		var list = [new_username, new_email, new_birth, new_password];
+		list.forEach(item => {
+			if (item != ""){
+
+			}
+		});
+	})
 
 	// A close button will close its pop up.
 	$(".close-btn").click(function(){
@@ -363,12 +378,11 @@ function setCookie(username, password, name, email, image,birth ,interest1="",in
 
 	}
 }
-function show_username_profile(){
+function show_username(){
 	let val=check_loged("loged");
 	let values=getCookie(val);
 	let data = values.split(",");
 	$("#username_show").html(data[0]);
-	$("#profile_show").html(data[3]);
 }
 
 function update_image(pic){
@@ -459,12 +473,18 @@ function upload_data_profile() {
 	$("#username_prof").html(cookie[0]);
 	$("#email_prof").html(val);
 	$("#birth_prof").html(cookie[4]);
-	$("#pfp").html(cookie[3]);
 	$("#int-1").children("a").html(cookie[5]);
 	$("#int-2").children("a").html(cookie[6]);
 	$("#int-3").children("a").html(cookie[7]);
 	$("#int-4").children("a").html(cookie[8]);
 	$("#int-5").children("a").html(cookie[9]);
-	console.log($("#name_prof").html());
-	console.log("a");
+
+	var interest = "";
+	for (var i = 5; i < 10; i++) {
+		$interest = $("#default-interest").clone();
+		$interest.children("p").html(cookie[i]);
+		var ii = i - 4;
+		$interest.prop("id", "interest-to-change-" + ii);
+		$("#default-interest").parent().append($interest);
+	}
 }
