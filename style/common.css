@@ -168,6 +168,31 @@ header{
 #registered-bts button{
   margin: 5px auto;
 }
+.text_username {
+    width: 135px;
+    height: 22px;
+    left: 928px;
+    top: 30px;
+
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 21.8023px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #000000;
+    margin: auto;
+}
+
+.image_message{
+    width: 54px;
+    height: 33px;
+    left: 874px;
+    top: 25px;
+    margin:auto;
+    cursor: pointer;
+}
 
 #nav-header-menu{
   position: absolute;
@@ -237,7 +262,8 @@ header{
 }
 
 #myList li a:hover:not(.header) {
-    background-color: #eee;
+    background-color: #FDFCEC;
+    color: #1D1E2C;
 }
 
 /*------ FOOTER -------*/
@@ -313,6 +339,7 @@ footer{
 /*------ TOP EXPERIENCES AND LAST EXPERIENCES -------*/
 #experiences{
     display: inline-block;
+    margin-left: 8.335%;
 }
 
 .experience{
@@ -591,8 +618,8 @@ footer{
 #in-messages {
   height: 30vh;
   overflow: scroll;
-	scrollbar-width: thin;
-	scrollbar-color: rgba(0,0,0,0.25) transparent;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.25) transparent;
 }
 
 .message {
@@ -680,10 +707,26 @@ p#date-chat {
 		background: rgba(196, 215, 242, 0.9);
 	}
 
-	#search-input{
-		display: none;
+    #search-input{
         color: #FDFCEC;
-	}
+        display: flex;
+        background-color: #1D1E2C;
+        width: 70%;
+    }
+
+    /*----------EXPERIENCES-------------*/
+    #experiences{
+        display: flex;
+    }
+
+    #experiences a{
+        margin: 1%;
+    }
+
+    .experience{
+        margin: 0px;
+        flex-direction: column;
+    }
 
 }
 
@@ -741,13 +784,6 @@ p#date-chat {
     #search-bar{
         padding-left: 6.00%;
         padding-right: 2.33%;
-    }
-
-    #search-input{
-        display: flex;
-        background-color: #1D1E2C;
-        width: 70%;
-
     }
 
     #logo, #footer-logo {
@@ -870,5 +906,9 @@ p#date-chat {
 
     .interest{
         padding: 5px 20px;
+    }
+
+    #experiences{
+        display: inline-block;
     }
 }

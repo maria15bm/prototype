@@ -32,14 +32,15 @@ function deleteFilter(filter){
 
 
 $(document).ready(function() {
-	if (check_loged("loged") === ""){
+	if (check_loged("loged") == ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
 		$("#please-popup").hide();
 		$("#registered").hide();
 		$("#registered-bts").hide();
-		$("#logout").hide();
+		$("#logout-popup").hide();
+		$('#messages-popup').hide();
 	}
 	else{
 		$("#pop-up-comments").hide();
@@ -48,8 +49,11 @@ $(document).ready(function() {
 		$("#please-popup").hide();
 		$("#registered").show();
 		$("#main").hide();
-		$("#main-bts").hide()
-		$("#logout").hide();
+		$("#main-bts").hide();
+		$("#logout-popup").hide();
+		$('#messages-popup').hide();
+		show_username();
+
 	}
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
@@ -102,6 +106,12 @@ $(document).ready(function() {
 			location.reload();
 		})
 	})
+	$('#image_mes').click(function () {
+		$('#messages-popup').show();
+	})
+	$('#profile-btn').click(function (){
+		window.location="profile.html"
+	})
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
@@ -132,14 +142,14 @@ $(document).ready(function() {
 	$('#log-in-menu-btn').click(function() {
 		$("#login-popup").show();
 		$("#sign-popup").hide();
-		$('#submit-login').click(function() {
+		$('#profile-info').submit(function() {
 			get_values2();
 		})
 	})
 	$('#sign-in-menu-btn').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
-		$('#submit-sign').click(function() {
+		$('#signup-popup').submit(function() {
 			get_values();
 		})
 	})
@@ -280,11 +290,19 @@ function get_values() {
 		var passwregex = /^[a-z0-9]{0,8}$/;
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
-			register = email;
-			console.log(register);
-			setCookie(username, password, name, email, profile, birth, interested, exdays);
-			delete_or_create_loged(email);
-			location.reload();
+			if (password1 == "" || password2 == "" || name == "" || username == "" || email==""){
+				alert("Some required fields are empty");
+			}
+			else {
+				register = email;
+				console.log(register);
+				setCookie(username, password, name, email, profile, birth, interested, exdays);
+				delete_or_create_loged(email);
+				location.reload();
+			}
+		}
+		else{
+			alert("Format incorrect");
 		}
 	}
 }
@@ -299,32 +317,31 @@ function setCookie(username, password, name, email, image,birth ,interests="", e
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
 	}
 	else{
-		alert("Email allready registered");
+		alert("Email allready registered, log in");
+		location.reload();
 	}
+}
+function show_username(){
+	let val=check_loged("loged")
+	let values=getCookie(val);
+	$("#username_show").html(values[0]);
 }
 
 function check_loged(loged) {
-	getCookie("loged")
-	let value = getCookie("loged");
+	let value = getCookie(loged);
 	let val = value.split(',');
 	return val[0];
 }
 
 function delete_or_create_loged(email) {
-	if (getCookie("loged") !== "") {
-		let value = getCookie("loged");
-		let val = value.split(',');
-		val[0]= email;
-	}
-	else {
-		//create cookie loged
-		exdays = 50000;
-		const d = new Date();
-		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-		let expires = "expires=" + d.toUTCString();
-		let loged = "loged";
-		document.cookie = loged + "=" + email + ";" + expires + ";path=/";
-	}
+	//create cookie loged
+	exdays = 50000;
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	let loged = "loged";
+	document.cookie = loged + "=" + email + ";" + expires + ";path=/";
+
 }
 
 function getCookie(cname) {
@@ -347,21 +364,30 @@ function getCookie(cname) {
 
 //in log in
 function get_values2(){
-	var mail = $("#email_login").val();
-	const password = $("#password_login").val();
+	var mail = $("#email-login").val();
+	const password = $("#password-login").val();
 	const value=getCookie(mail);
-	if (value !== "") {
-		let val = value.split(',');
-		//if log in is correct
-		if (val[1] === password) {
-			delete_or_create_loged(mail);
-			const username = val[0];
-			//let profile= photo;
-			$("#username_").html(username);
-			location.reload();
-		}
+	if (password == "" || mail == "" ) {
+		alert("Some required fields are empty");
 	}
-	else {
-		alert("Email not registered, sign in");
+	else{
+		var passwregex = /^[a-z0-9]{0,8}$/;
+		if (password.match(passwregex)){
+			if (value === "") {
+				alert("Email not registered, sign in");
+			} else {
+				let val = value.split(',');
+				//if log in is correct
+				if (val[1] === password) {
+					delete_or_create_loged(mail);
+					location.reload();
+				} else {
+					alert("Password not correct");
+				}
+			}
+		}
+		else {
+			alert("Format incorrect");
+		}
 	}
 }
