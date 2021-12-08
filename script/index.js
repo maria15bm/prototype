@@ -195,9 +195,31 @@ $(document).ready(function() {
 		var new_password = $("#form-password").value();
 
 		var list = [new_username, new_email, new_birth, new_password];
-		list.forEach(item => {
+		list.forEach((item,i) => {
 			if (item != ""){
-
+				let val = check_loged("loged");
+				let values=getCookie(val);
+				let data = values.split(",");
+				const exdays = 190;
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				if (i==0){
+					var cvalue = [new_username,data[1],data[2], val,data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==3){
+					var cvalue = [data[0],new_password ,data[2], val,data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==1){
+					var cvalue = [data[0],data[1] ,data[2], new_email,data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==2){
+					var cvalue = [data[0],data[1] ,data[2], val,data[3], data[4],new_birth,data[6],data[7],data[8],data[9]];
+					document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+				}
 			}
 		});
 	})
