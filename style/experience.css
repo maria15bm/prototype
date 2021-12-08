@@ -105,6 +105,7 @@
 #like-img{
   height: 32px;
   margin: auto;
+  cursor: pointer;
 }
 
 #see-comments{
@@ -121,8 +122,20 @@
 }
 
 /*----- POP UP COMMENTS -----*/
+#please-btns{
+  display: flex;
+  padding: 2%;
+  align-self: center;
+  width: 50%;
+}
 
+.please-btn{
+  margin: 2%;
+}
 
+#please-popup p{
+  text-align: center;
+}
 
 #pop-up-comments{
   position: absolute;
@@ -208,6 +221,14 @@
 
   h1{
     margin-top: 30px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  h3{
+    font-size: 24px;
   }
 
   /*HEADER*/
@@ -333,8 +354,9 @@
   }
 
   .interest p{
+    margin: auto;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 22px;
   }
 
   .obj1, .obj2, .obj3{

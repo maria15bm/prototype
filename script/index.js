@@ -31,27 +31,36 @@ function deleteFilter(filter){
 
 
 
-
-
 $(document).ready(function() {
-	if (getCookie("loged") === ""){
+	if (check_loged("loged") === ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
+		$("#please-popup").hide();
 		$("#registered").hide();
+		$("#registered-bts").hide();
 		$("#logout").hide();
 	}
 	else{
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
 		$("#sign-popup").hide();
+		$("#please-popup").hide();
 		$("#registered").show();
 		$("#main").hide();
+		$("#main-bts").hide()
 		$("#logout").hide();
 	}
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
+
+	$("#search-input").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myList li").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
 
 	// Show always the navigation menu for tablet and desktop
 	$(window).resize(function(){
@@ -83,9 +92,35 @@ $(document).ready(function() {
 			get_values();
 		})
 	})
+	$('#log-out-btn').click(function (){
+		$("#logout-popup").show();
+		$("#stay").click(function() {
+			$("#logout-popup").hide();
+		})
+		$("#logout").click(function() {
+			delete_or_create_loged("");
+			location.reload();
+		})
+	})
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
+	$('#log-please-btn').click(function() {
+		$("#login-popup").show();
+		$("#sign-popup").hide();
+		$("#please-popup").hide();
+		$('#submit-login').click(function() {
+			get_values2();
+		})
+	})
+	$('#sign-please-btn').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$("#please-popup").hide();
 		$('#submit-sign').click(function() {
 			get_values();
 		})
@@ -117,6 +152,18 @@ $(document).ready(function() {
 	$("#see-comments").click(function(){
 		$("#pop-up-comments").show()
 	})
+
+	$("#myList li a").hide();
+	//search bar
+	$("#search-input").on("keyup", function() {
+		if($("#search-input").val() !== ""){
+			$("#myList li a").filter(function() {
+				$(this).show();
+			});
+		}else{
+			$("#myList li a").hide();
+		}
+	});
 
 	// The images in the experiences are displayed using a photoroulette
 	$(".arr-right").click(function(){
@@ -161,18 +208,22 @@ $(document).ready(function() {
 
 	/* Comments posting when chicking the send button. */
 	$(".send-btn").click(function(){
-		/* Check if sign up */
-		var comment_val = $(this).parent().children('input').val();
-		/* Get name and user from cookies. */
-		var user_val = 'userx'
-		var name_val = 'Name'
-		var newcomment = $("<article class='comment col-s-11'></article>");
-		var name = $("<p class='col-s-6'></p>").html(name_val);
-		var user = $("<h3 class='col-s-6'></h3>").html('@'+user_val);
-		var com_text = $("<p class='col-s-12'></p>").html(comment_val);
-		newcomment.append(name, user, com_text);
-		var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
-		$("#comment-sect").append(separator, newcomment);
+		if (getCookie("loged") !== "") {
+			var comment_val = $(this).parent().children('input').val();
+			/* Get name and user from cookies. */
+			var user_val = 'userx'
+			var name_val = 'Name'
+			var newcomment = $("<article class='comment col-s-11'></article>");
+			var name = $("<p class='col-s-6'></p>").html(name_val);
+			var user = $("<h3 class='col-s-6'></h3>").html('@'+user_val);
+			var com_text = $("<p class='col-s-12'></p>").html(comment_val);
+			newcomment.append(name, user, com_text);
+			var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
+			$("#comment-sect").append(separator, newcomment);
+		} else {
+			$("#please-popup").show();
+			$("#pop-up-comments").hide();
+		}
 	})
 
 	/* Filter in last experiences. */
@@ -187,6 +238,22 @@ $(document).ready(function() {
 			button.attr('onclick', 'deleteFilter(this)');
 			newfilter.append(newval, button);
 			$("#filters").append(newfilter);
+		}
+	})
+
+	$("#like-img").click(function(){
+		if (getCookie("loged") !== "") {
+			var value = parseInt($(this).parent().children("h4").html());
+			if ($(this).attr("src")==="images/like.png"){
+				value -=1;
+				$(this).attr("src", "images/like_sin_dar.png");
+			} else {
+				value+=1;
+				$(this).attr("src", "images/like.png");
+			}
+			$(this).parent().children("h4").html(value.toString());
+		} else{
+			$("#please-popup").show();
 		}
 	})
 })
@@ -208,7 +275,6 @@ function get_values() {
 		let birth = $("#birth").val();
 		let profile = "images/user.jpg";
 		const interested = $("#interested").val();
-		const terms = $("#Terms").val();
 		const exdays = 190;
 		//check pattern of the inputs
 		var passwregex = /^[a-z0-9]{0,8}$/;
@@ -216,34 +282,43 @@ function get_values() {
 		if (password.match(passwregex) && email.match(emailregex)) {
 			register = email;
 			console.log(register);
-			setCookie(username, password, name, email, profile, birth, interested, terms, exdays);
-			delete_or_create_loged(email, exdays);
+			setCookie(username, password, name, email, profile, birth, interested, exdays);
+			delete_or_create_loged(email);
+			location.reload();
 		}
 	}
 }
 
-function setCookie(username, password, name, email, image,birth ,interests="", acepted, exdays) {
-	if (getCookie(email) !== "") {
-		//if mail exist
-		alert("Email allready registered");
-	}
-	else {
+function setCookie(username, password, name, email, image,birth ,interests="", exdays) {
+	if (getCookie(email) == "") {
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
 		//two cookies one for all data and the other for the image
-		var cvalue = [username, password, name, image,birth, interests, acepted];
+		var cvalue = [username, password, name, image,birth, interests];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	else{
+		alert("Email allready registered");
 	}
 }
 
+function check_loged(loged) {
+	getCookie("loged")
+	let value = getCookie("loged");
+	let val = value.split(',');
+	return val[0];
+}
 
-function delete_or_create_loged(email, exdays) {
+function delete_or_create_loged(email) {
 	if (getCookie("loged") !== "") {
-		//if loged exist
-		//borrar cookie
+		let value = getCookie("loged");
+		let val = value.split(',');
+		val[0]= email;
 	}
 	else {
+		//create cookie loged
+		exdays = 50000;
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
@@ -279,13 +354,14 @@ function get_values2(){
 		let val = value.split(',');
 		//if log in is correct
 		if (val[1] === password) {
-			delete_or_create_loged(email, exdays);
+			delete_or_create_loged(mail);
 			const username = val[0];
 			//let profile= photo;
 			$("#username_").html(username);
+			location.reload();
 		}
 	}
 	else {
-		alert("Email not registered");
+		alert("Email not registered, sign in");
 	}
 }
