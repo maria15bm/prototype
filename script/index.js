@@ -180,10 +180,26 @@ $(document).ready(function() {
 
   var e = new Event("look", {"cancelable":true});
   $("#new-picture").submit(function(e) {
+		e.preventDefault();
 		var pic = document.getElementById('new-pfp-in').files[0];
     pic = URL.createObjectURL(pic);
     $("#change-pfp").hide();
   })
+
+	$("#form-profile-info").submit(function (e) {
+		e.preventDefault();
+		var new_username = $("#form-username").value();
+		var new_email = $("#form-email").value();
+		var new_birth = $("#form-birth").value();
+		var new_password = $("#form-password").value();
+
+		var list = [new_username, new_email, new_birth, new_password];
+		list.forEach(item => {
+			if (item != ""){
+
+			}
+		});
+	})
 
 	// A close button will close its pop up.
 	$(".close-btn").click(function(){
@@ -447,6 +463,13 @@ function upload_data_profile() {
 	$("#int-3").children("a").html(cookie[7]);
 	$("#int-4").children("a").html(cookie[8]);
 	$("#int-5").children("a").html(cookie[9]);
-	console.log($("#name_prof").html());
-	console.log("a");
+
+	var interest = "";
+	for (var i = 5; i < 10; i++) {
+		$interest = $("#default-interest").clone();
+		$interest.children("p").html(cookie[i]);
+		var ii = i - 4;
+		$interest.prop("id", "interest-to-change-" + ii);
+		$("#default-interest").parent().append($interest);
+	}
 }
