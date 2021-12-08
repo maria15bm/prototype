@@ -52,7 +52,7 @@ $(document).ready(function() {
 		$("#main-bts").hide();
 		$("#logout-popup").hide();
 		$('#messages-popup').hide();
-		show_username();
+		show_username_profile();
 		upload_data_profile();
 
 	}
@@ -180,9 +180,11 @@ $(document).ready(function() {
 
   var e = new Event("look", {"cancelable":true});
   $("#new-picture").submit(function(e) {
-		var pic = document.getElementById('new-pfp-in').files[0];
-    pic = URL.createObjectURL(pic);
-    $("#change-pfp").hide();
+	  var pic = document.getElementById('new-pfp-in').files[0];
+	pic = URL.createObjectURL(pic);
+	console.log("pic");
+	update_image(pic);
+	$("#change-pfp").hide();
   })
 
 	// A close button will close its pop up.
@@ -361,11 +363,26 @@ function setCookie(username, password, name, email, image,birth ,interest1="",in
 
 	}
 }
-function show_username(){
+function show_username_profile(){
 	let val=check_loged("loged");
 	let values=getCookie(val);
 	let data = values.split(",");
 	$("#username_show").html(data[0]);
+	$("#profile_show").html(data[3]);
+}
+
+function update_image(pic){
+	let val=check_loged("loged");
+	let values=getCookie(val);
+	let data = values.split(",");
+	const exdays = 190;
+	const d = new Date();
+	console.log(pic);
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	//two cookies one for all data and the other for the image
+	var cvalue = [data[0],data[1],data[2], val,pic, data[4],data[5],data[6],data[7],data[8],data[9]];
+	document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function check_loged(loged) {
@@ -442,6 +459,7 @@ function upload_data_profile() {
 	$("#username_prof").html(cookie[0]);
 	$("#email_prof").html(val);
 	$("#birth_prof").html(cookie[4]);
+	$("#pfp").html(cookie[3]);
 	$("#int-1").children("a").html(cookie[5]);
 	$("#int-2").children("a").html(cookie[6]);
 	$("#int-3").children("a").html(cookie[7]);
