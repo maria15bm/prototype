@@ -53,6 +53,7 @@ $(document).ready(function() {
 			$('#nav-header-menu').hide();
 	}
 
+
 	// Show always the navigation menu for tablet and desktop
 	$(window).resize(function(){
 		if ($(window).width() > 601){
@@ -161,18 +162,19 @@ $(document).ready(function() {
 
 	/* Comments posting when chicking the send button. */
 	$(".send-btn").click(function(){
-		/* Check if sign up */
-		var comment_val = $(this).parent().children('input').val();
-		/* Get name and user from cookies. */
-		var user_val = 'userx'
-		var name_val = 'Name'
-		var newcomment = $("<article class='comment col-s-11'></article>");
-		var name = $("<p class='col-s-6'></p>").html(name_val);
-		var user = $("<h3 class='col-s-6'></h3>").html('@'+user_val);
-		var com_text = $("<p class='col-s-12'></p>").html(comment_val);
-		newcomment.append(name, user, com_text);
-		var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
-		$("#comment-sect").append(separator, newcomment);
+		if (getCookie("loged") !== "") {
+			var comment_val = $(this).parent().children('input').val();
+			/* Get name and user from cookies. */
+			var user_val = 'userx'
+			var name_val = 'Name'
+			var newcomment = $("<article class='comment col-s-11'></article>");
+			var name = $("<p class='col-s-6'></p>").html(name_val);
+			var user = $("<h3 class='col-s-6'></h3>").html('@'+user_val);
+			var com_text = $("<p class='col-s-12'></p>").html(comment_val);
+			newcomment.append(name, user, com_text);
+			var separator = $("<img class='separator col-s-11' src='images/separator_comments.png'>");
+			$("#comment-sect").append(separator, newcomment);
+		} // else showear el popup ese del login o signup
 	})
 
 	/* Filter in last experiences. */
@@ -188,6 +190,20 @@ $(document).ready(function() {
 			newfilter.append(newval, button);
 			$("#filters").append(newfilter);
 		}
+	})
+
+	$("#like-img").click(function(){
+		if (getCookie("loged") !== "") {
+			var value = parseInt($(this).parent().children("h4").html());
+			if ($(this).attr("src")==="images/like.png"){
+				value -=1;
+				$(this).attr("src", "images/like_sin_dar.png");
+			} else {
+				value+=1;
+				$(this).attr("src", "images/like.png");
+			}
+			$(this).parent().children("h4").html(value.toString());
+		} // else show el popup del login
 	})
 })
 
