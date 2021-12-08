@@ -31,8 +31,6 @@ function deleteFilter(filter){
 
 
 
-
-
 $(document).ready(function() {
 	if (getCookie("loged") === ""){
 		$("#pop-up-comments").hide();
@@ -52,6 +50,13 @@ $(document).ready(function() {
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
+
+	$("#search-input").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myList li").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
 
 	// Show always the navigation menu for tablet and desktop
 	$(window).resize(function(){
@@ -117,6 +122,18 @@ $(document).ready(function() {
 	$("#see-comments").click(function(){
 		$("#pop-up-comments").show()
 	})
+
+	$("#myList li a").hide();
+	//search bar
+	$("#search-input").on("keyup", function() {
+		if($("#search-input").val() !== ""){
+			$("#myList li a").filter(function() {
+				$(this).show();
+			});
+		}else{
+			$("#myList li a").hide();
+		}
+	});
 
 	// The images in the experiences are displayed using a photoroulette
 	$(".arr-right").click(function(){
