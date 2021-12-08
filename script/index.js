@@ -176,6 +176,74 @@ $(document).ready(function() {
 		})
 	})
 
+	$(".exit-button").click(function(){
+    var $id = $(".exit-button").closest(".popup").css("display", "none");
+  })
+
+  $("#change-pfp-begin").click(function () {
+    $("#change-pfp").css("display", "block");
+  })
+
+  $("#mod-but").click(function () {
+    $("#modify-profile").css("display", "block");
+  })
+
+  $("#inter-but").click(function () {
+    $("#change-interests").css("display", "block");
+  })
+
+  $('#new-pfp-in').on('input', function() {
+    var pic = document.getElementById('new-pfp-in').files[0];
+    pic = URL.createObjectURL(pic);
+    $("#pfpp-2").prop("src", pic);
+  });
+
+  var e = new Event("look", {"cancelable":true});
+  $("#new-picture").submit(function(e) {
+	  var pic = document.getElementById('new-pfp-in').files[0];
+	pic = URL.createObjectURL(pic);
+	console.log("pic");
+	update_image(pic);
+	$("#change-pfp").hide();
+  })
+
+	$("#form-profile-info").submit(function (e) {
+		e.preventDefault();
+		var new_username = $("#form-username").value();
+		var new_email = $("#form-email").value();
+		var new_birth = $("#form-birth").value();
+		var new_password = $("#form-password").value();
+
+		var list = [new_username, new_email, new_birth, new_password];
+		list.forEach((item,i) => {
+			if (item != ""){
+				let val = check_loged("loged");
+				let values=getCookie(val);
+				let data = values.split(",");
+				const exdays = 190;
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				if (i==0){
+					var cvalue = [new_username,data[1],data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==3){
+					var cvalue = [data[0],new_password ,data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==1){
+					var cvalue = [data[0],data[1] ,data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					document.cookie = new_email + "=" + cvalue + ";" + expires + ";path=/";
+				}
+				if (i==2){
+					var cvalue = [data[0],data[1] ,data[2],data[3], data[4],new_birth,data[6],data[7],data[8],data[9]];
+					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
+				}
+			}
+		});
+	})
+
 	// A close button will close its pop up.
 	$(".close-btn").click(function(){
 		$(this).parent().hide()
@@ -359,6 +427,20 @@ function show_username(){
 	$("#username_show").html(data[0]);
 }
 
+function update_image(pic){
+	let val=check_loged("loged");
+	let values=getCookie(val);
+	let data = values.split(",");
+	const exdays = 190;
+	const d = new Date();
+	console.log(pic);
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	//two cookies one for all data and the other for the image
+	var cvalue = [data[0],data[1],data[2],pic, data[4],data[5],data[6],data[7],data[8],data[9]];
+	document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 function check_loged(loged) {
 	let value = getCookie(loged);
 	let val = value.split(',');
@@ -438,6 +520,13 @@ function upload_data_profile() {
 	$("#int-3").children("a").html(cookie[7]);
 	$("#int-4").children("a").html(cookie[8]);
 	$("#int-5").children("a").html(cookie[9]);
-	console.log($("#name_prof").html());
-	console.log("a");
+
+	var interest = "";
+	for (var i = 5; i < 10; i++) {
+		$interest = $("#default-interest").clone();
+		$interest.children("p").html(cookie[i]);
+		var ii = i - 4;
+		$interest.prop("id", "interest-to-change-" + ii);
+		$("#default-interest").parent().append($interest);
+	}
 }
