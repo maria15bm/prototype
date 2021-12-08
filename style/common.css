@@ -138,12 +138,31 @@ header{
   margin: auto;
 }
 
+#main-bts{
+  display: flex;
+  flex: wrap;
+}
+
 #sign-btn{
   display: none;
 }
 
 #log-btn{
   margin: auto;
+}
+
+#registered-bts{
+  display: flex;
+  flex: wrap;
+}
+
+#registered-bts div{
+  margin: auto;
+  display: block;
+}
+
+#registered-bts button{
+  margin: 5px auto;
 }
 
 #nav-header-menu{
@@ -585,6 +604,12 @@ footer{
 
     #nav-header-menu a{
     font-size: 20px;
+    }
+
+    #registered-bts div{
+      margin: auto;
+      display: flex;
+      
     }
 
     #search-bar{
