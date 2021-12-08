@@ -240,7 +240,9 @@ $(document).ready(function() {
 				$(this).attr("src", "images/like.png");
 			}
 			$(this).parent().children("h4").html(value.toString());
-		} // else show el popup del login
+		} else{
+			$("#please-popup").show();
+		}
 	})
 })
 
