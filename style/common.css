@@ -436,7 +436,7 @@ footer{
 }
 
 .input-sign {
-    margin-left: 5%;
+    margin: auto;
     height: 30px;
     padding-left: 10px;
     border-radius: 20px;
@@ -447,8 +447,9 @@ footer{
 .profile-info label {
     color: #FF958C;
     font-style: italic;
-    line-height: 40px;
-    margin-left: 15%;
+    line-height: 20px;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .profile-info {
@@ -464,6 +465,11 @@ footer{
 #right {
     display: flex;
     flex-flow: column;
+}
+
+#right div{
+  margin: 10px auto;
+  text-align: center;
 }
 
 #signup-popup{
@@ -486,8 +492,6 @@ footer{
 .sign-info label {
     color: #FF958C;
     font-style: italic;
-    line-height: 40px;
-    margin-left: 3%;
 }
 
 #hidden {
@@ -497,11 +501,12 @@ footer{
 #input-label {
     border: none;
     border-radius: 15px;
-    font-size: 20px;
-    color: black;
+    font-size: 14px;
+    text-align: center;
+    color: #1D1E2C;
     background-color: #FF958C;
-    margin: auto;
-    padding: 1px;
+    margin: 10px auto;
+    padding: 5px 10px;
     cursor: pointer;
 }
 
