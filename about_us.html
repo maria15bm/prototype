@@ -14,272 +14,268 @@
     <title>Travelust</title>
 </head>
 <body>
-	<!-- ----------HEADER----------- -->
-
 	<header class="clearfix">
-		<div id='header-main' class='col-t-12 col-s-12 col-12'>
-			<img class='col-s-2' id='show-menu' src="images/show-menu.png" alt="display menu">
-			<img class="col-s-2 col-3" id='logo' src="images/logo.png" alt="travelust logo">
-			<h2 class='col-s-5 col-4' id='head-title'>Travelust</h2>
-			<nav class='col-s-5 col-6' id='log-sign-frm'>
-				<div id="main-bts" class="col-s-12">
-					<button class="col-t-5" id='sign-btn'>Sign up</button>
-					<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
-				</div>
-				<div id="registered-bts" class="col-s-12">
-					<div id="pfp-user" class="col-s-9 col-t-7 col-3">
-						<img src="images/email%201.png" class="image_message" id="image_mes" alt="letter logo for messages">
-						<p class="text_username" id="username_show"></p>
-						<img src="images/user.png" alt="user default image">
+			<div id='header-main' class='col-t-12 col-s-12 col-12'>
+				<img class='col-s-2' id='show-menu' src="images/show-menu.png" alt="display menu">
+				<img class="col-s-2 col-3" id='logo' src="images/logo.png" alt="travelust logo">
+				<h2 class='col-s-5 col-4' id='head-title'>Travelust</h2>
+				<nav class='col-s-5 col-6' id='log-sign-frm'>
+					<div id="main-bts" class="col-s-12">
+						<button class="col-t-5" id='sign-btn'>Sign up</button>
+						<button class="col-s-10 col-t-5" id='log-btn'>Log in</button>
 					</div>
-					<div id="prf-out" class="col-t-3 col-6">
-						<button class="col-s-12 col-5" id='profile-btn'>Profile</button>
-						<button class="col-s-12 col-5" id='log-out-btn'>Log out</button>
+					<div id="registered-bts" class="col-s-12">
+						<div id="pfp-user" class="col-s-9 col-t-7 col-3">
+							<img src="images/email%201.png" class="image_message" id="image_mes" alt="letter logo for messages">
+							<p class="text_username" id="username_show"></p>
+							<img src="images/user.png" alt="user default image">
+						</div>
+						<div id="prf-out" class="col-t-3 col-6">
+							<button class="col-s-12 col-5" id='profile-btn'>Profile</button>
+							<button class="col-s-12 col-5" id='log-out-btn'>Log out</button>
+						</div>
 					</div>
-				</div>
-			</nav>
-		</div>
-		<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
-			<a href="index.html">Home</a>
-			<a href="about_us.html">About</a>
-			<a href="last_experiences.html">Experiences</a>
-			<a href="plan.html">Plan</a>
-			<a href="top_users.html">Top users</a>
-			<nav id='log-sign-in-menu'>
-				<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
-				<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
-			</nav>
-			<nav id="prf-out-in-menu">
-				<button class="col-s-5" id='profile-btn-in-menu'>Profile</button>
-				<button class="col-s-5" id='log-out-btn-in-menu'>Log out</button>
-			</nav>
-		</nav>
-		<nav id='search-bar' class='col-t-3 col-4'>
-			<label for="search-input">Search input</label>
-			<input type="text" id='search-input' name="search-input">
-			<img id='search-lupa' src="images/search_lupa.png" alt="magnifying glass">
-		</nav>
-	</header>
-	<ul id="myList" class="col-4">
-		<li><a href="last_experiences.html">Experiences</a></li>
-		<li><a href="top_users.html">Users</a></li>
-		<li><a href="experience_bali.html">Sacred monkey forest, Bali</a></li>
-		<li><a href="experience_prague.html">City tour, Prague</a></li>
-		<li><a href="experience_cies.html">Trip to Cies islands, Vigo</a></li>
-		<li><a href="about_us.html">About us</a></li>
-		<li><a href="privacy_policy.html">Privacy policy, terms, conditions</a></li>
-		<li><a href="index.html">Home, main page</a></li>
-		<li><a href="index.html">Map</a></li>
-		<li><a href="plan.html">Plan a trip</a></li>
-	</ul>
-	<!-- ----------END HEADER----------- -->
-
-	<!-- ----------POP UPS----------- -->
-	<div id="main">
-		<!-- ----------SIGN UP----------- -->
-		<article class="popup col-s-7" id="sign-popup">
-			<div class="title-exit">
-				<h3>Create new account</h3>
-				<button type="button" name="exit" class="exit-button">x</button>
+				</nav>
 			</div>
-			<form class="sign-info profile-info" id="signup-popup">
-				<div id="left" class="col-s-8">
-					<label for="name">Name</label>
-					<input type="text" name="name" value="" class="input-sign col-s-8" id="name" required>
-					<label for="username">Username</label>
-					<input type="text" name="username" value="" class="input-sign col-s-8" id="username" required>
-					<label for="email">Email Address</label>
-					<input type="text" name="email" value="" class="input-sign col-s-8" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]" required>
-					<label for="birth">New Birth Date</label>
-					<input type="date" name="birth" class="input-sign col-s-8" id="birth">
-					<label for="password">Password</label>
-					<input type="password" name="password" value="" class="input-sign col-s-8" id="password" pattern="[A-Za-z0-9]{4,8}" required>
-					<label for="password-confirm">Confirm Password</label>
-					<input type="password" name="password" value="" class="input-sign col-s-8" id="password-confirm" pattern="[A-Za-z0-9]{4,8}" required>
+			<nav class='col-s-5 col-t-9 col-7' id='nav-header-menu'>
+				<a href="index.html">Home</a>
+				<a href="about_us.html">About</a>
+				<a href="last_experiences.html">Experiences</a>
+				<a href="plan.html">Plan</a>
+				<a href="top_users.html">Top users</a>
+				<nav id='log-sign-in-menu'>
+					<button class="col-s-5" id='sign-in-menu-btn'>Sign up</button>
+					<button class="col-s-5" id='log-in-menu-btn'>Log in</button>
+				</nav>
+				<nav id="prf-out-in-menu">
+					<button class="col-s-5" id='profile-btn-in-menu'>Profile</button>
+					<button class="col-s-5" id='log-out-btn-in-menu'>Log out</button>
+				</nav>
+			</nav>
+			<nav id='search-bar' class='col-t-3 col-4'>
+				<label for="search-input">Search input</label>
+				<input type="text" id='search-input' name="search-input">
+				<img id='search-lupa' src="images/search_lupa.png" alt="magnifying glass">
+			</nav>
+		</header>
+		<ul id="myList" class="col-4">
+			<li><a href="last_experiences.html">Experiences</a></li>
+			<li><a href="top_users.html">Users</a></li>
+			<li><a href="experience_bali.html">Sacred monkey forest, Bali</a></li>
+			<li><a href="experience_prague.html">City tour, Prague</a></li>
+			<li><a href="experience_cies.html">Trip to Cies islands, Vigo</a></li>
+			<li><a href="about_us.html">About us</a></li>
+			<li><a href="privacy_policy.html">Privacy policy, terms, conditions</a></li>
+			<li><a href="index.html">Home, main page</a></li>
+			<li><a href="index.html">Map</a></li>
+			<li><a href="plan.html">Plan a trip</a></li>
+		</ul>
+		<!-- END HEADER -->
+
+		<!-- POP UP -->
+		<div id="main">
+			<!-- SIGN UP -->
+			<article class="popup col-s-7" id="sign-popup">
+				<div class="title-exit">
+					<h3>Create new account</h3>
+					<button type="button" name="exit" class="exit-button">x</button>
 				</div>
-				<div id="right" class="col-s-3">
-					<img src="images/default_pfp.png" alt="current picture" class="col-s-8">
-					<input type="file" id="hidden" class="input-sign" name="change picture">
-					<label for="hidden" id="input-label">Select picture</label>
-					<h4>Interests</h4>
+				<form class="sign-info profile-info" id="signup-popup">
+					<div id="left" class="col-s-8">
+						<label for="name">Name</label>
+						<input type="text" name="name" value="" class="input-sign col-s-8" id="name" required>
+						<label for="username">Username</label>
+						<input type="text" name="username" value="" class="input-sign col-s-8" id="username" required>
+						<label for="email">Email Address</label>
+						<input type="text" name="email" value="" class="input-sign col-s-8" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]" required>
+						<label for="birth">New Birth Date</label>
+						<input type="date" name="birth" class="input-sign col-s-8" id="birth">
+						<label for="password">Password</label>
+						<input type="password" name="password" value="" class="input-sign col-s-8" id="password" pattern="[A-Za-z0-9]{4,8}" required>
+						<label for="password-confirm">Confirm Password</label>
+						<input type="password" name="password" value="" class="input-sign col-s-8" id="password-confirm" pattern="[A-Za-z0-9]{4,8}" required>
+					</div>
+					<div id="right" class="col-s-3">
+						<img src="images/default_pfp.png" alt="current picture" class="col-s-8">
+						<input type="file" id="hidden" class="input-sign" name="change picture">
+						<label for="hidden" id="input-label">Select picture</label>
+						<h4>Interests</h4>
+							<div class="col-s-9 col-t-9 col-9">
+								<label for="interest-1" class="label-int">Interest 1</label>
+								<select name="inter1" id="interest-1" class="col-s-12">
+									<option selected disabled hidden></option>
+									<option value="beach">Beach</option>
+									<option value="exotic">Exotic</option>
+									<option value="city">City</option>
+									<option value="europe">Europe</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="forest">Forest</option>
+									<option value="islands">Islands</option>
+									<option value="budhist">Budhist</option>
+									<option value="religious">Religious</option>
+								</select>
+							</div>
+							<div class="col-s-9 col-t-9 col-9">
+								<label for="interest-2" class="label-int">Interest 2</label>
+								<select name="inter2" id="interest-2" class="col-s-12">
+									<option selected disabled hidden></option>
+									<option value="beach">Beach</option>
+									<option value="exotic">Exotic</option>
+									<option value="city">City</option>
+									<option value="europe">Europe</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="forest">Forest</option>
+									<option value="islands">Islands</option>
+									<option value="budhist">Budhist</option>
+									<option value="religious">Religious</option>
+								</select>
+							</div>
+							<div class="col-s-9 col-t-9 col-9">
+								<label for="interest-3" class="label-int">Interest 3</label>
+								<select name="inter3" id="interest-3" class="col-s-12">
+									<option selected disabled hidden></option>
+									<option value="beach">Beach</option>
+									<option value="exotic">Exotic</option>
+									<option value="city">City</option>
+									<option value="europe">Europe</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="forest">Forest</option>
+									<option value="islands">Islands</option>
+									<option value="budhist">Budhist</option>
+									<option value="religious">Religious</option>
+								</select>
+							</div>
+							<div class="col-s-9 col-t-9 col-9">
+								<label for="interest-4" class="label-int">Interest 4</label>
+								<select name="inter4" id="interest-4" class="col-s-12">
+									<option selected disabled hidden></option>
+									<option value="beach">Beach</option>
+									<option value="exotic">Exotic</option>
+									<option value="city">City</option>
+									<option value="europe">Europe</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="forest">Forest</option>
+									<option value="islands">Islands</option>
+									<option value="budhist">Budhist</option>
+									<option value="religious">Religious</option>
+								</select>
+							</div>
+							<div class="col-s-9 col-t-9 col-9">
+								<label for="interest-5" class="label-int">Interest 5</label>
+								<select name="inter5" id="interest-5" class="col-s-12">
+									<option selected disabled hidden></option>
+									<option value="beach">Beach</option>
+									<option value="exotic">Exotic</option>
+									<option value="city">City</option>
+									<option value="europe">Europe</option>
+									<option value="africa">Africa</option>
+									<option value="america">America</option>
+									<option value="asia">Asia</option>
+									<option value="forest">Forest</option>
+									<option value="islands">Islands</option>
+									<option value="budhist">Budhist</option>
+									<option value="religious">Religious</option>
+								</select>
+							</div>
+					</div>
+				</form>
+				<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
+			</article>
+			<!-- END SIGN UP -->
+
+			<!-- LOG IN -->
+			<article class="popup col-s-6" id="login-popup">
+				<div class="title-exit">
+					<h3>Log in</h3>
+					<button type="button" name="exit" class="exit-button">x</button>
+				</div>
+				<div class="inputs">
 					<form class="profile-info">
-						<div class="col-s-9 col-t-9 col-9">
-							<label for="interest-1" class="label-int">Interest 1</label>
-							<select name="inter1" id="interest-1" class="col-s-12">
-								<option selected disabled hidden></option>
-								<option value="beach">Beach</option>
-								<option value="exotic">Exotic</option>
-								<option value="city">City</option>
-								<option value="rurope">Europe</option>
-								<option value="africa">Africa</option>
-								<option value="america">America</option>
-								<option value="asia">Asia</option>
-								<option value="forest">Forest</option>
-								<option value="islands">Islands</option>
-								<option value="budhist">Budhist</option>
-								<option value="religious">Religious</option>
-							</select>
-						</div>
-						<div class="col-s-9 col-t-9 col-9">
-							<label for="interest-2" class="label-int">Interest 2</label>
-							<select name="inter2" id="interest-2" class="col-s-12">
-								<option selected disabled hidden></option>
-								<option value="beach">Beach</option>
-								<option value="exotic">Exotic</option>
-								<option value="city">City</option>
-								<option value="europe">Europe</option>
-								<option value="africa">Africa</option>
-								<option value="america">America</option>
-								<option value="asia">Asia</option>
-								<option value="forest">Forest</option>
-								<option value="islands">Islands</option>
-								<option value="budhist">Budhist</option>
-								<option value="religious">Religious</option>
-							</select>
-						</div>
-						<div class="col-s-9 col-t-9 col-9">
-							<label for="interest-3" class="label-int">Interest 3</label>
-							<select name="inter3" id="interest-3" class="col-s-12">
-								<option selected disabled hidden></option>
-								<option value="beach">Beach</option>
-								<option value="exotic">Exotic</option>
-								<option value="city">City</option>
-								<option value="rurope">Europe</option>
-								<option value="africa">Africa</option>
-								<option value="america">America</option>
-								<option value="asia">Asia</option>
-								<option value="forest">Forest</option>
-								<option value="islands">Islands</option>
-								<option value="budhist">Budhist</option>
-								<option value="religious">Religious</option>
-							</select>
-						</div>
-						<div class="col-s-9 col-t-9 col-9">
-							<label for="interest-4" class="label-int">Interest 4</label>
-							<select name="inter4" id="interest-4" class="col-s-12">
-								<option selected disabled hidden></option>
-								<option value="beach">Beach</option>
-								<option value="exotic">Exotic</option>
-								<option value="city">City</option>
-								<option value="europe">Europe</option>
-								<option value="africa">Africa</option>
-								<option value="america">America</option>
-								<option value="asia">Asia</option>
-								<option value="forest">Forest</option>
-								<option value="islands">Islands</option>
-								<option value="budhist">Budhist</option>
-								<option value="religious">Religious</option>
-							</select>
-						</div>
-						<div class="col-s-9 col-t-9 col-9">
-							<label for="interest-5" class="label-int">Interest 5</label>
-							<select name="inter5" id="interest-5" class="col-s-12">
-								<option selected disabled hidden></option>
-								<option value="beach">Beach</option>
-								<option value="exotic">Exotic</option>
-								<option value="city">City</option>
-								<option value="europe">Europe</option>
-								<option value="africa">Africa</option>
-								<option value="america">America</option>
-								<option value="asia">Asia</option>
-								<option value="forest">Forest</option>
-								<option value="islands">Islands</option>
-								<option value="budhist">Budhist</option>
-								<option value="religious">Religious</option>
-							</select>
-						</div>
+						<label for="email-login">Email</label>
+						<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login" required>
+						<label for="password-login">Password</label>
+						<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}" required>
+						<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
+					</form>
+					<p>You don’t have an account?<button id="link-sign"> Click here to sign up</button></p>
+				</div>
+			</article>
+			<!-- END LOG IN -->
+		</div>
+		<!-- LOG OUT -->
+		<div id="registered">
+			<article class="popup col-s-6" id="logout-popup">
+				<div class="title-exit">
+					<h3>Log out</h3>
+					<button type="button" name="exit" class="exit-button">x</button>
+				</div>
+				<div class="inputs">
+					<form class="profile-info">
+						<p>Are you sure you want to log out?</p>
+						<button type="submit" id="stay" class="submit-but col-s-3">Stay signed</button>
+						<button type="submit" id="logout" class="submit-but col-s-3">Log out</button>
 					</form>
 				</div>
-			</form>
-			<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
-		</article>
-		<!-- ----------END SIGN UP----------- -->
+			</article>
+		</div>
+		<!--  END POP UPS -->
 
-		<!-- ----------LOG IN----------- -->
-		<article class="popup col-s-6" id="login-popup">
+		<!--  MESSAGES -->
+
+		<article class="popup col-s-11" id="messages-popup">
 			<div class="title-exit">
-				<h3>Log in</h3>
+				<h3>Messaging</h3>
 				<button type="button" name="exit" class="exit-button">x</button>
 			</div>
-			<div class="inputs">
-				<form class="profile-info">
-					<label for="email-login">Email</label>
-					<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login" required>
-					<label for="password-login">Password</label>
-					<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}" required>
-					<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
-				</form>
-				<p>You don’t have an account?<button id="link-sign"> Click here to sign up</button></p>
+			<div id="inside-messages">
+				<div id="your-chats" class="col-s-11 col-t-11 col-3">
+		      <h3>Your chats</h3>
+		      <div id="chats" class="">
+		        <article class="chat-person" id="default-person">
+		          <p class="date-chat" id="date-chat">Default date</p>
+		          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+		          <h4 class="name-chat" id="name-chat">Defaul name</h4>
+		        </article>
+		        <article class="chat-person" id="selected-chat">
+		          <p class="date-chat" id="date-chat-2">Default date</p>
+		          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+		          <h4 class="name-chat" id="name-chat-2">Defaul name</h4>
+		        </article>
+		      </div>
+		    </div>
+		    <div id="chat" class="col-s-11 col-t-11 col-8">
+		      <div id="title-chat">
+		        <h3 id="main-chat">Default name</h3>
+		        <img id="profile-chat" src="images/default_pfp.png" alt="default picture">
+		      </div>
+		      <hr id="horizontal">
+		      <div id="in-messages">
+		        <div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
+		          <p class="message-date-small" id="message-date">Default date</p>
+		          <p class="message-text">Default Message</p>
+		        </div>
+		        <div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
+		          <p class="message-date-small" id="message-date-2">Default date</p>
+		          <p class="message-text">Default Message</p>
+		        </div>
+		      </div>
+		      <div class="col-s-9 comment-frm">
+			  	<label for="message">Enter your message:</label>
+		        <input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+		        <img class="send-btn" src="images/send.png" alt="send message">
+		      </div>
+		    </div>
 			</div>
 		</article>
-		<!-- ----------END LOG IN----------- -->
-	</div>
-	<!-- ----------LOG OUT----------- -->
-	<div id="registered">
-		<article class="popup col-s-6" id="logout-popup">
-			<div class="title-exit">
-				<h3>Log out</h3>
-				<button type="button" name="exit" class="exit-button">x</button>
-			</div>
-			<div class="inputs">
-				<form class="profile-info">
-					<p>Are you sure you want to log out?</p>
-					<button type="submit" id="stay" class="submit-but col-s-3">Stay signed</button>
-					<button type="submit" id="logout" class="submit-but col-s-3">Log out</button>
-				</form>
-			</div>
-		</article>
-	</div>
-	<!-- ---------- END POP UPS----------- -->
-
-	<!-- ---------- MESSAGES -------- -->
-
-	<article class="popup col-s-11" id="messages-popup">
-		<div class="title-exit">
-			<h3>Messaging</h3>
-			<button type="button" name="exit" class="exit-button">x</button>
-		</div>
-		<div id="inside-messages">
-			<div id="your-chats" class="col-s-11 col-t-11 col-3">
-				<h3>Your chats</h3>
-				<div id="chats" class="">
-					<article class="chat-person" id="default-person">
-						<p class="date-chat" id="date-chat-2">Default date</p>
-						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-						<h4 class="name-chat" id="name-chat-2">Defaul name</h4>
-					</article>
-					<article class="chat-person" id="selected-chat">
-						<p class="date-chat" id="date-chat">Default date</p>
-						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-						<h4 class="name-chat" id="name-chat">Defaul name</h4>
-					</article>
-				</div>
-			</div>
-			<div id="chat" class="col-s-11 col-t-11 col-8">
-				<div id="title-chat">
-					<h3 id="main-chat">Default name</h3>
-					<img id="profile-chat" src="images/default_pfp.png" alt="default picture">
-				</div>
-				<hr id="horizontal">
-				<div id="in-messages">
-					<div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
-						<p class="message-date-small" id="message-date">Default date</p>
-						<p class="message-text">Default Message</p>
-					</div>
-					<div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
-						<p class="message-date-small" id="message-date">Default date</p>
-						<p class="message-text">Default Message</p>
-					</div>
-				</div>
-				<div class="col-s-9 comment-frm">
-					<label for="message">Enter your message:</label>
-					<input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
-					<img class="send-btn" src="images/send.png" alt="send message">
-				</div>
-			</div>
-		</div>
-	</article>
-	<!-- ----------END MESSAGES -------- -->
+		<!-- END MESSAGES -->
 
     <section class="clearfix_about">
         <h1>About us</h1>
@@ -290,25 +286,25 @@
             Have a nice day !</p>
     </section>
 
-	<!-- ----------FOOTER----------- -->
-	<footer class="clearfix">
-		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
-			<img id='footer-logo' src="images/logo.png" alt="travelust logo">
-			<h2 id='footer-title'>Travelust</h2>
-		</div>
+    <!-- FOOTER- -->
+    <footer class="clearfix">
+    	<div id='footer-main' class='col-t-8 col-s-12 col-3'>
+    		<img id='footer-logo' src="images/logo.png" alt="travelust logo">
+    		<h2 id='footer-title'>Travelust</h2>
+    	</div>
 
-		<div id="footer-text" class='col-t-8 col-s-12'>
-			<div id="footer c">© 2021 Travelust</div>
-			<a href="privacy_policy.html">Privacy policy</a>
-		</div>
+    	<div id="footer-text" class='col-t-8 col-s-12'>
+    		<div>© 2021 Travelust</div>
+    		<a href="privacy_policy.html">Privacy policy</a>
+    	</div>
 
-		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
-			<a href="" alt="youtube"><img src="images/youtube%202.png" alt="youtube logo"></a>
-			<a href="" alt="twitter"><img src="images/twitter%201.png" alt="twitter logo"></a>
-			<a href="" alt="instagram"><img src="images/instagram%202.png" alt="instagram logo"></a>
-		</div>
-	</footer>
-	<!-- ----------END FOOTER----------- -->
+    	<div id="footer-images" class='col-t-4 col-s-16 col-3'>
+    		<a href=""><img src="images/youtube%202.png" alt="youtube logo"></a>
+    		<a href=""><img src="images/twitter%201.png" alt="twitter logo"></a>
+    		<a href=""><img src="images/instagram%202.png" alt="instagram logo"></a>
+    	</div>
+    </footer>
+    <!-- END FOOTER -->
 </body>
 
 </html>

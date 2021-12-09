@@ -12,7 +12,7 @@
 	<title>Travelust</title>
 </head>
 <body>
-	<!-- ----------HEADER----------- -->
+	<!-- HEADER -->
 
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
@@ -70,11 +70,11 @@
 		<li><a href="index.html">Map</a></li>
 		<li><a href="plan.html">Plan a trip</a></li>
 	</ul>
-	<!-- ----------END HEADER----------- -->
+	<!-- END HEADER -->
 
-	<!-- ----------POP UPS----------- -->
+	<!-- POP UP -->
 	<div id="main">
-		<!-- ----------SIGN UP----------- -->
+		<!-- SIGN UP -->
 		<article class="popup col-s-7" id="sign-popup">
 			<div class="title-exit">
 				<h3>Create new account</h3>
@@ -100,7 +100,6 @@
 					<input type="file" id="hidden" class="input-sign" name="change picture">
 					<label for="hidden" id="input-label">Select picture</label>
 					<h4>Interests</h4>
-					<form class="profile-info">
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-1" class="label-int">Interest 1</label>
 							<select name="inter1" id="interest-1" class="col-s-12">
@@ -186,14 +185,13 @@
 								<option value="religious">Religious</option>
 							</select>
 						</div>
-					</form>
 				</div>
 			</form>
 			<button type="submit" id="submit-sign" class="submit-but col-s-3">Submit</button>
 		</article>
-		<!-- ----------END SIGN UP----------- -->
+		<!-- END SIGN UP -->
 
-		<!-- ----------LOG IN----------- -->
+		<!-- LOG IN -->
 		<article class="popup col-s-6" id="login-popup">
 			<div class="title-exit">
 				<h3>Log in</h3>
@@ -210,23 +208,9 @@
 				<p>You don’t have an account?<button id="link-sign"> Click here to sign up</button></p>
 			</div>
 		</article>
-		<!-- ----------END LOG IN----------- -->
-
-		<!-- ----------PLEASE LOG IN----------- -->
-		<article class="popup col-s-6" id="please-popup">
-			<div class="title-exit">
-				<h3>Log in</h3>
-				<button type="button" name="exit" class="exit-button">x</button>
-			</div>
-			<p>Please, log in to comment or like.</p>
-			<div id="please-btns">
-				<button class="col-s-6 please-btn" id='sign-please-btn'>Sign up</button>
-				<button class="col-s-6 please-btn" id='log-please-btn'>Log in</button>
-			</div>
-		</article>
-		<!-- ----------END PLEASE LOG IN----------- -->
+		<!-- END LOG IN -->
 	</div>
-	<!-- ----------LOG OUT----------- -->
+	<!-- LOG OUT -->
 	<div id="registered">
 		<article class="popup col-s-6" id="logout-popup">
 			<div class="title-exit">
@@ -242,9 +226,9 @@
 			</div>
 		</article>
 	</div>
-	<!-- ---------- END POP UPS----------- -->
+	<!--  END POP UPS -->
 
-	<!-- ---------- MESSAGES -------- -->
+	<!--  MESSAGES -->
 
 	<article class="popup col-s-11" id="messages-popup">
 		<div class="title-exit">
@@ -253,45 +237,45 @@
 		</div>
 		<div id="inside-messages">
 			<div id="your-chats" class="col-s-11 col-t-11 col-3">
-				<h3>Your chats</h3>
-				<div id="chats" class="">
-					<article class="chat-person" id="default-person">
-						<p class="date-chat" id="date-chat">Default date</p>
-						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-						<h4 class="name-chat" id="name-chat">Defaul name</h4>
-					</article>
-					<article class="chat-person" id="selected-chat">
-						<p class="date-chat" id="date-chat">Default date</p>
-						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-						<h4 class="name-chat" id="name-chat">Defaul name</h4>
-					</article>
-				</div>
-			</div>
-			<div id="chat" class="col-s-11 col-t-11 col-8">
-				<div id="title-chat">
-					<h3 id="main-chat">Default name</h3>
-					<img id="profile-chat" src="images/default_pfp.png" alt="default picture">
-				</div>
-				<hr id="horizontal">
-				<div id="in-messages">
-					<div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
-						<p class="message-date-small" id="message-date">Default date</p>
-						<p class="message-text">Default Message</p>
-					</div>
-					<div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
-						<p class="message-date-small" id="message-date">Default date</p>
-						<p class="message-text">Default Message</p>
-					</div>
-				</div>
-				<div class="col-s-9 comment-frm">
-					<label for="message">Enter your message:</label>
-					<input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
-					<img class="send-btn" src="images/send.png" alt="send message">
-				</div>
-			</div>
+	      <h3>Your chats</h3>
+	      <div id="chats" class="">
+	        <article class="chat-person" id="default-person">
+	          <p class="date-chat" id="date-chat">Default date</p>
+	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+	          <h4 class="name-chat" id="name-chat">Defaul name</h4>
+	        </article>
+	        <article class="chat-person" id="selected-chat">
+	          <p class="date-chat" id="date-chat-2">Default date</p>
+	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+	          <h4 class="name-chat" id="name-chat-2">Defaul name</h4>
+	        </article>
+	      </div>
+	    </div>
+	    <div id="chat" class="col-s-11 col-t-11 col-8">
+	      <div id="title-chat">
+	        <h3 id="main-chat">Default name</h3>
+	        <img id="profile-chat" src="images/default_pfp.png" alt="default picture">
+	      </div>
+	      <hr id="horizontal">
+	      <div id="in-messages">
+	        <div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
+	          <p class="message-date-small" id="message-date">Default date</p>
+	          <p class="message-text">Default Message</p>
+	        </div>
+	        <div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
+	          <p class="message-date-small" id="message-date-2">Default date</p>
+	          <p class="message-text">Default Message</p>
+	        </div>
+	      </div>
+	      <div class="col-s-9 comment-frm">
+		  	<label for="message">Enter your message:</label>
+	        <input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+	        <img class="send-btn" src="images/send.png" alt="send message">
+	      </div>
+	    </div>
 		</div>
 	</article>
-	<!-- ----------END MESSAGES -------- -->
+	<!-- END MESSAGES -->
 
 	<!-- POP UP COMMENTS -->
 	<section id='pop-up-comments' class="col-s-11">
@@ -375,7 +359,7 @@
         	<button id="see-comments" class="col-s-6 col-t-4 col-3">See comments</button>
         </section>
 	</section>
-	<!-- ----------FOOTER----------- -->
+	<!-- FOOTER- -->
 	<footer class="clearfix">
 		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
 			<img id='footer-logo' src="images/logo.png" alt="travelust logo">
@@ -383,17 +367,17 @@
 		</div>
 
 		<div id="footer-text" class='col-t-8 col-s-12'>
-			<div id="footer c">© 2021 Travelust</div>
+			<div>© 2021 Travelust</div>
 			<a href="privacy_policy.html">Privacy policy</a>
 		</div>
 
 		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
-			<a href="" alt="youtube"><img src="images/youtube%202.png" alt="youtube logo"></a>
-			<a href="" alt="twitter"><img src="images/twitter%201.png" alt="twitter logo"></a>
-			<a href="" alt="instagram"><img src="images/instagram%202.png" alt="instagram logo"></a>
+			<a href=""><img src="images/youtube%202.png" alt="youtube logo"></a>
+			<a href=""><img src="images/twitter%201.png" alt="twitter logo"></a>
+			<a href=""><img src="images/instagram%202.png" alt="instagram logo"></a>
 		</div>
 	</footer>
-	<!-- ----------END FOOTER----------- -->
+	<!-- END FOOTER -->
 
 </body>
 <script src="script/index.js"></script>
