@@ -14,7 +14,6 @@
 </head>
 <body>
 	<!-- HEADER -->
-
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
 			<img class='col-s-2' id='show-menu' src="images/show-menu.png" alt="display menu">
@@ -74,7 +73,7 @@
 	<!-- END HEADER -->
 
 	<!-- POP UP -->
-	<div id="main">
+	<div id="main"> <!-- the pop-ups that only appear in the non-registered version -->
 		<!-- SIGN UP -->
 		<article class="popup col-s-7" id="sign-popup">
 			<div class="title-exit">
@@ -211,8 +210,9 @@
 		</article>
 		<!-- END LOG IN -->
 	</div>
+
 	<!-- LOG OUT -->
-	<div id="registered">
+	<div id="registered"> <!-- the pop-ups that only appear in the registered version -->
 		<article class="popup col-s-6" id="logout-popup">
 			<div class="title-exit">
 				<h3>Log out</h3>
@@ -227,10 +227,9 @@
 			</div>
 		</article>
 	</div>
-	<!--  END POP UPS -->
+	<!--  END LOG OUT -->
 
 	<!--  MESSAGES -->
-
 	<article class="popup col-s-11" id="messages-popup">
 		<div class="title-exit">
 			<h3>Messaging</h3>
@@ -238,46 +237,47 @@
 		</div>
 		<div id="inside-messages">
 			<div id="your-chats" class="col-s-11 col-t-11 col-3">
-	      <h3>Your chats</h3>
-	      <div id="chats" class="">
-	        <article class="chat-person" id="default-person">
-	          <p class="date-chat" id="date-chat">Default date</p>
-	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-	          <h4 class="name-chat" id="name-chat">Defaul name</h4>
-	        </article>
-	        <article class="chat-person" id="selected-chat">
-	          <p class="date-chat" id="date-chat-2">Default date</p>
-	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-	          <h4 class="name-chat" id="name-chat-2">Defaul name</h4>
-	        </article>
-	      </div>
-	    </div>
-	    <div id="chat" class="col-s-11 col-t-11 col-8">
-	      <div id="title-chat">
-	        <h3 id="main-chat">Default name</h3>
-	        <img id="profile-chat" src="images/default_pfp.png" alt="default picture">
-	      </div>
-	      <hr id="horizontal">
-	      <div id="in-messages">
-	        <div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
-	          <p class="message-date-small" id="message-date">Default date</p>
-	          <p class="message-text">Default Message</p>
-	        </div>
-	        <div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
-	          <p class="message-date-small" id="message-date-2">Default date</p>
-	          <p class="message-text">Default Message</p>
-	        </div>
-	      </div>
-	      <div class="col-s-9 comment-frm">
-		  	<label for="message">Enter your message:</label>
-	        <input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
-	        <img class="send-btn" src="images/send.png" alt="send message">
-	      </div>
-	    </div>
+				<h3>Your chats</h3>
+				<div id="chats" class="">
+					<article class="chat-person" id="default-person">
+						<p class="date-chat" id="date-chat">Default date</p>
+						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+						<h4 class="name-chat" id="name-chat">Defaul name</h4>
+					</article>
+					<article class="chat-person" id="selected-chat">
+						<p class="date-chat" id="date-chat-2">Default date</p>
+						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+						<h4 class="name-chat" id="name-chat-2">Defaul name</h4>
+					</article>
+				</div>
+			</div>
+			<div id="chat" class="col-s-11 col-t-11 col-8">
+				<div id="title-chat">
+					<h3 id="main-chat">Default name</h3>
+					<img id="profile-chat" src="images/default_pfp.png" alt="default picture">
+				</div>
+				<hr id="horizontal">
+				<div id="in-messages">
+					<div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
+						<p class="message-date-small" id="message-date">Default date</p>
+						<p class="message-text">Default Message</p>
+					</div>
+					<div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
+						<p class="message-date-small" id="message-date-2">Default date</p>
+						<p class="message-text">Default Message</p>
+					</div>
+				</div>
+				<div class="col-s-9 comment-frm">
+					<label for="message">Enter your message:</label>
+					<input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+					<img class="send-btn" src="images/send.png" alt="send message">
+				</div>
+			</div>
 		</div>
 	</article>
 	<!-- END MESSAGES -->
 
+	<!-- CHANGE PICTURE -->
 	<article class="popup col-s-10" id="change-pfp">
 		<div class="title-exit">
 			<h3>Change Profile picture</h3>
@@ -304,7 +304,9 @@
 			</form>
 		</div>
 	</article>
+	<!-- END CHANGE PICTURE -->
 
+	<!-- MODIFY PROFILE -->
 	<article class="popup col-s-10" id="modify-profile">
 		<div class="title-exit">
 			<h3>Modify Profile</h3>
@@ -324,7 +326,9 @@
 			</form>
 		</div>
 	</article>
+	<!-- END MODIFY PROFILE -->
 
+	<!-- CHANGE INTERESTS -->
 	<article class="popup col-s-10" id="change-interests">
 		<div class="title-exit">
 			<h3>Change Interests</h3>
@@ -357,69 +361,72 @@
 			</form>
 		</div>
 	</article>
+	<!-- END CHANGE INTERESTS -->
 
-
-  <section id="main-sect" class="col-12">
-    <div id="profile" class="col-10 col-s-10">
-      <img src="images/default_pfp.png" alt="default profile picture" id="pfp">
-			<button type="button" name="change-pfp" class="big-button col-s-6 col-t-6 col-5" id="change-pfp-begin">Change profile picture</button>
-			<div id="profile-data" class="col-10">
-				<p>Name:</p>
-				<p id="name_prof" class="default"></p>
-				<p>Username:</p>
-				<p id="username_prof" class="default">Default username</p>
-				<p>Email:</p>
-				<p id="email_prof" class="default">Default email</p>
-				<p>Date of birth:</p>
-				<p id="birth_prof" class="default">Default date of birth</p>
-				<p id="interests-p">Interests:</p>
-				<div id="interests">
-					<div class="column">
-						<p class="interest" id="int-1">
-							<a href="#">Interest 1</a>
-						</p>
-						<p class="interest" id="int-2">
-							<a href="#">Interest 2</a>
-						</p>
-						<p class="interest" id="int-3">
-							<a href="#">Interest 3</a>
-						</p>
-					</div>
-					<div class="column">
-						<p class="interest" id="int-4">
-							<a href="#">Interest 4</a>
-						</p>
-						<p class="interest" id="int-5">
-							<a href="#">Interest 5</a>
-						</p>
+	<!-- MAIN SECTION -->
+	<section id="main-sect" class="col-12">
+		<div id="profile" class="col-10 col-s-10">
+		  	<img src="images/default_pfp.png" alt="default profile picture" id="pfp">
+				<button type="button" name="change-pfp" class="big-button col-s-6 col-t-6 col-5" id="change-pfp-begin">Change profile picture</button>
+				<div id="profile-data" class="col-10">
+					<p>Name:</p>
+					<p id="name_prof" class="default"></p>
+					<p>Username:</p>
+					<p id="username_prof" class="default">Default username</p>
+					<p>Email:</p>
+					<p id="email_prof" class="default">Default email</p>
+					<p>Date of birth:</p>
+					<p id="birth_prof" class="default">Default date of birth</p>
+					<p id="interests-p">Interests:</p>
+					<div id="interests">
+						<div class="column">
+							<p class="interest" id="int-1">
+								<a href="#">Interest 1</a>
+							</p>
+							<p class="interest" id="int-2">
+								<a href="#">Interest 2</a>
+							</p>
+							<p class="interest" id="int-3">
+								<a href="#">Interest 3</a>
+							</p>
+						</div>
+						<div class="column">
+							<p class="interest" id="int-4">
+								<a href="#">Interest 4</a>
+							</p>
+							<p class="interest" id="int-5">
+								<a href="#">Interest 5</a>
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div id="buttons">
-				<button type="button" name="modify-profi" class="big-button col-s-5 col-t-5" id="mod-but">Modify profile</button>
-				<button type="button" name="change-interests" class="big-button col-s-5 col-t-5" id="inter-but">Change interests</button>
-				<button type="button" name="experiences" class="big-button col-s-7 col-t-9" id="exp-but-link">My Experiences</button>
-			</div>
-    </div>
-  </section>
-  <!-- FOOTER- -->
-  <footer class="clearfix">
-  	<div id='footer-main' class='col-t-8 col-s-12 col-3'>
-  		<img id='footer-logo' src="images/logo.png" alt="travelust logo">
-  		<h2 id='footer-title'>Travelust</h2>
-  	</div>
+				<div id="buttons">
+					<button type="button" name="modify-profi" class="big-button col-s-5 col-t-5" id="mod-but">Modify profile</button>
+					<button type="button" name="change-interests" class="big-button col-s-5 col-t-5" id="inter-but">Change interests</button>
+					<button type="button" name="experiences" class="big-button col-s-7 col-t-9" id="exp-but-link">My Experiences</button>
+				</div>
+		</div>
+	</section>
+	<!-- END MAIN SECTION -->
 
-  	<div id="footer-text" class='col-t-8 col-s-12'>
-  		<div>© 2021 Travelust</div>
-  		<a href="privacy_policy.html">Privacy policy</a>
-  	</div>
+	<!-- FOOTER- -->
+	<footer class="clearfix">
+		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
+			<img id='footer-logo' src="images/logo.png" alt="travelust logo">
+			<h2 id='footer-title'>Travelust</h2>
+		</div>
 
-  	<div id="footer-images" class='col-t-4 col-s-16 col-3'>
-  		<a href=""><img src="images/youtube%202.png" alt="youtube logo"></a>
-  		<a href=""><img src="images/twitter%201.png" alt="twitter logo"></a>
-  		<a href=""><img src="images/instagram%202.png" alt="instagram logo"></a>
-  	</div>
-  </footer>
-  <!-- END FOOTER -->
+		<div id="footer-text" class='col-t-8 col-s-12'>
+			<div>© 2021 Travelust</div>
+			<a href="privacy_policy.html">Privacy policy</a>
+		</div>
+
+		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
+			<a href=""><img src="images/youtube%202.png" alt="youtube logo"></a>
+			<a href=""><img src="images/twitter%201.png" alt="twitter logo"></a>
+			<a href=""><img src="images/instagram%202.png" alt="instagram logo"></a>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
 </body>
 </html>

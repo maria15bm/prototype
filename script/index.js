@@ -1,37 +1,9 @@
 var filter_list = ["filter 1", "filter 2"];
 
-/* Updates the filter in last experiences using the values in filter_list*/
-function updateFilter() {
-	$(".experience").filter(function() {
-		if (filter_list.length>0){
-			for(var i = 0; i < filter_list.length; i++){
-		  		$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
-			}
-		} else{
-			// If filter_list is empty, every experience is shown.
-			$(".experience").each(function(){
-				$(this).show();
-			});
-		}
-
-	})
-}
-
-/* Deletes a filter in last experiences */
-function deleteFilter(filter){
-	var value = $(filter).parent().children("p").html();
-	filter_list = filter_list.filter(function(item) {
-	    return item !== value
-	})
-	updateFilter();
-	$(filter).parent().remove();
-
-}
-
-
-
+/* every time the page reloads everything inside is executed */
 $(document).ready(function() {
-	//check the cookie loged to know if it has to show the registered version or ungestired one
+	//--------HEADER-----------------
+	/*check the cookie loged to know if it has to show the registered version or ungestired one*/
 	if (check_loged("loged") == ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
@@ -58,26 +30,21 @@ $(document).ready(function() {
 		$("#log-sign-in-menu").hide();
 		show_username();
 		upload_data_profile();
-
 	}
+
+	/* if the window size is for mobile phones, hide the navigation bar */
 	if ($(window).width() < 601){
 			$('#nav-header-menu').hide();
 	}
 
-	$("#search-input").on("keyup", function() {
-		var value = $(this).val().toLowerCase();
-		$("#myList li").filter(function() {
-			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-		});
-	});
-
-	// Show always the navigation menu for tablet and desktop
+	/* show always the navigation menu for tablet and desktop */
 	$(window).resize(function(){
 		if ($(window).width() > 601){
 			$('#nav-header-menu').show();
 		}
 	})
-	// In mobile version, a button shows and hides the navigation menu.
+
+	/* in mobile version, a button shows and hides the navigation menu */
 	$('#show-menu').click(function() {
 		if ($('#nav-header-menu').is(':hidden')){
 			$('#nav-header-menu').show();
@@ -86,7 +53,23 @@ $(document).ready(function() {
 		}
 	})
 
-	// log in and sign in pop ups
+	/* search bar filter list */
+	$("#myList li a").hide();
+	$("#search-input").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myList li").filter(function() {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+		});
+		if($("#search-input").val() !== ""){
+			$("#myList li a").filter(function() {
+				$(this).show();
+			});
+		}else{
+			$("#myList li a").hide();
+		}
+	});
+
+	/* display log in, sign in, log out pop ups in desktop and tablet */
 	$('#log-btn').click(function() {
 		$("#login-popup").show();
 		$("#sign-popup").hide();
@@ -95,6 +78,13 @@ $(document).ready(function() {
 		})
 	})
 	$('#sign-btn').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
+	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
 		$('#submit-sign').click(function() {
@@ -112,6 +102,7 @@ $(document).ready(function() {
 		})
 	})
 
+	/* display log in, sign in, log out pop ups in mobile */
 	$('#log-out-btn-in-menu').click(function (){
 		$("#logout-popup").show();
 		$("#stay").click(function() {
@@ -122,10 +113,30 @@ $(document).ready(function() {
 			location.reload();
 		})
 	})
+	$('#log-in-menu-btn').click(function() {
+		$("#login-popup").show();
+		$("#sign-popup").hide();
+		$('#profile-info').submit(function() {
+			get_values2();
+		})
+	})
+	$('#sign-in-menu-btn').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$('#signup-popup').submit(function() {
+			get_values();
+		})
+	})
+	$('#profile-btn-in-menu').click(function (){
+		window.location="profile.html"
+	})
+
+	/* display message pop up */
 	$('#image_mes').click(function () {
 		$('#messages-popup').show();
 	})
 
+	/* SEBAS */
 	$('#profile-btn').click(function (){
 		window.location="profile.html";
 
@@ -154,86 +165,60 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#profile-btn-in-menu').click(function (){
-		window.location="profile.html"
+	/* close pop up */
+	$(".exit-button").click(function(){
+		$(".exit-button").closest(".popup").css("display", "none");
+	})
+	$(".exit-button").click(function(){
+		var $id = $(".exit-button").closest(".popup").css("display", "none");
 	})
 
+	/* a close button will close its pop up */
+	$(".close-btn").click(function(){
+		$(this).parent().hide()
+	})
+
+	/* NOT IMPLEMENTED DUE TO BUGS */
+	/* the top experiences can be sorted (drag and drop) */
+	/*let sortable = document.getElementById("experiences");
+	$( function() {
+		$(sortable).sortable();
+	} );*/
+
+	//--------PROFILE-----------------
+	/* SEBAS */
 	$("#exp-but-link").click(function () {
 		window.location = "my_exp.html"
 	})
 
-	$('#link-sign').click(function() {
-		$("#sign-popup").show();
-		$("#login-popup").hide();
-		$('#submit-sign').click(function() {
-			get_values();
-		})
-	})
-	$('#log-please-btn').click(function() {
-		$("#login-popup").show();
-		$("#sign-popup").hide();
-		$("#please-popup").hide();
-		$('#submit-login').click(function() {
-			get_values2();
-		})
-	})
-	$('#sign-please-btn').click(function() {
-		$("#sign-popup").show();
-		$("#login-popup").hide();
-		$("#please-popup").hide();
-		$('#submit-sign').click(function() {
-			get_values();
-		})
-	})
-	$(".exit-button").click(function(){
-		$(".exit-button").closest(".popup").css("display", "none");
-	})
-	// mobile version
-	$('#log-in-menu-btn').click(function() {
-		$("#login-popup").show();
-		$("#sign-popup").hide();
-		$('#profile-info').submit(function() {
-			get_values2();
-		})
-	})
-	$('#sign-in-menu-btn').click(function() {
-		$("#sign-popup").show();
-		$("#login-popup").hide();
-		$('#signup-popup').submit(function() {
-			get_values();
-		})
+	/* SEBAS */
+	$("#change-pfp-begin").click(function () {
+		$("#change-pfp").css("display", "block");
 	})
 
-	$(".exit-button").click(function(){
-    var $id = $(".exit-button").closest(".popup").css("display", "none");
-  })
+	$("#mod-but").click(function () {
+		$("#modify-profile").css("display", "block");
+	})
 
-  $("#change-pfp-begin").click(function () {
-    $("#change-pfp").css("display", "block");
-  })
+	$("#inter-but").click(function () {
+		$("#change-interests").css("display", "block");
+	})
 
-  $("#mod-but").click(function () {
-    $("#modify-profile").css("display", "block");
-  })
+	$('#new-pfp-in').on('input', function() {
+		var pic = document.getElementById('new-pfp-in').files[0];
+		pic = URL.createObjectURL(pic);
+		$("#pfpp-2").prop("src", pic);
+	});
 
-  $("#inter-but").click(function () {
-    $("#change-interests").css("display", "block");
-  })
+	var e = new Event("look", {"cancelable":true});
+	$("#new-picture").submit(function(e) {
+		var pic = document.getElementById('new-pfp-in').files[0];
+		pic = URL.createObjectURL(pic);
+		update_image(pic);
+		$("#change-pfp").hide();
+	})
 
-  $('#new-pfp-in').on('input', function() {
-    var pic = document.getElementById('new-pfp-in').files[0];
-    pic = URL.createObjectURL(pic);
-    $("#pfpp-2").prop("src", pic);
-  });
-
-  var e = new Event("look", {"cancelable":true});
-  $("#new-picture").submit(function(e) {
-	  var pic = document.getElementById('new-pfp-in').files[0];
-	pic = URL.createObjectURL(pic);
-	update_image(pic);
-	$("#change-pfp").hide();
-  })
-
+	/* SEBAS */
 	$("#form-profile-info").submit(function (e) {
 		e.preventDefault();
 		var new_username = $("#form-username").value();
@@ -271,39 +256,7 @@ $(document).ready(function() {
 		});
 	})
 
-	// A close button will close its pop up.
-	$(".close-btn").click(function(){
-		$(this).parent().hide()
-	})
-
-	$("#see-comments").click(function(){
-		$("#pop-up-comments").show()
-	})
-
-	$("#myList li a").hide();
-	//search bar
-	$("#search-input").on("keyup", function() {
-		if($("#search-input").val() !== ""){
-			$("#myList li a").filter(function() {
-				$(this).show();
-			});
-		}else{
-			$("#myList li a").hide();
-		}
-	});
-
-	$("#ES-exp").click( function () {
-		window.location = "experience_cies.html"
-	})
-
-	$(".Indonesia").click(function () {
-		window.location = "experience_bali.html"
-	})
-
-	$("#CZ-exp").click( function () {
-		window.location = "experience_prague.html"
-	})
-
+	/* SEBAS */
 	$(".delete-interest-modify").click(function () {
 		$(this).parent().remove();
 		let val = check_loged("loged");
@@ -330,7 +283,7 @@ $(document).ready(function() {
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
-    var interest = $('#new-interest-form-new').find(":selected").text().toLowerCase();
+		var interest = $('#new-interest-form-new').find(":selected").text().toLowerCase();
 		var yes = 0;
 		cookie.forEach((item, i) => {
 			if (item == "") {
@@ -341,13 +294,44 @@ $(document).ready(function() {
 		document.cookie = val + "=" + cookie + ";" + expires + ";path=/";
 	})
 
-	// the top experiences can be sorted (drag and drop)
-	/*let sortable = document.getElementById("experiences");
-	$( function() {
-		$(sortable).sortable();
-	} );*/
+	//--------EXPERIENCES-----------------
+	/* display pop up when someone tries to comment or like without being registered */
+	$('#log-please-btn').click(function() {
+		$("#login-popup").show();
+		$("#sign-popup").hide();
+		$("#please-popup").hide();
+		$('#submit-login').click(function() {
+			get_values2();
+		})
+	})
+	$('#sign-please-btn').click(function() {
+		$("#sign-popup").show();
+		$("#login-popup").hide();
+		$("#please-popup").hide();
+		$('#submit-sign').click(function() {
+			get_values();
+		})
+	})
 
-	// The images in the experiences are displayed using a photoroulette
+	/* display comments */
+	$("#see-comments").click(function(){
+		$("#pop-up-comments").show()
+	})
+
+	/* display experience when clicking on map countries */
+	$("#ES-exp").click( function () {
+		window.location = "experience_cies.html"
+	})
+
+	$(".Indonesia").click(function () {
+		window.location = "experience_bali.html"
+	})
+
+	$("#CZ-exp").click( function () {
+		window.location = "experience_prague.html"
+	})
+
+	/* the images in the experiences are displayed using a photoroulette */
 	$(".arr-right").click(function(){
 		let art = $(this).parent();
 		let objs = $(art).children('div');
@@ -388,7 +372,7 @@ $(document).ready(function() {
 		obj5.addClass('obj1');
 	})
 
-	/* Comments posting when chicking the send button. */
+	/* comments posting when clicking the send button */
 	$(".send-btn").click(function(){
 		if (getCookie("loged") !== "") {
 			var comment_val = $(this).parent().children('input').val();
@@ -408,7 +392,7 @@ $(document).ready(function() {
 		}
 	})
 
-	/* Filter in last experiences. */
+	/* filter in last experiences */
 	$("#add-filter-btn").click(function(){
 		if($("#filter-input").val()!== ""){
 			var value = $("#filter-input").val().toLowerCase();
@@ -423,6 +407,7 @@ $(document).ready(function() {
 		}
 	})
 
+	/* to increase the likes in a experience */
 	$("#like-img").click(function(){
 		if (getCookie("loged") !== "") {
 			var value = parseInt($(this).parent().children("h4").html());
@@ -440,11 +425,7 @@ $(document).ready(function() {
 	})
 })
 
-
-
-
 //--------------------MANAGING COOKIES FUNCTIONS----------------------------
-
 
 // function done in the signup pop up
 function get_values() {
@@ -489,7 +470,6 @@ function get_values() {
 	}
 }
 
-
 //function done in the log in pop up
 function get_values2(){
 	var mail = $("#email-login").val();
@@ -521,7 +501,6 @@ function get_values2(){
 	}
 }
 
-
 //creation of a cookie of the user
 function setCookie(username, password, name, email, image,birth ,interest1="",interest2="",interest3="",interest4="",interest5="", exdays) {
 	if (getCookie(email) == "") {
@@ -539,7 +518,6 @@ function setCookie(username, password, name, email, image,birth ,interest1="",in
 
 	}
 }
-
 
 //function to get a cookie
 function getCookie(cname) {
@@ -559,7 +537,6 @@ function getCookie(cname) {
 }
 
 
-
 //function done after registering to show the username in the header
 function show_username(){
 	let val=check_loged("loged");
@@ -567,7 +544,6 @@ function show_username(){
 	let data = values.split(",");
 	$("#username_show").html(data[0]);
 }
-
 
 //--------loged cookie-----------------
 
@@ -647,4 +623,35 @@ function upload_data_profile() {
 			ii += 1;
 		}
 	}
+}
+
+//--------------------FILTERS FUNCTIONS----------------------------
+
+/* Updates the filter in last experiences using the values in filter_list*/
+function updateFilter() {
+	$(".experience").filter(function() {
+		if (filter_list.length>0){
+			for(var i = 0; i < filter_list.length; i++){
+				$(this).toggle($(this).text().toLowerCase().indexOf(filter_list[i]) > -1);
+			}
+		} else{
+			// If filter_list is empty, every experience is shown.
+			$(".experience").each(function(){
+				$(this).show();
+			});
+		}
+
+	})
+}
+
+/* Deletes a filter in last experiences */
+function deleteFilter(filter){
+	var value = $(filter).parent().children("p").html();
+	filter_list = filter_list.filter(function(item) {
+		return item !== value
+	})
+	updateFilter();
+	console.log(filter_list);
+	$(filter).parent().remove();
+
 }

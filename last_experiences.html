@@ -14,7 +14,6 @@
 </head>
 <body>
 	<!-- HEADER -->
-
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
 			<img class='col-s-2' id='show-menu' src="images/show-menu.png" alt="display menu">
@@ -74,7 +73,7 @@
 	<!-- END HEADER -->
 
 	<!-- POP UP -->
-	<div id="main">
+	<div id="main"> <!-- the pop-ups that only appear in the non-registered version -->
 		<!-- SIGN UP -->
 		<article class="popup col-s-7" id="sign-popup">
 			<div class="title-exit">
@@ -211,8 +210,9 @@
 		</article>
 		<!-- END LOG IN -->
 	</div>
+
 	<!-- LOG OUT -->
-	<div id="registered">
+	<div id="registered"> <!-- the pop-ups that only appear in the registered version -->
 		<article class="popup col-s-6" id="logout-popup">
 			<div class="title-exit">
 				<h3>Log out</h3>
@@ -227,10 +227,9 @@
 			</div>
 		</article>
 	</div>
-	<!--  END POP UPS -->
+	<!--  END LOG OUT -->
 
 	<!--  MESSAGES -->
-
 	<article class="popup col-s-11" id="messages-popup">
 		<div class="title-exit">
 			<h3>Messaging</h3>
@@ -238,42 +237,42 @@
 		</div>
 		<div id="inside-messages">
 			<div id="your-chats" class="col-s-11 col-t-11 col-3">
-	      <h3>Your chats</h3>
-	      <div id="chats" class="">
-	        <article class="chat-person" id="default-person">
-	          <p class="date-chat" id="date-chat">Default date</p>
-	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-	          <h4 class="name-chat" id="name-chat">Defaul name</h4>
-	        </article>
-	        <article class="chat-person" id="selected-chat">
-	          <p class="date-chat" id="date-chat-2">Default date</p>
-	          <img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
-	          <h4 class="name-chat" id="name-chat-2">Defaul name</h4>
-	        </article>
-	      </div>
-	    </div>
-	    <div id="chat" class="col-s-11 col-t-11 col-8">
-	      <div id="title-chat">
-	        <h3 id="main-chat">Default name</h3>
-	        <img id="profile-chat" src="images/default_pfp.png" alt="default picture">
-	      </div>
-	      <hr id="horizontal">
-	      <div id="in-messages">
-	        <div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
-	          <p class="message-date-small" id="message-date">Default date</p>
-	          <p class="message-text">Default Message</p>
-	        </div>
-	        <div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
-	          <p class="message-date-small" id="message-date-2">Default date</p>
-	          <p class="message-text">Default Message</p>
-	        </div>
-	      </div>
-	      <div class="col-s-9 comment-frm">
-		  	<label for="message">Enter your message:</label>
-	        <input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
-	        <img class="send-btn" src="images/send.png" alt="send message">
-	      </div>
-	    </div>
+				<h3>Your chats</h3>
+				<div id="chats" class="">
+					<article class="chat-person" id="default-person">
+						<p class="date-chat" id="date-chat">Default date</p>
+						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+						<h4 class="name-chat" id="name-chat">Defaul name</h4>
+					</article>
+					<article class="chat-person" id="selected-chat">
+						<p class="date-chat" id="date-chat-2">Default date</p>
+						<img class="profile-img-chat" src="images/default_pfp.png" alt="default picture">
+						<h4 class="name-chat" id="name-chat-2">Defaul name</h4>
+					</article>
+				</div>
+			</div>
+			<div id="chat" class="col-s-11 col-t-11 col-8">
+				<div id="title-chat">
+					<h3 id="main-chat">Default name</h3>
+					<img id="profile-chat" src="images/default_pfp.png" alt="default picture">
+				</div>
+				<hr id="horizontal">
+				<div id="in-messages">
+					<div class="received-message message col-s-8 col-t-8 col-6" id="default-received">
+						<p class="message-date-small" id="message-date">Default date</p>
+						<p class="message-text">Default Message</p>
+					</div>
+					<div class="sent-message message col-s-8 col-t-8 col-6" id="default-sent">
+						<p class="message-date-small" id="message-date-2">Default date</p>
+						<p class="message-text">Default Message</p>
+					</div>
+				</div>
+				<div class="col-s-9 comment-frm">
+					<label for="message">Enter your message:</label>
+					<input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+					<img class="send-btn" src="images/send.png" alt="send message">
+				</div>
+			</div>
 		</div>
 	</article>
 	<!-- END MESSAGES -->
@@ -281,6 +280,7 @@
 	<!-- MAIN SECTION -->
 	<section id="main-section">
 		<h1>Last Experiences</h1>
+		<!-- FILTER SECTION -->
 		<nav id="filter-bar" class="col-s-10 col-t-8 col-4">
 			<label for="filter-input" class="col-s-2">filter</label>
 			<div class="col-s-10">
@@ -298,6 +298,7 @@
 				<button onclick="deleteFilter(this)" class="delete-filter">x</button>
 			</div>
 		</nav>
+		<!-- END FILTER SECTION -->
 		<section class="experiences">
 			<a href="experience_bali.html">
 				<article class="experience-r experience col-11">
@@ -346,7 +347,9 @@
 			</a>
 		</section>
 	</section>
-	<!-- FOOTER- -->
+	<!-- END MAIN SECTION -->
+
+	<!-- FOOTER -->
 	<footer class="clearfix">
 		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
 			<img id='footer-logo' src="images/logo.png" alt="travelust logo">
