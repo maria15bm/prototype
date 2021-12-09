@@ -127,13 +127,38 @@ $(document).ready(function() {
 	})
 
 	$('#profile-btn').click(function (){
-		window.location="profile.html"
+		window.location="profile.html";
+
+		let val=check_loged("loged");
+		let values=getCookie(val);
+		let cookie = values.split(",");
+		var interest = "";
+		var ii = 10;
+		for (var i = 5; i < ii; i++) {
+			if (cookie[i] != ""){
+				$interest = $("#default-interest").clone();
+				$interest.children("p").html(cookie[i]);
+				var iii = i - 4;
+				$interest.prop("id", "interest-to-change-" + iii);
+				$("#default-interest").parent().append($interest);
+			}
+
+			if (cookie[i] == "") {
+				ii += 1;
+			}
+		}
+		for (var i = 1; i < 6; i++) {
+			console.log($("#interest-to-change-"+i));
+			if ($("#interest-to-change-" + i).children("p").html(cookie[i]) == "") {
+				$("#interest-to-change-" + i)
+			}
+		}
 	})
 
 	$('#profile-btn-in-menu').click(function (){
 		window.location="profile.html"
 	})
-	
+
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
@@ -264,6 +289,43 @@ $(document).ready(function() {
 			$("#myList li a").hide();
 		}
 	});
+
+	$(".delete-interest-modify").click(function () {
+		$(this).parent().remove();
+		let val = check_loged("loged");
+		let values = getCookie(val);
+		let cookie = values.split(",");
+		const exdays = 190;
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+		cookie.forEach((item, i) => {
+			if (item == $(this).parent().children("p").html()) {
+				delete cookie[i]
+			}
+			document.cookie = val + "=" + cookie + ";" + expires + ";path=/";
+		});
+	})
+
+	$("#new-interest-form").submit(function (e) {
+		e.preventDefault()
+		let val = check_loged("loged");
+		let values = getCookie(val);
+		let cookie = values.split(",");
+		const exdays = 190;
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+    var interest = $('#new-interest-form-new').find(":selected").text().toLowerCase();
+		var yes = 0;
+		cookie.forEach((item, i) => {
+			if (item == "") {
+				cookie.splice(i, 0, interest)
+			}
+		});
+
+		document.cookie = val + "=" + cookie + ";" + expires + ";path=/";
+	})
 
 	// the top experiences can be sorted (drag and drop)
 	/*let sortable = document.getElementById("experiences");
@@ -520,18 +582,30 @@ function upload_data_profile() {
 	$("#username_prof").html(cookie[0]);
 	$("#email_prof").html(val);
 	$("#birth_prof").html(cookie[4]);
-	$("#int-1").children("a").html(cookie[5]);
-	$("#int-2").children("a").html(cookie[6]);
-	$("#int-3").children("a").html(cookie[7]);
-	$("#int-4").children("a").html(cookie[8]);
-	$("#int-5").children("a").html(cookie[9]);
+	var ii = 10;
+	for (var i = 5; i < ii; i++) {
+		if (cookie[i] != ""){
+			var index = i - 4;
+			$("#int-" + index).children("a").html(cookie[i]);
+		}
+		if (cookie[i] == "") {
+			ii += 1;
+		}
+	}
 
 	var interest = "";
-	for (var i = 5; i < 10; i++) {
-		$interest = $("#default-interest").clone();
-		$interest.children("p").html(cookie[i]);
-		var ii = i - 4;
-		$interest.prop("id", "interest-to-change-" + ii);
-		$("#default-interest").parent().append($interest);
+	var ii = 10;
+
+	for (var i = 5; i < ii; i++) {
+		if (cookie[i] != ""){
+			$interest = $("#default-interest").clone();
+			$interest.children("p").html(cookie[i]);
+			var iii = i - 4;
+			$interest.prop("id", "interest-to-change-" + iii);
+			$("#default-interest").parent().append($interest);
+		}
+		if (cookie[i] == "") {
+			ii += 1;
+		}
 	}
 }
