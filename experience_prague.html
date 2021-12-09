@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script/index.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet">
@@ -281,7 +282,7 @@
 	<section id='pop-up-comments' class="col-s-11">
 		<button class="close-btn">x</button>
 		<h2>Comments</h2>
-		<section id="comment-sect">
+		<div id="comment-sect">
 			<article class="comment col-s-11">
 				<p class="col-s-6">Name</p>
 				<h3 class="col-s-6">@user1</h3>
@@ -293,12 +294,12 @@
 				<h3 class="col-s-6">@user1</h3>
 				<p class="col-s-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</article>
-		</section>
-		<section class="comment-frm col-s-9">
+		</div>
+		<div class="comment-frm col-s-9">
 			<label for="comment-in-2">Enter your comment:</label>
 			<input type="text" id="comment-in-2" class='comment-input col-s-10 col-t-11 col-11' name="comments">
 			<img class="send-btn" src="images/send.png" alt="send comment">
-		</section>
+		</div>
 	</section>
 	<!-- MAIN SECTION -->
 	<section id=main-sect>
@@ -313,17 +314,20 @@
 			<h3>Approximate budget: 150€</h3>
 		</article>
 		<article id=description class='col-s-11 col-t-10 col-8'>
-			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.<br><p/>
+			<h3>Description</h3>
+			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.<br></p>
 			<p>Main attractions include Prague Castle, Charles Bridge, Old Town Square with the Prague astronomical clock, the Jewish Quarter, Petřín hill and Vyšehrad.</p>
-			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.<p/>
+			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.</p>
 			<br>
 			<p>Main attractions include Prague Castle, Charles Bridge, Old Town Square with the Prague astronomical clock, the Jewish Quarter, Petřín hill and Vyšehrad.</p>
-			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.<p/>
+			<p>Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval Astronomical Clock, which gives an animated hourly show.</p>
 			<br>
 			<p>Main attractions include Prague Castle, Charles Bridge, Old Town Square with the Prague astronomical clock, the Jewish Quarter, Petřín hill and Vyšehrad.</p>
 		</article>
 		<section id="media" class="col-s-12 col-t-11 col-9">
+			<h3 class="col-s-12">Media content</h3>
 			<article id="images">
+				<h4 class="col-s-12">images</h4>
 	            <button type="button" class="arrow-img arr-right"><img src="images/left-arrow.png" alt="right arrow"></button>
 	            <div class="col-s-8 col-t-9 col-10">
 	              <img id='img1' class="obj1 ex-img col-s-12 col-t-5" src="images/prague_pic_1.png" alt="prague image">
@@ -335,19 +339,21 @@
 	            <button type="button" class="arrow-img arr-left"><img src="images/right-arrow.png" alt="left arrow"></button>
 	        </article>
 	        <article id="videos">
+				<h4 class="col-s-12">videos</h4>
 		        <button type="button" class="arrow-img arr-right"><img src="images/left-arrow.png" alt="right arrow"></button>
 		        <div class="col-s-8 col-t-9 col-10">
-			        <iframe id="vid1" class="obj1 col-s-12 col-t-5" src="https://www.youtube.com/embed/idg6vW3vXtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			        <iframe id="vid2" class="obj2 col-s-12 col-t-5" src="https://www.youtube.com/embed/87GfE07QZdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			        <iframe id="vid3" class="obj3 col-s-12 col-t-5" src="https://www.youtube.com/embed/njFvp_JnJ2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<iframe id="vid4" class="obj4 col-s-12 col-t-5" src="https://www.youtube.com/embed/tNJTWOUH8JE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			        <iframe id="vid5" class="obj5 col-s-12 col-t-5" src="https://www.youtube.com/embed/N4_ghWwdtMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid1" class="obj1 col-s-12 col-t-5" src="https://www.youtube.com/embed/idg6vW3vXtE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid2" class="obj2 col-s-12 col-t-5" src="https://www.youtube.com/embed/87GfE07QZdc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid3" class="obj3 col-s-12 col-t-5" src="https://www.youtube.com/embed/njFvp_JnJ2U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe id="vid4" class="obj4 col-s-12 col-t-5" src="https://www.youtube.com/embed/tNJTWOUH8JE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			        <iframe id="vid5" class="obj5 col-s-12 col-t-5" src="https://www.youtube.com/embed/N4_ghWwdtMc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		        </div>
 		        <button type="button" class="arrow-img arr-left"><img src="images/right-arrow.png" alt="left arrow"></button>
 	      	</article>
         </section>
         <section id="bottom-sect" class="col-s-12">
-        	<article id="likes-coms" class="col-s-11">
+        	<h3>Comment section</h3>
+        	<div id="likes-coms" class="col-s-11">
         		<div class="col-s-9 comment-frm">
 					<label for="comment-in">Enter your comment:</label>
         			<input type="text" id="comment-in" class='comment-input col-s-10 col-t-11 col-11' name="comments">
@@ -357,7 +363,7 @@
         			<h4>10</h4>
         			<img id="like-img" src="images/like_sin_dar.png" alt="like heart">
         		</div>
-        	</article>
+        	</div>
         	<button id="see-comments" class="col-s-6 col-t-4 col-3">See comments</button>
         </section>
 	</section>
@@ -382,5 +388,4 @@
 	<!-- END FOOTER -->
 
 </body>
-<script src="script/index.js"></script>
 </html>
