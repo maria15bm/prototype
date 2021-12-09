@@ -1,20 +1,15 @@
-/*Palette:
-- Oscuro: #1D1E2C
-- Azulito: #C4D7F2
-- Salmón: #FF958C
-- Piel de limón: #FDFCEC
-- Granate raro no sé: #B6244F
-*/
+/* IMPLEMENTS top_users.html SPECIFIC DESIGN */
+
+/*----- CUSTOMIZED STANDARD -----*/
+p{
+	text-align: center;
+}
 
 /*----- MAIN SECTION -----*/
 section{
 	background-color: #1D1E2C;
 	padding-bottom: 30px;
 	display: block;
-}
-
-p{
-	text-align: center;
 }
 
 .user{
@@ -61,7 +56,6 @@ p{
 		display: block;
 		margin: auto;
 	}
-
 
 	.user h3 {
 		margin: auto;

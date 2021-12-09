@@ -1,13 +1,6 @@
-/*Palette:
-- Oscuro: #1D1E2C
-- Azulito: #C4D7F2
-- Salmón: #FF958C
-- Piel de limón: #FDFCEC
-- Granate raro no sé: #B6244F
-*/
+/* IMPLEMENTS experience_bali.html, experience_cies.html and experience_prague.html SPECIFIC DESIGN */
 
-/*----- MAIN SECTION -----*/
-
+/*------- CUSTOMIZED STANDARDS ------*/
 h3{
   margin: 20px auto;
 }
@@ -17,6 +10,7 @@ h4{
   margin: 10px auto;
 }
 
+/*----- MAIN SECTION -----*/
 #main-sect{
   background-color: #1D1E2C;
   display: inline-block;
@@ -56,6 +50,7 @@ h4{
   display: inline-block;
 }
 
+/*media: images and videos*/
 #media{
   display: inline-block;
   margin: auto;
@@ -66,7 +61,6 @@ h4{
   flex-wrap: wrap;
   margin: 30px auto;
   text-align: center;
-
 }
 
 #images div, #videos div{
@@ -90,6 +84,8 @@ h4{
   margin: auto;
 }
 
+  /* in the mobile version, one image/video are displayed in
+  the photo roulette */
 .obj1{
   display: flex;
 }
@@ -229,6 +225,8 @@ h4{
   .col-t-11 {width: 91.66%;}
   .col-t-12 {width: 100%;}
 
+  /*INDIVIDUAL STANDARTS*/
+
   h1{
     margin-top: 30px;
   }
@@ -292,6 +290,7 @@ h4{
     margin: auto;
   }
 
+  /*media: images and videos*/
   .arrow-img{
     margin: 10px;
   }
@@ -309,6 +308,8 @@ h4{
     height: 50px;
   }
 
+  /* in the tablet version, two images/videos are displayed in
+  the photo roulette */
   .obj1, .obj2{
     display: inline-block;
     margin: auto;
@@ -370,6 +371,8 @@ h4{
     line-height: 22px;
   }
 
+  /* in the desktop version, three images/videos are displayed in
+  the photo roulette */
   .obj1, .obj2, .obj3{
     display: inline-block;
     margin: auto;

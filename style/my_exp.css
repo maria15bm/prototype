@@ -1,12 +1,11 @@
-/*Palette:
-- Oscuro: #1D1E2C
-- Azulito: #C4D7F2
-- Salmón: #FF958C
-- Piel de limón: #FDFCEC
-- Granate raro no sé: #B6244F
-*/
-/*----- MAIN SECTION -----*/
+/* IMPLEMENTS my_exp.html SPECIFIC DESIGN */
 
+/*----- CUTOMIZED STANDARDS -----*/
+h3 {
+	color: black;
+}
+
+/*----- MAIN SECTION -----*/
 #section {
 	background-color: #1D1E2C;
 	display: flex;
@@ -89,10 +88,6 @@
 	width: 25px;
 	border-radius: 7px;
 	margin-bottom: 2px
-}
-
-h3 {
-	color: black
 }
 
 .interests-exp {

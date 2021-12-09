@@ -1,4 +1,4 @@
-var filter_list = ["filter 1", "filter 2"];
+var filter_list = [];
 
 /* every time the page reloads everything inside is executed */
 $(document).ready(function() {
