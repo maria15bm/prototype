@@ -42,7 +42,7 @@ $(document).ready(function() {
     var description = $("input[name='description']", this).val();
     var location = $("input[name='location']", this).val();
     var budget = $("input[name='budget']", this).val();
-    var image = document.getElementById('image-input-exp').files[0];
+    var image = document.getElementById('hidden-input').files[0];
     var int1 = $('#new-interest-1').find(":selected").text();
     var int2 = $('#new-interest-2').find(":selected").text();
 
