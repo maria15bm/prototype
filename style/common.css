@@ -364,6 +364,22 @@ footer{
     flex-direction: column-reverse;
 }
 
+.comments-and-likes{
+    display: inline-flex;
+    float: right;
+    padding-top: 2%;
+}
+
+.read-more{
+    text-decoration: underline;
+    color: #C4D7F2;
+}
+
+.comments-and-likes img{
+    width: 20%;
+    margin: 5%;
+}
+
 .comment-frm{
   background: #FDFCEC;
   border-radius: 50px;
@@ -752,6 +768,7 @@ p.date-chat {
         margin: 0px;
         flex-direction: column;
     }
+
 
 }
 
