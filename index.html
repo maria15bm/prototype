@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +16,8 @@
 
 	<header class="clearfix">
 		<div id='header-main' class='col-t-12 col-s-12 col-12'>
-			<img class='col-s-2' id='show-menu' src="images/show-menu.png">
-			<img class="col-s-2 col-3" id='logo' src="images/logo.png">
+			<img class='col-s-2' id='show-menu' src="images/show-menu.png" alt="display menu">
+			<img class="col-s-2 col-3" id='logo' src="images/logo.png" alt="travelust logo">
 			<h2 class='col-s-5 col-4' id='head-title'>Travelust</h2>
 			<nav class='col-s-5 col-6' id='log-sign-frm'>
 				<div id="main-bts" class="col-s-12">
@@ -26,9 +26,9 @@
 				</div>
 				<div id="registered-bts" class="col-s-12">
 					<div id="pfp-user" class="col-s-9 col-t-7 col-3">
-						<img src="images/email%201.png" class="image_message" id="image_mes">
+						<img src="images/email%201.png" class="image_message" id="image_mes" alt="letter logo for messages">
 						<p class="text_username" id="username_show"></p>
-						<img src="images/user.png">
+						<img src="images/user.png" alt="user default image">
 					</div>
 					<div id="prf-out" class="col-t-3 col-6">
 						<button class="col-s-12 col-5" id='profile-btn'>Profile</button>
@@ -53,8 +53,9 @@
 			</nav>
 		</nav>
 		<nav id='search-bar' class='col-t-3 col-4'>
+			<label for="search-input">Search input</label>
 			<input type="text" id='search-input' name="search-input">
-			<img id='search-lupa' src="images/search_lupa.png">
+			<img id='search-lupa' src="images/search_lupa.png" alt="magnifying glass">
 		</nav>
 	</header>
 	<ul id="myList" class="col-4">
@@ -98,10 +99,10 @@
 					<img src="images/default_pfp.png" alt="current picture" class="col-s-8">
 					<input type="file" id="hidden" class="input-sign" name="change picture">
 					<label for="hidden" id="input-label">Select picture</label>
-					<label for="interest">Interests</label>
+					<h4>Interests</h4>
 					<form class="profile-info">
 						<div class="col-s-9 col-t-9 col-9">
-							<label for="inter1" class="label-int">Interest 1</label>
+							<label for="interest-1" class="label-int">Interest 1</label>
 							<select name="inter1" id="interest-1" class="col-s-12">
 								<option selected disabled hidden></option>
 								<option value="beach">Beach</option>
@@ -118,7 +119,7 @@
 							</select>
 						</div>
 						<div class="col-s-9 col-t-9 col-9">
-							<label for="inter2" class="label-int">Interest 2</label>
+							<label for="interest-2" class="label-int">Interest 2</label>
 							<select name="inter2" id="interest-2" class="col-s-12">
 								<option selected disabled hidden></option>
 								<option value="beach">Beach</option>
@@ -135,7 +136,7 @@
 							</select>
 						</div>
 						<div class="col-s-9 col-t-9 col-9">
-							<label for="inter3" class="label-int">Interest 3</label>
+							<label for="interest-3" class="label-int">Interest 3</label>
 							<select name="inter3" id="interest-3" class="col-s-12">
 								<option selected disabled hidden></option>
 								<option value="beach">Beach</option>
@@ -152,7 +153,7 @@
 							</select>
 						</div>
 						<div class="col-s-9 col-t-9 col-9">
-							<label for="inter4" class="label-int">Interest 4</label>
+							<label for="interest-4" class="label-int">Interest 4</label>
 							<select name="inter4" id="interest-4" class="col-s-12">
 								<option selected disabled hidden></option>
 								<option value="beach">Beach</option>
@@ -169,7 +170,7 @@
 							</select>
 						</div>
 						<div class="col-s-9 col-t-9 col-9">
-							<label for="inter5" class="label-int">Interest 5</label>
+							<label for="interest-5" class="label-int">Interest 5</label>
 							<select name="inter5" id="interest-5" class="col-s-12">
 								<option selected disabled hidden></option>
 								<option value="beach">Beach</option>
@@ -200,9 +201,9 @@
 			</div>
 			<div class="inputs">
 				<form class="profile-info">
-					<label for="email">Email</label>
+					<label for="email-login">Email</label>
 					<input type="email" name="email" value="" class="input-modify col-s-8" id="email-login" required>
-					<label for="password">Password</label>
+					<label for="password-login">Password</label>
 					<input type="password" name="password" value="" class="input-modify col-s-8" id="password-login" pattern="[a-z0-9]{0,8}" required>
 					<button type="submit" id="submit-login" class="submit-but col-s-3">Log in</button>
 				</form>
@@ -269,7 +270,8 @@
 	        </div>
 	      </div>
 	      <div class="col-s-9 comment-frm">
-	        <input type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
+		  	<label for="message">Enter your message:</label>
+	        <input id="message" type="text" class='comment-input col-s-10 col-t-11 col-11' name="message">
 	        <img class="send-btn" src="images/send.png" alt="send message">
 	      </div>
 	    </div>
@@ -1176,7 +1178,7 @@
 		<section id="experiences" class="col-s-10">
 			<a href="experience_bali.html" class="col-t-4 col-11">
 				<article class="experience-r experience">
-					<img src="images/bali main img.png" class="col-s-12 col-t-12 col-4">
+					<img src="images/bali main img.png" class="col-s-12 col-t-12 col-4" alt="sacred monkey bali">
 					<div class="col-7">
 						<h3>Bali</h3>
 						<p class="col-s-11 col-12">Mandala Suci Wenara Wana, or well known as Ubud Monkey Forest, is the sanctuary and natural habitat of the Balinese long-tailed macaque. It is located at Padangtegal Ubud, Bali. About 1049 monkeys live in this sanctuary. They are divided into 6 groups, namely in front of main temple group, forest...</p>
@@ -1189,12 +1191,12 @@
 						<h3>Prague</h3>
 						<p class="col-s-11 col-12">Prague, capital city of the Czech Republic, is bisected by the Vltava River. Nicknamed “the City of a Hundred Spires,” it's known for its Old Town Square, the heart of its historic core, with colorful baroque buildings, Gothic churches and the medieval...</p>
 					</div>
-					<img src="images/prague main img.png" class="col-s-12 col-t-12 col-4">
+					<img src="images/prague main img.png" class="col-s-12 col-t-12 col-4" alt="city of prague">
 				</article>
 			</a>
 			<a href="experience_cies.html" class="col-t-4 col-11">
 				<article id='cies-exp' class="experience-r experience">
-					<img src="images/cies main img.png" class="col-s-12 col-t-12 col-4">
+					<img src="images/cies main img.png" class="col-s-12 col-t-12 col-4" alt="cies islands img">
 					<div class="col-7">
 						<h3>Cies Islands</h3>
 						<p class="col-s-11 col-12">Natural paradise in the Vigo estuary, the Cíes Islands are part of the maritime-terrestrial Natural Park of the Atlantic Islands of Galicia. This archipelago is made up of three islands: North or Monteagudo, Del Medio or do Faro, and South or San...</p>
@@ -1208,7 +1210,7 @@
 	<!-- ----------FOOTER----------- -->
 	<footer class="clearfix">
 		<div id='footer-main' class='col-t-8 col-s-12 col-3'>
-			<img id='footer-logo' src="images/logo.png">
+			<img id='footer-logo' src="images/logo.png" alt="travelust logo">
 			<h2 id='footer-title'>Travelust</h2>
 		</div>
 
@@ -1218,9 +1220,9 @@
 		</div>
 
 		<div id="footer-images" class='col-t-4 col-s-16 col-3'>
-			<a href=""><img src="images/youtube%202.png"></a>
-			<a href=""><img src="images/twitter%201.png"></a>
-			<a href=""><img src="images/instagram%202.png"></a>
+			<a href="" alt="youtube"><img src="images/youtube%202.png" alt="youtube logo"></a>
+			<a href="" alt="twitter"><img src="images/twitter%201.png" alt="twitter logo"></a>
+			<a href="" alt="instagram"><img src="images/instagram%202.png" alt="instagram logo"></a>
 		</div>
 	</footer>
 	<!-- ----------END FOOTER----------- -->

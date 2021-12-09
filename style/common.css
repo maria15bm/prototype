@@ -228,6 +228,10 @@ header{
   padding: 10px;
 }
 
+#search-bar label{
+    color: #C4D7F2;
+}
+
 #search-lupa{
   margin: auto;
   width: 31px;
@@ -547,6 +551,9 @@ footer{
 
 
 /* MESSAGES POPUP */
+.comment-frm label{
+    font-style: italic;
+}
 
 #your-chats {
   display: flex;
