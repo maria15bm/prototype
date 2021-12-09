@@ -290,6 +290,18 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#ES-exp").click( function () {
+		window.location = "experience_cies.html"
+	})
+
+	$(".Indonesia").click(function () {
+		window.location = "experience_bali.html"
+	})
+
+	$("#CZ-exp").click( function () {
+		window.location = "experience_prague.html"
+	})
+
 	$(".delete-interest-modify").click(function () {
 		$(this).parent().remove();
 		let val = check_loged("loged");

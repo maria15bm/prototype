@@ -1,3 +1,7 @@
+.b-contain {
+	font-size: 0.1px
+}
+
 .b-contain *, .b-contain *::before, .b-contain *::after {
 	box-sizing: content-box !important;
 }

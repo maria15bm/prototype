@@ -69,6 +69,8 @@ $(document).ready(function() {
     $experience.css("width", "90%");
     $experience.children("div.top-mark").hide();
     $child.children("h3.title-exp").html(name);
+    $child.children(".img-remove").children(".remove-select").children(".b-contain").prop("for", "check-me" + num_exps);
+    $child.children(".img-remove").children(".remove-select").children(".b-contain").children("input").prop("id", "check-me" + num_exps);
     $child.children(".interests-exp").children(".interest-1").children(".inter-1").html(int1);
     $child.children(".interests-exp").children(".interest-2").children(".inter-2").html(int2);
     $child.children(".img-remove").children(".img-title").attr("src", imageURL);
