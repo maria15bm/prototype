@@ -235,7 +235,7 @@ $(document).ready(function() {
 		var new_birth = $("#form-birth").val();
 		var new_password = $("#form-password").val();
 
-		var list = [new_username, new_email, new_birth, new_password];
+		var list = [new_username, new_birth, new_password, new_email];
 		list.forEach((item,i) => {
 			if (item != ""){
 				// check for data and replace the cookie
@@ -250,16 +250,16 @@ $(document).ready(function() {
 					var cvalue = [new_username,data[1],data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
 					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
 				}
-				if (i==3){
+				if (i==2){
 					var cvalue = [data[0],new_password ,data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
 					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
 				}
-				if (i==1){
+				if (i==3){
 					var cvalue = [data[0],data[1] ,data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
 					delete_or_create_loged(new_email);
 					document.cookie = new_email + "=" + cvalue + ";" + expires + ";path=/";
 				}
-				if (i==2){
+				if (i==1){
 					var cvalue = [data[0],data[1] ,data[2],data[3],new_birth,data[5],data[6],data[7],data[8],data[9]];
 					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
 				}
