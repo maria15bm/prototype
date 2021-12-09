@@ -278,35 +278,38 @@
 		</div>
 	</article>
 	<!-- ----------END MESSAGES -------- -->
-	<section>
+	<section class="clearfix">
 		<h1>Planning</h1>
-		<article id="budget-frm" class="col-s-11 col-t-10 col-7">
-			<h3 class="col-s-5">Budget:</h3>
-			<div id="budget-params" class="col-s-7">
-				<div>
-					<label for="min" class="col-s-12">min:</label>
-					<input type="text" id="min" name="min" class="col-s-10">
-					<h3 class="col-s-1">€</h3>
+		<img id='image_plan' class="col-t-12 col-s-12 col-3" src="images/plan.png" alt="image infography">
+		<div id="content-plan" class="col-8">
+			<article id="budget-frm" class="col-s-11 col-t-10 col-7">
+				<h3 class="col-s-5">Budget:</h3>
+				<div id="budget-params" class="col-s-7">
+					<div>
+						<label for="min" class="col-s-12">min:</label>
+						<input type="text" id="min" name="min" class="col-s-10">
+						<h3 class="col-s-1">€</h3>
+					</div>
+					<div>
+						<label for="max" class="col-s-12">max:</label>
+						<input type="text" id="max" name="max" class="col-s-10">
+						<h3 class="col-s-1">€</h3>
+					</div>
 				</div>
-				<div>
-					<label for="max" class="col-s-12">max:</label>
-					<input type="text" id="max" name="max" class="col-s-10">
-					<h3 class="col-s-1">€</h3>
+			</article>
+			<article id="interests-frm" class="col-s-11 col-t-10 col-7">
+				<label for="interests" class="col-4">Interests:</label>
+				<div class="col-8">
+					<h4>Separate the diferent interests using commas.</h4>
+					<input type="text" id="interests" name="interests" class="col-s-10 col-12">
 				</div>
-			</div>
-		</article>
-		<article id="interests-frm" class="col-s-11 col-t-10 col-7">
-			<label for="interests" class="col-4">Interests:</label>
-			<div class="col-8">
-				<h4>Separate the diferent interests using commas.</h4>
-				<input type="text" id="interests" name="interests" class="col-s-10 col-12">
-			</div>
-		</article>
-		<article id="destination-frm" class="col-s-11 col-t-10 col-7">
-			<label for="destination" class="col-s-12 col-4">Destination:</label>
-			<input class="col-s-10 col-8" type="text" id="destination" name="destination" class="col-s-10">
-		</article>
-		<button id="search-btn">SEARCH</button>
+			</article>
+			<article id="destination-frm" class="col-s-11 col-t-10 col-7">
+				<label for="destination" class="col-s-12 col-4">Destination:</label>
+				<input class="col-s-10 col-8" type="text" id="destination" name="destination" class="col-s-10">
+			</article>
+			<button id="search-btn">SEARCH</button>
+		</div>
 	</section>
 	<!-- ----------FOOTER----------- -->
 	<footer class="clearfix">

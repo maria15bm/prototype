@@ -9,7 +9,7 @@
 /*----- MAIN SECTION -----*/
 section{
 	background-color: #1D1E2C;
-	padding-bottom: 25%;
+	padding-bottom: 3%;
 	display: block;
 	text-align: center;
 }
@@ -68,7 +68,7 @@ label{
 }
 
 #search-btn{
-	margin: 20px auto;
+	margin: auto;
 	background: #B6244F;
 	border-radius: 20.3125px;
 	color: #FDFCEC;
@@ -76,6 +76,9 @@ label{
 	padding: 10px 20px;
 }
 
+#image_plan{
+	width: 50%;
+}
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
@@ -83,6 +86,23 @@ label{
 
 
 @media only screen and (min-device-width: 769px) {
+	#image_plan{
+		width: 25%;
+	}
+
+	#search-btn{
+		margin-left: 50%;
+	}
+
+	#content-plan{
+		text-align:left;
+		float:right;
+		margin: 0px;
+		font-size: 22px;
+		line-height: 120%;
+		vertical-align: baseline;
+	}
+
 	#budget-frm{
 		padding-bottom: 40px;
 	}
