@@ -24,7 +24,6 @@ function deleteFilter(filter){
 	    return item !== value
 	})
 	updateFilter();
-	console.log(filter_list);
 	$(filter).parent().remove();
 
 }
@@ -32,6 +31,7 @@ function deleteFilter(filter){
 
 
 $(document).ready(function() {
+	//check the cookie loged to know if it has to show the registered version or ungestired one
 	if (check_loged("loged") == ""){
 		$("#pop-up-comments").hide();
 		$("#login-popup").hide();
@@ -148,7 +148,6 @@ $(document).ready(function() {
 			}
 		}
 		for (var i = 1; i < 6; i++) {
-			console.log($("#interest-to-change-"+i));
 			if ($("#interest-to-change-" + i).children("p").html(cookie[i]) == "") {
 				$("#interest-to-change-" + i)
 			}
@@ -231,7 +230,6 @@ $(document).ready(function() {
   $("#new-picture").submit(function(e) {
 	  var pic = document.getElementById('new-pfp-in').files[0];
 	pic = URL.createObjectURL(pic);
-	console.log("pic");
 	update_image(pic);
 	$("#change-pfp").hide();
   })
@@ -443,7 +441,12 @@ $(document).ready(function() {
 })
 
 
-// function in sign in to create cookie
+
+
+//--------------------MANAGING COOKIES FUNCTIONS----------------------------
+
+
+// function done in the signup pop up
 function get_values() {
 	const username = $("#username").val();
 	let password;
@@ -473,10 +476,8 @@ function get_values() {
 			}
 			else {
 				register = email;
-				console.log(register);
 				if (setCookie(username, password, name, email, profile, birth, interest1, interest2,interest3, interest4, interest5, exdays) === true){
 					delete_or_create_loged(email);
-
 					location.reload();
 				}
 			}
@@ -488,79 +489,8 @@ function get_values() {
 	}
 }
 
-function setCookie(username, password, name, email, image,birth ,interest1="",interest2="",interest3="",interest4="",interest5="", exdays) {
-	if (getCookie(email) == "") {
-		const d = new Date();
-		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-		let expires = "expires=" + d.toUTCString();
-		var cvalue = [username, password, name, image,birth,interest1, interest2,interest3,interest4,interest5];
-		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
-		return true;
 
-	}
-	else{
-		alert("Email allready registered, log in");
-		return false;
-
-	}
-}
-function show_username(){
-	let val=check_loged("loged");
-	let values=getCookie(val);
-	let data = values.split(",");
-	$("#username_show").html(data[0]);
-}
-
-function update_image(pic){
-	let val=check_loged("loged");
-	let values=getCookie(val);
-	let data = values.split(",");
-	const exdays = 190;
-	const d = new Date();
-	console.log(pic);
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	let expires = "expires=" + d.toUTCString();
-	//two cookies one for all data and the other for the image
-	var cvalue = [data[0],data[1],data[2],pic, data[4],data[5],data[6],data[7],data[8],data[9]];
-	document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function check_loged(loged) {
-	let value = getCookie(loged);
-	let val = value.split(',');
-	return val[0];
-}
-
-function delete_or_create_loged(email) {
-	//create cookie loged
-	exdays = 50000;
-	const d = new Date();
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-	let expires = "expires=" + d.toUTCString();
-	let loged = "loged";
-	document.cookie = loged + "=" + email + ";" + expires + ";path=/";
-
-}
-
-function getCookie(cname) {
-	console.log(cname);
-	let name = cname + "=";
-	let ca = document.cookie.split(';');
-	for(let i = 0; i < ca.length; i++) {
-		let c = ca[i];
-		while (c.charAt(0) == ' ') {
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) {
-			console.log(c.substring(name.length, c.length));
-			return c.substring(name.length, c.length);
-		}
-	}
-	// if cookie does not exist
-	return "";
-}
-
-//in log in
+//function done in the log in pop up
 function get_values2(){
 	var mail = $("#email-login").val();
 	const password = $("#password-login").val();
@@ -591,6 +521,98 @@ function get_values2(){
 	}
 }
 
+
+//creation of a cookie of the user
+function setCookie(username, password, name, email, image,birth ,interest1="",interest2="",interest3="",interest4="",interest5="", exdays) {
+	if (getCookie(email) == "") {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires=" + d.toUTCString();
+		var cvalue = [username, password, name, image,birth,interest1, interest2,interest3,interest4,interest5];
+		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
+		return true;
+
+	}
+	else{
+		alert("Email allready registered, log in");
+		return false;
+
+	}
+}
+
+
+//function to get a cookie
+function getCookie(cname) {
+	let name = cname + "=";
+	let ca = document.cookie.split(';');
+	for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	// if cookie does not exist
+	return "";
+}
+
+
+
+//function done after registering to show the username in the header
+function show_username(){
+	let val=check_loged("loged");
+	let values=getCookie(val);
+	let data = values.split(",");
+	$("#username_show").html(data[0]);
+}
+
+
+//--------loged cookie-----------------
+
+//cookie used to know if there is an user registered and to have the email of him, if it is the case
+
+
+//function to get the data of the cookie
+function check_loged(loged) {
+	let value = getCookie(loged);
+	let val = value.split(',');
+	return val[0];
+}
+
+
+//function to modify the cookie, passing the value of the email or an empty string if it is not registered
+function delete_or_create_loged(email) {
+	exdays = 50000;
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	let loged = "loged";
+	document.cookie = loged + "=" + email + ";" + expires + ";path=/";
+
+}
+
+
+//--------in profile-----------
+
+
+//update in the cookie the value of image when this is changed
+function update_image(pic){
+	let val=check_loged("loged");
+	let values=getCookie(val);
+	let data = values.split(",");
+	const exdays = 190;
+	const d = new Date();
+	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	let expires = "expires=" + d.toUTCString();
+	var cvalue = [data[0],data[1],data[2],pic, data[4],data[5],data[6],data[7],data[8],data[9]];
+	document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+
+//get the data of the profile in the screen
 function upload_data_profile() {
 	let val=check_loged("loged");
 	let values=getCookie(val);
