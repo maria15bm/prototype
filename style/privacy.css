@@ -1,3 +1,4 @@
+/* IMPLEMENTS privacy_policy.html SPECIFIC DESIGN */
 .privacy_text{
 
     font-family: Raleway;
@@ -10,6 +11,7 @@
     margin-right: 20px;
     color: #FFFFFF;
 }
+
 .privacy_title{
     font-family: Raleway;
     font-style: italic;

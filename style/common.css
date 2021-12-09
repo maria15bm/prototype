@@ -1,3 +1,5 @@
+/* IMPLEMENTS THE GENERAL COMMON DESIGN */
+
 *{
   font-family: 'Raleway', sans-serif;
   margin: 0px;
@@ -22,6 +24,7 @@
 .col-s-11 {width: 91.66%;}
 .col-s-12 {width: 100%;}
 
+/*------- STANDARDS -------*/
 
 h2{
   font-size: 32px;
@@ -87,19 +90,19 @@ button{
   cursor: pointer;
 }
 
+/* Represnts the orange rounded buttons that appear in our sections */
 .big-button {
 	border: none;
 	border-radius: 20px;
 	font-size: 21.8px;
 	color: black;
 	background-color: #FF958C;
-    margin: auto;
+  margin: auto;
 }
 
+
 .interest {
-	/*width: 30%;
-	height: 25px^*/
-    padding: 2px 10px;
+  padding: 2px 10px;
 	background-color: #FDFCEC;
 	border-radius: 20px;
 	margin: 5px auto;
@@ -177,6 +180,7 @@ header{
 #registered-bts button{
   margin: 5px auto;
 }
+
 .text_username {
     font-family: Raleway;
     font-style: italic;
@@ -184,7 +188,6 @@ header{
     font-size: 18px;
     line-height: 26px;
     text-align: center;
-
     color: #000000;
     margin: auto;
 }
@@ -866,7 +869,7 @@ p.date-chat {
         text-align: right;
     }
 
-    /* messages */
+    /* --------- MESSAGES -------- */
 
     #messages-popup {
       height: 62vh

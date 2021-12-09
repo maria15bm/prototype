@@ -1,27 +1,6 @@
-/*Palette:
-- Oscuro: #1D1E2C
-- Azulito: #C4D7F2
-- Salmón: #FF958C
-- Piel de limón: #FDFCEC
-- Granate raro no sé: #B6244F
-*/
+/* IMPLEMENTS plan.html SPECIFIC DESIGN */
 
-/*----- MAIN SECTION -----*/
-section{
-	background-color: #1D1E2C;
-	padding-bottom: 3%;
-	display: block;
-	text-align: center;
-}
-
-section input{
-	background: #FDFCEC;
-	border-radius: 30px;
-	border: 0px;
-	margin: 5px auto;
-	font-size: 20px;
-}
-
+/*----- CUSTOMIZED STANDARDS -----*/
 h3{
 	margin: auto;
 }
@@ -46,6 +25,22 @@ label{
 	color: #FF958C;
 	text-align: center;
 	margin: auto;
+}
+
+/*----- MAIN SECTION -----*/
+section{
+	background-color: #1D1E2C;
+	padding-bottom: 3%;
+	display: block;
+	text-align: center;
+}
+
+section input{
+	background: #FDFCEC;
+	border-radius: 30px;
+	border: 0px;
+	margin: 5px auto;
+	font-size: 20px;
 }
 
 #content-plan article{
@@ -78,6 +73,7 @@ label{
 
 
 @media only screen and (min-device-width: 769px) {
+  /* For desktop: */
 	#image_plan{
 		width: 25%;
 	}

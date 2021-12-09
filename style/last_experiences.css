@@ -1,13 +1,6 @@
-/*Palette:
-- Oscuro: #1D1E2C
-- Azulito: #C4D7F2
-- Salmón: #FF958C
-- Piel de limón: #FDFCEC
-- Granate raro no sé: #B6244F
-*/
+/* IMPLEMENTS last_experiences.html SPECIFIC DESIGN */
 
-/*----- MAIN SECTION -----*/
-
+/*----- CUSTOMIZED STANDARDS -----*/
 label{
 	font-style: italic;
 	font-weight: normal;
@@ -18,6 +11,7 @@ label{
 	margin: auto;
 }
 
+/*----- MAIN SECTION -----*/
 #main-section{
 	background-color: #1D1E2C;
 	padding-bottom: 30px;
@@ -92,8 +86,7 @@ label{
 }
 
 @media only screen and (min-device-width: 601px) {
-  /* For tablets: */
-
+		/*FOR TABLET*/
 }
 
 
