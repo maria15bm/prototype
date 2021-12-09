@@ -97,6 +97,8 @@ $(document).ready(function() {
 			$("#logout-popup").hide();
 		})
 		$("#logout").click(function() {
+			window.location = "index.html";
+			// the previous line does not work but it should
 			delete_or_create_loged("");
 			location.reload();
 		})
@@ -109,6 +111,7 @@ $(document).ready(function() {
 			$("#logout-popup").hide();
 		})
 		$("#logout").click(function() {
+			window.location = "index.html";
 			delete_or_create_loged("");
 			location.reload();
 		})
@@ -253,10 +256,11 @@ $(document).ready(function() {
 				}
 				if (i==1){
 					var cvalue = [data[0],data[1] ,data[2],data[3], data[4],data[5],data[6],data[7],data[8],data[9]];
+					delete_or_create_loged(new_email);
 					document.cookie = new_email + "=" + cvalue + ";" + expires + ";path=/";
 				}
 				if (i==2){
-					var cvalue = [data[0],data[1] ,data[2],data[3], data[4],new_birth,data[6],data[7],data[8],data[9]];
+					var cvalue = [data[0],data[1] ,data[2],data[3],new_birth,data[5],data[6],data[7],data[8],data[9]];
 					document.cookie = val + "=" + cvalue + ";" + expires + ";path=/";
 				}
 			}
