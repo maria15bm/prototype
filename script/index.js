@@ -488,7 +488,6 @@ function setCookie(username, password, name, email, image,birth ,interest1="",in
 		const d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		let expires = "expires=" + d.toUTCString();
-		//two cookies one for all data and the other for the image
 		var cvalue = [username, password, name, image,birth,interest1, interest2,interest3,interest4,interest5];
 		document.cookie = email + "=" + cvalue + ";" + expires + ";path=/";
 		return true;
