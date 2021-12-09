@@ -22,20 +22,20 @@
 		<div class="inputs">
 			<form id="create-exp">
 				<div class="grid">
-					<label class="exp-label" for="name">Name</label>
+					<label class="exp-label" for="form-name">Name</label>
 					<input type="text" name="name" value="" class="input-exp col-s-11 col-t-11 col-11" id="form-name">
-					<label class="exp-label" for="Description">Description</label>
+					<label class="exp-label" for="form-description">Description</label>
 					<input type="text" name="description" value="" class="input-exp col-s-11 col-t-11 col-11" id="form-description">
-					<label class="exp-label" for="location">Location</label>
+					<label class="exp-label" for="form-location">Location</label>
 					<input type="text" name="location" class="input-exp col-s-11 col-t-11 col-11" id="form-location">
 				</div>
 				<div id="input-smaller">
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-1-1">
-						<label class="exp-label" for="budget">Budget</label>
+						<label class="exp-label" for="form-budget">Budget</label>
 						<input type="number" name="budget" value="" class="input-exp col-s-6 col-t-6 col-6" id="form-budget">
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-2-2">
-						<label class="exp-label" for="inter1" class="label-int">Interest 1</label>
+						<label class="exp-label" for="new-interest-1" class="label-int">Interest 1</label>
 						<select name="inter1" id="new-interest-1" class="col-s-7 col-t-7 col-7">
 							<option selected disabled hidden></option>
 							<option value="beach">Beach</option>
@@ -52,7 +52,7 @@
 						</select>
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-3-3">
-						<label class="exp-label" for="inter2" class="label-int">Interest 2</label>
+						<label class="exp-label" for="new-interest-2" class="label-int">Interest 2</label>
 						<select name="inter2" id="new-interest-2" class="col-s-7 col-t-7 col-7">
 							<option selected disabled hidden></option>
 							<option value="beach">Beach</option>
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 					<input type="file" id="hidden-input" class="input-sign" name="change picture">
-					<label for="hidden" id="input-label-hidden">Select picture</label>
+					<label for="hidden-input" id="input-label-hidden">Select picture</label>
 				</label>
 				<button type="submit" name="add-experience" class="submit-but col-s-3 col-t-3 col-3">Submit</button>
 			</form>
@@ -87,7 +87,7 @@
 			<p class="col-s-12" id="selected-experiences-p">Default Experience</p>
 		</div>
 		<form class="inputs col-s-8 col-t-8 col-8" id="new-collection">
-			<label class="small-title" for="coll-name">Collection name:</label>
+			<label class="small-title" for="input-new-col">Collection name:</label>
 			<input type="text" name="coll-name" value="" id="input-new-col">
 			<button type="submit" name="add-collection-but" id="submit-coll" class="submit-but col-s-3 col-t-3 col-3">Submit</button>
 		</form>
