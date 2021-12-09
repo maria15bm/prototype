@@ -125,6 +125,7 @@ $(document).ready(function() {
 	$('#image_mes').click(function () {
 		$('#messages-popup').show();
 	})
+
 	$('#profile-btn').click(function (){
 		window.location="profile.html";
 
@@ -326,6 +327,12 @@ $(document).ready(function() {
 		document.cookie = val + "=" + cookie + ";" + expires + ";path=/";
 	})
 
+	// the top experiences can be sorted (drag and drop)
+	/*let sortable = document.getElementById("experiences");
+	$( function() {
+		$(sortable).sortable();
+	} );*/
+
 	// The images in the experiences are displayed using a photoroulette
 	$(".arr-right").click(function(){
 		let art = $(this).parent();
@@ -442,7 +449,7 @@ function get_values() {
 		const interest5 = $("#interest-5").val();
 		const exdays = 190;
 		//check pattern of the inputs
-		var passwregex = /^[a-z0-9]{0,8}$/;
+		var passwregex = /^[A-Za-z0-9]{4,8}$/;
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
 			if (password1 == "" || password2 == "" || name == "" || username == "" || email==""){
