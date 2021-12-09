@@ -35,9 +35,9 @@
 						<input type="number" name="budget" value="" class="input-exp col-s-6 col-t-6 col-6" id="form-budget">
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-2-2">
-						<label class="exp-label" for="new-interest-1" class="label-int">Interest 1</label>
+						<label class="exp-label label-int" for="new-interest-1">Interest 1</label>
 						<select name="inter1" id="new-interest-1" class="col-s-7 col-t-7 col-7">
-							<option selected disabled hidden></option>
+							<option selected disabled hidden>...</option>
 							<option value="beach">Beach</option>
 							<option value="exotic">Exotic</option>
 							<option value="city">City</option>
@@ -52,9 +52,9 @@
 						</select>
 					</div>
 					<div class="sub-in col-s-9 col-t-9 col-9" id="in-3-3">
-						<label class="exp-label" for="new-interest-2" class="label-int">Interest 2</label>
+						<label class="exp-label " for="new-interest-2">Interest 2</label>
 						<select name="inter2" id="new-interest-2" class="col-s-7 col-t-7 col-7">
-							<option selected disabled hidden></option>
+							<option selected disabled hidden>...</option>
 							<option value="beach">Beach</option>
 							<option value="exotic">Exotic</option>
 							<option value="city">City</option>
@@ -69,9 +69,8 @@
 						</select>
 					</div>
 				</div>
-					<input type="file" id="hidden-input" class="input-sign" name="change picture">
-					<label for="hidden-input" id="input-label-hidden">Select picture</label>
-				</label>
+				<input type="file" id="hidden-input" class="input-sign" name="change picture">
+				<label for="hidden-input" id="input-label-hidden">Select picture</label>
 				<button type="submit" name="add-experience" class="submit-but col-s-3 col-t-3 col-3">Submit</button>
 			</form>
 		</div>
@@ -208,7 +207,7 @@
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-1" class="label-int">Interest 1</label>
 							<select name="inter1" id="interest-1" class="col-s-12">
-								<option selected disabled hidden></option>
+								<option selected disabled hidden>...</option>
 								<option value="beach">Beach</option>
 								<option value="exotic">Exotic</option>
 								<option value="city">City</option>
@@ -225,7 +224,7 @@
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-2" class="label-int">Interest 2</label>
 							<select name="inter2" id="interest-2" class="col-s-12">
-								<option selected disabled hidden></option>
+								<option selected disabled hidden>...</option>
 								<option value="beach">Beach</option>
 								<option value="exotic">Exotic</option>
 								<option value="city">City</option>
@@ -242,7 +241,7 @@
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-3" class="label-int">Interest 3</label>
 							<select name="inter3" id="interest-3" class="col-s-12">
-								<option selected disabled hidden></option>
+								<option selected disabled hidden>...</option>
 								<option value="beach">Beach</option>
 								<option value="exotic">Exotic</option>
 								<option value="city">City</option>
@@ -259,7 +258,7 @@
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-4" class="label-int">Interest 4</label>
 							<select name="inter4" id="interest-4" class="col-s-12">
-								<option selected disabled hidden></option>
+								<option selected disabled hidden>...</option>
 								<option value="beach">Beach</option>
 								<option value="exotic">Exotic</option>
 								<option value="city">City</option>
@@ -276,7 +275,7 @@
 						<div class="col-s-9 col-t-9 col-9">
 							<label for="interest-5" class="label-int">Interest 5</label>
 							<select name="inter5" id="interest-5" class="col-s-12">
-								<option selected disabled hidden></option>
+								<option selected disabled hidden>...</option>
 								<option value="beach">Beach</option>
 								<option value="exotic">Exotic</option>
 								<option value="city">City</option>
@@ -384,7 +383,7 @@
 	<section>
 		<div id="section">
 			<h2>My Experiences</h2>
-			<article class="exp-coll col-s-11" id="block-1">
+			<div class="exp-coll col-s-11" id="block-1">
 				<p id="no-experiences">You currently have no experiences. <br>
 				Add a new experience to begin your adventure</p>
 				<article class="general-exp" id="default-experience">
@@ -404,14 +403,14 @@
 							</div>
 						</div>
 						<h3 class="title-exp default-tit">Prague at night</h3>
-						<article class="interests-exp">
+						<div class="interests-exp">
 							<div class="interest interest-1">
 								<p class="inter-1">Europe</p>
 							</div>
 							<div class="interest interest-2">
 								<p class="inter-2">City</p>
 							</div>
-						</article>
+						</div>
 						<button type="button" name="comments-experience comments" class="big-button small">See comments</button>
 					</div>
 				</article>
@@ -429,22 +428,22 @@
 							</div>
 						</div>
 						<h3 class="title-exp default-tit">Bike path - Bali</h3>
-						<article class="interests-exp">
+						<div class="interests-exp">
 							<div class="interest interest-1">
 								<p class="inter-1">Forest</p>
 							</div>
 							<div class="interest interest-2">
 								<p class="inter-2">Asia</p>
 							</div>
-						</article>
+						</div>
 						<button type="button" name="comments-experience" class="big-button small comments">See comments</button>
 					</div>
 				</article>
-			</article>
+			</div>
 			<button type="button" name="add-experien" id="add-exp" class="big-button col-s-7 col-t-4 col-4">Add Experience</button>
 			<button type="button" name="add-collect" id="new-coll" class="big-button col-s-7 col-t-4 col-4">New Collection</button>
 			<h2>My Collections</h2>
-			<article class="exp-coll col-s-11" id="block-2">
+			<div class="exp-coll col-s-11" id="block-2">
 				<p id="no-collections">You currently have no collections. <br>
 				Create a new collection by selecting experiences</p>
 				<article class="experience-col collection" id="default-collection">
@@ -460,7 +459,7 @@
 					<p class="exp-p experiences-inside">Prague at night <br>Bike path - Bali</p>
 					<button type="button" name="comments-experience" class="big-button small comments">See collection</button>
 				</article>
-			</article>
+			</div>
 		</div>
 	</section>
 
@@ -484,7 +483,7 @@
 	</footer>
 	<!-- END FOOTER -->
 
+	<script src="script/index.js"></script>
+	<script src="script/my_exp.js"></script>
 </body>
 </html>
-<script src="script/index.js" charset="utf-8"></script>
-<script src="script/my_exp.js" charset="utf-8"></script>
