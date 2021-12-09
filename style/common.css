@@ -376,7 +376,7 @@ footer{
 }
 
 .comments-and-likes img{
-    width: 5%;
+    width: 25%;
     margin: 5%;
 }
 
@@ -410,6 +410,7 @@ footer{
 /*--------POPUPS---------*/
 .popup {
   border: 6px solid #FF958C;
+  max-height: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -419,8 +420,8 @@ footer{
   display: flex;
   flex-direction: column;
   overflow: scroll;
-	scrollbar-width: thin;
-	scrollbar-color: rgba(255,255,255,0.25) transparent;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) transparent;
 }
 
 .title-exit {
