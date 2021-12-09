@@ -469,7 +469,7 @@ function get_values() {
 		var emailregex = /^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]$/;
 		if (password.match(passwregex) && email.match(emailregex)) {
 			if (password1 == "" || password2 == "" || name == "" || username == "" || email==""){
-				alert("Some required fields are empty");
+				alert("Some required fields are empty, please fill: name, username, mail, password and password confirmation");
 			}
 			else {
 				register = email;
@@ -482,7 +482,8 @@ function get_values() {
 			}
 		}
 		else{
-			alert("Format incorrect");
+			alert("Format incorrect: the password must have a lowercase, an uppercase letter and a number " +
+				"it mus be of length 4-8. The mail must have some text, a '@' followed by more text, a dot and some text");
 		}
 	}
 }
