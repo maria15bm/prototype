@@ -116,6 +116,7 @@ p{
   margin: auto;
 }
 
+
 /*------ HEADER -------*/
 
 header{
@@ -532,7 +533,7 @@ footer{
     font-size: 14px;
 }
 
-#new-interest {
+#new-interest, .new-interest-profile {
     border: none;
     border-radius: 20px;
     height: 30px;
