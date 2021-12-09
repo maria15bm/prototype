@@ -1,10 +1,10 @@
 *{
-    font-family: 'Raleway', sans-serif;
-    margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0px;
 }
 
 .popup {
-    display: none
+  display: none;
 }
 
 
@@ -24,158 +24,158 @@
 
 
 h2{
-    font-size: 32px;
-    line-height: 42px;
-    font-style: italic;
-    font-weight: 800;
-    margin: auto;
-    color: #1D1E2C;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 32px;
+  line-height: 42px;
+  font-style: italic;
+  font-weight: 800;
+  margin: auto;
+  color: #1D1E2C;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h1 {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 28px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #FF958C;
-    padding: 15px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FF958C;
+  padding: 15px;
 }
 
 h3{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 20px;
-    color: #FF958C;
-    text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  color: #FF958C;
+  text-align: center;
 }
 
 h4{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #FDFCEC;
-    margin: auto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FDFCEC;
+  margin: auto;
 }
 
 h5{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
-    text-align: center;
-    color: #FF958C;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FF958C;
 }
 
 a{
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 button{
-    background: #B6244F;
-    border: 0.726744px solid #000000;
-    box-sizing: border-box;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #FDFCEC;
-    cursor: pointer;
+  background: #B6244F;
+  border: 0.726744px solid #000000;
+  box-sizing: border-box;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #FDFCEC;
+  cursor: pointer;
 }
 
 .big-button {
-    border: none;
-    border-radius: 20px;
-    font-size: 21.8px;
-    color: black;
-    background-color: #FF958C;
+	border: none;
+	border-radius: 20px;
+	font-size: 21.8px;
+	color: black;
+	background-color: #FF958C;
     margin: auto;
 }
 
 .interest {
-    /*width: 30%;
-    height: 25px^*/
+	/*width: 30%;
+	height: 25px^*/
     padding: 2px 10px;
-    background-color: #FDFCEC;
-    border-radius: 20px;
-    margin: 5px auto;
-    text-align: center;
+	background-color: #FDFCEC;
+	border-radius: 20px;
+	margin: 5px auto;
+	text-align: center;
 }
 
 p{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: #FDFCEC;
-    text-align: left;
-    margin: auto;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FDFCEC;
+  text-align: left;
+  margin: auto;
 }
 
 
 /*------ HEADER -------*/
 
 header{
-    display: block;
+  display: block;
 }
 
 #header-main{
-    background-color: #C4D7F2;
-    display: flex;
-    margin: auto;
-    height: 79px;
+  background-color: #C4D7F2;
+  display: flex;
+  margin: auto;
+  height: 79px;
 }
 
 #show-menu, #logo{
-    width: 32px;
-    height: 32px;
-    margin: auto 5px;
-    cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin: auto 5px;
+  cursor: pointer;
 }
 
 #log-sign-frm{
-    display: flex;
-    text-align: center;
-    margin: auto;
+  display: flex;
+  text-align: center;
+  margin: auto;
 }
 
 #main-bts{
-    display: flex;
-    flex: wrap;
+  display: flex;
+  flex: wrap;
 }
 
 #sign-btn{
-    display: none;
+  display: none;
 }
 
 #log-btn{
-    margin: auto;
+  margin: auto;
 }
 
 #registered-bts{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #registered-bts img{
-    width: 40px;
+  width: 40px;
 }
 
 #pfp-user{
-    margin: auto;
-    display: flex;
+  margin: auto;
+  display: flex;
 }
 
 #prf-out{
-    display: none;
+  display: none;
 }
 
 #registered-bts button{
-    margin: 5px auto;
+  margin: 5px auto;
 }
 .text_username {
     font-family: Raleway;
@@ -195,38 +195,38 @@ header{
 }
 
 #nav-header-menu{
-    position: absolute;
-    top: 79px;
-    background: rgba(196, 215, 242, 0.9);
-    padding: 10px 0px;
+  position: absolute;
+  top: 79px;
+  background: rgba(196, 215, 242, 0.9);
+  padding: 10px 0px;
 }
 
 #nav-header-menu a{
-    text-decoration: none;
-    display: block;
-    font-style: italic;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 23px;
-    text-align: center;
-    color: #1D1E2C;
-    margin: 5px auto;
+  text-decoration: none;
+  display: block;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #1D1E2C;
+  margin: 5px auto;
 }
 
 #log-sign-in-menu, #prf-out-in-menu{
-    text-align: center;
-    margin: 10px auto;
+  text-align: center;
+  margin: 10px auto;
 }
 
 #log-sign-in-menu button, #prf-out-in-menu button{
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #search-bar{
-    display: flex;
-    text-align: center;
-    background-color: #1D1E2C;
-    padding: 10px;
+  display: flex;
+  text-align: center;
+  background-color: #1D1E2C;
+  padding: 10px;
 }
 
 #search-bar label{
@@ -234,17 +234,17 @@ header{
 }
 
 #search-lupa{
-    margin: auto;
-    width: 31px;
-    height: 31px;
+  margin: auto;
+  width: 31px;
+  height: 31px;
 }
 
 
 #search-input{
-    margin: auto;
-    width: 80%;
-    background-color: #FDFCEC;
-    border: 0px;
+  margin: auto;
+  width: 80%;
+  background-color: #FDFCEC;
+  border: 0px;
 }
 
 
@@ -273,27 +273,27 @@ header{
 
 /*------ FOOTER -------*/
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 footer{
-    background-color: #C4D7F2;
+	background-color: #C4D7F2;
 }
 
 #footer-main{
-    display: flex;
-    margin-left: auto;
+	display: flex;
+	margin-left: auto;
     margin-right: auto;
-    height: 79px;
+	height: 79px;
 }
 
 #footer-text{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: center;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 20px;
+	text-align: center;
     color: #1D1E2C;
     display: block;
     margin: auto;
@@ -310,8 +310,8 @@ footer{
 }
 
 #footer-images{
-    display: flex;
-    text-align: right;
+	display: flex;
+	text-align: right;
     float: right;
     padding: 5px;
 }
@@ -326,19 +326,19 @@ footer{
 }
 
 #footer-title {
-    height: 61px;
-    font-style: italic;
-    font-weight: 800;
-    font-size: 51px;
-    line-height: 60px;
-    text-align: center;
-    color: #1D1E2C;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	height: 61px;
+	font-style: italic;
+	font-weight: 800;
+	font-size: 51px;
+	line-height: 60px;
+	text-align: center;
+	color: #1D1E2C;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 #footer-logo{
-    width: 32px;
-    height: 32px;
-    margin: auto 5px auto auto;
+	width: 32px;
+	height: 32px;
+	margin: auto 5px auto auto;
 }
 
 /*------ TOP EXPERIENCES AND LAST EXPERIENCES -------*/
@@ -376,75 +376,75 @@ footer{
 }
 
 .comments-and-likes img{
-    width: 20%;
+    width: 5%;
     margin: 5%;
 }
 
 .comment-frm{
-    background: #FDFCEC;
-    border-radius: 50px;
-    display: flex;
-    margin: auto;
-    padding: 5px;
+  background: #FDFCEC;
+  border-radius: 50px;
+  display: flex;
+  margin: auto;
+  padding: 5px;
 
 }
 
 .comment-input{
-    margin: auto;
-    background: transparent;
-    display:inline-block;
-    font-size: 20px;
-    border: 0px;
-    color: #1D1E2C;
+  margin: auto;
+  background: transparent;
+  display:inline-block;
+  font-size: 20px;
+  border: 0px;
+  color: #1D1E2C;
 }
 
 .comment-input:focus{
-    outline: none;
+  outline: none;
 }
 
 .send-btn{
-    margin: auto 5px auto auto;
-    cursor: pointer;
+  margin: auto 5px auto auto;
+  cursor: pointer;
 }
 
 /*--------POPUPS---------*/
 .popup {
-    border: 6px solid #FF958C;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1D1E2C;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255,255,255,0.25) transparent;
+  border: 6px solid #FF958C;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1D1E2C;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(255,255,255,0.25) transparent;
 }
 
 .title-exit {
-    display: flex;
-    position: relative;
-    width: 100%
+  display: flex;
+  position: relative;
+  width: 100%
 }
 
 .title-exit h3{
-    font-weight: bold;
-    font-size: 24px;
-    margin: 20px auto
+  font-weight: bold;
+  font-size: 24px;
+  margin: 20px auto
 }
 
 .exit-button {
-    position: absolute;
-    right: 9px;
-    top: 12px;
-    width: 30px;
-    height: 30px;
-    background-color: #FF958C;
-    border: none;
-    border-radius: 10px;
-    color: black;
+  position: absolute;
+  right: 9px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: #FF958C;
+  border: none;
+  border-radius: 10px;
+  color: black;
 }
 
 .input-modify {
@@ -570,141 +570,143 @@ footer{
 /* MESSAGES POPUP */
 .comment-frm label{
     font-style: italic;
-}
-
-#your-chats {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto 20px;
-    background: rgba(255,255,255,0.05)
-}
-
-#chats {
-    display: flex;
-    margin: 0px auto 10px;
-    overflow: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.25) transparent;
-    gap: 20px
-}
-
-.profile-img-chat {
-    width: 50px;
-    margin: 4px auto
-}
-
-.chat-person {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.date-chat {
-    font-size: 10px
-}
-
-.name-chat {
-    font-size: 15px
-}
-
-#selected-chat {
-    background-color: #FF958C;
-    padding: 10px;
-    border: none;
-    border-radius: 5px
-}
-
-#selected-chat .name-chat, #selected-chat .date-chat, .message-date-small, .message-text {
-    color: black
-}
-
-#chat {
-    margin: auto auto 20px;
-    background: rgba(255,255,255,0.05)
-}
-
-#title-chat {
-    display: flex;
-    margin: 10px auto
-}
-
-#main-chat {
-    height: 30px;
+    text-align: center;
     margin: auto;
 }
 
+#your-chats {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 20px;
+  background: rgba(255,255,255,0.05)
+}
+
+#chats {
+  display: flex;
+  margin: 0px auto 10px;
+  overflow: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0,0,0,0.25) transparent;
+  gap: 20px
+}
+
+.profile-img-chat {
+  width: 50px;
+  margin: 4px auto
+}
+
+.chat-person {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.date-chat {
+  font-size: 10px
+}
+
+.name-chat {
+  font-size: 15px
+}
+
+#selected-chat {
+  background-color: #FF958C;
+  padding: 10px;
+  border: none;
+  border-radius: 5px
+}
+
+#selected-chat .name-chat, #selected-chat .date-chat, .message-date-small, .message-text {
+  color: black
+}
+
+#chat {
+  margin: auto auto 20px;
+  background: rgba(255,255,255,0.05)
+}
+
+#title-chat {
+  display: flex;
+  margin: 10px auto
+}
+
+#main-chat {
+  height: 30px;
+  margin: auto;
+}
+
 #profile-chat {
-    width: 70px;
-    margin: auto
+  width: 70px;
+  margin: auto
 }
 
 #horizontal {
-    color: #FF958C;
+  color: #FF958C;
 }
 
 #in-messages {
-    height: 30vh;
-    overflow: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0,0,0,0.25) transparent;
+  height: 30vh;
+  overflow: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0,0,0,0.25) transparent;
 }
 
 .message {
-    border-radius: 30px;
-    position: relative;
-    margin: 10px auto;
+  border-radius: 30px;
+  position: relative;
+  margin: 10px auto;
 }
 
 .received-message {
-    background-color: #C65476;
-    margin: 10px auto 10px 20px
+  background-color: #C65476;
+  margin: 10px auto 10px 20px
 }
 
 .sent-message {
-    background-color: #FF958C;
-    margin: 10px 20px 10px auto
+  background-color: #FF958C;
+  margin: 10px 20px 10px auto
 }
 
 .message-date-small {
-    position: absolute;
-    bottom: 2px;
-    left: 15px;
-    font-size: 10px
+  position: absolute;
+  bottom: 2px;
+  left: 15px;
+  font-size: 10px
 }
 
 .message-text {
-    padding: 10px;
-    text-align: right;
-    margin-right: 20px
+  padding: 10px;
+  text-align: right;
+  margin-right: 20px
 }
 
 .comment-frm {
-    height: 30px;
-    margin-bottom: 20px
+  height: 30px;
+  margin-bottom: 20px
 }
 
 .send-btn {
-    height: 30px
+  height: 30px
 }
 
 p.date-chat {
-    text-align: center;
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 601px) {
-    /* For tablets: */
-    .col-t-1 {width: 8.33%;}
-    .col-t-2 {width: 16.66%;}
-    .col-t-3 {width: 25%;}
-    .col-t-4 {width: 33.33%;}
-    .col-t-5 {width: 41.66%;}
-    .col-t-6 {width: 50%;}
-    .col-t-7 {width: 58.33%;}
-    .col-t-8 {width: 66.66%;}
-    .col-t-9 {width: 75%;}
-    .col-t-10 {width: 83.33%;}
-    .col-t-11 {width: 91.66%;}
-    .col-t-12 {width: 100%;}
+  /* For tablets: */
+  .col-t-1 {width: 8.33%;}
+  .col-t-2 {width: 16.66%;}
+  .col-t-3 {width: 25%;}
+  .col-t-4 {width: 33.33%;}
+  .col-t-5 {width: 41.66%;}
+  .col-t-6 {width: 50%;}
+  .col-t-7 {width: 58.33%;}
+  .col-t-8 {width: 66.66%;}
+  .col-t-9 {width: 75%;}
+  .col-t-10 {width: 83.33%;}
+  .col-t-11 {width: 91.66%;}
+  .col-t-12 {width: 100%;}
 
     /*----------------------HEADER------------------------------*/
     header{
@@ -719,6 +721,7 @@ p.date-chat {
     #sign-btn{
         display: block;
     }
+
     #registered-bts img{
         width: 50px;
         margin: auto;
@@ -729,24 +732,24 @@ p.date-chat {
         margin: auto 5%;
     }
 
-    #nav-header-menu{
-        position: static;
-        display: flex;
-    }
+	#nav-header-menu{
+		position: static;
+		display: flex;
+	}
 
-    #log-sign-in-menu button, #prf-out-in-menu button{
-        display: none;
-    }
+	#log-sign-in-menu button, #prf-out-in-menu button{
+		display: none;
+	}
 
-    #prf-out{
-        display: block;
-        margin: auto 10px;
-    }
+  #prf-out{
+    display: block;
+    margin: auto 10px;
+  }
 
-    #search-bar{
-        padding: 0px;
-        background: rgba(196, 215, 242, 0.9);
-    }
+	#search-bar{
+		padding: 0px;
+		background: rgba(196, 215, 242, 0.9);
+	}
 
     #search-input{
         color: #FDFCEC;
@@ -799,22 +802,22 @@ p.date-chat {
 
     /*----------------------HEADER------------------------------*/
     header button{
-        font-size: 18px;
-        line-height: 28px;
+      font-size: 18px;
+      line-height: 28px;
     }
 
     h1{
-        font-size: 42px;
+      font-size: 42px;
     }
 
     #head-title {
-        font-weight: 800;
-        font-size: 51px;
-        margin: auto auto auto 10px
+      font-weight: 800;
+      font-size: 51px;
+      margin: auto auto auto 10px
     }
 
     #nav-header-menu a{
-        font-size: 20px;
+      font-size: 20px;
     }
 
 
@@ -865,82 +868,82 @@ p.date-chat {
     /* messages */
 
     #messages-popup {
-        height: 62vh
+      height: 62vh
     }
 
     #inside-messages {
-        display: flex;
-        flex-direction: row;
-        height: 60vh
+      display: flex;
+      flex-direction: row;
+      height: 60vh
     }
 
     #your-chats {
-        margin: auto 0px auto auto;
-        height: 100%
+      margin: auto 0px auto auto;
+      height: 100%
     }
 
     #chats {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     #chat {
-        margin-left: 10px;
-        height: 100%
+      margin-left: 10px;
+      height: 100%
     }
 
     #title-chat {
-        margin: 20px auto
+      margin: 20px auto
     }
 
     #main-chat {
-        margin-right: 30px;
+      margin-right: 30px;
     }
 
     #profile-chat {
-        margin-left: 10px;
-        margin-right: 15%
+      margin-left: 10px;
+      margin-right: 15%
     }
 
     #in-messages {
-        height: 60%
+      height: 60%
     }
 
     .message {
-        height: 55px;
+      height: 55px;
     }
 
     .received-message {
-        margin-left: 10%
+      margin-left: 10%
     }
 
     .sent-message {
-        margin-right: 10%
+      margin-right: 10%
     }
 
     .message-date-small {
-        font-size: 14px
+      font-size: 14px
     }
 
     .date-chat {
-        font-size: 14px
+      font-size: 14px
     }
 
     .name-chat {
-        font-size: 20px
+      font-size: 20px
     }
 
     .profile-img-chat {
-        width: 75px;
-        margin: 10px auto
+      width: 75px;
+      margin: 10px auto
     }
 
     .comment-frm {
-        height: 45px
+      height: 45px
     }
 
     .send-btn {
-        width: 40px;
-        height: 40px
+      width: 40px;
+      height: 40px
     }
 
     .interest{
