@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script/index.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400;1,800&display=swap" rel="stylesheet">
@@ -281,18 +282,10 @@
 		<img id='image_plan' class="col-t-12 col-s-12 col-3" src="images/plan.png" alt="image infography">
 		<div id="content-plan" class="col-8">
 			<article id="budget-frm" class="col-s-11 col-t-10 col-7">
-				<h3 class="col-s-5">Budget:</h3>
-				<div id="budget-params" class="col-s-7">
-					<div>
-						<label for="min" class="col-s-12">min:</label>
-						<input type="text" id="min" name="min" class="col-s-10">
-						<h3 class="col-s-1">€</h3>
-					</div>
-					<div>
-						<label for="max" class="col-s-12">max:</label>
-						<input type="text" id="max" name="max" class="col-s-10">
-						<h3 class="col-s-1">€</h3>
-					</div>
+				<label for="budget" class="col-s-12 col-4">Budget:</label>
+				<div class="col-t-8 col-8">
+					<input type="text" id="budget" name="min" class="col-s-10 col-t-9">
+					<h3 class="col-s-1 col-t-1">€</h3>
 				</div>
 			</article>
 			<article id="interests-frm" class="col-s-11 col-t-10 col-7">
@@ -304,7 +297,7 @@
 			</article>
 			<article id="destination-frm" class="col-s-11 col-t-10 col-7">
 				<label for="destination" class="col-s-12 col-4">Destination:</label>
-				<input class="col-s-10 col-8" type="text" id="destination" name="destination" class="col-s-10">
+				<input class="col-s-10 col-8" type="text" id="destination" name="destination">
 			</article>
 			<button id="search-btn">SEARCH</button>
 		</div>
@@ -330,5 +323,4 @@
 	<!-- END FOOTER -->
 
 </body>
-<script src="script/index.js"></script>
 </html>

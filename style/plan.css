@@ -48,19 +48,7 @@ label{
 	margin: auto;
 }
 
-#budget-frm{
-	display: flex;
-	margin: auto;
-}
-
-#budget-params div{
-	display: flex;
-	flex-wrap: wrap;
-	text-align: right;
-	margin: 20px auto;
-}
-
-#destination-frm, #interests-frm{
+#content-plan article{
 	display: block;
 	margin: auto;
 	text-align: center;
@@ -82,6 +70,10 @@ label{
 
 @media only screen and (min-device-width: 601px) {
   /* For tablets: */
+  #budget-frm div{
+  	display: flex;
+  	margin: auto;
+  }
 }
 
 
@@ -103,11 +95,7 @@ label{
 		vertical-align: baseline;
 	}
 
-	#budget-frm{
-		padding-bottom: 40px;
-	}
-
-	#destination-frm, #interests-frm{
+	#content-plan article{
 		text-align: right;
 		display: flex;
 		margin: auto;
