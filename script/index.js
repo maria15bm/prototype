@@ -1,4 +1,4 @@
-var filter_list = ["filter 1", "filter 2"];
+var filter_list = [];
 
 /* Updates the filter in last experiences using the values in filter_list*/
 function updateFilter() {
