@@ -136,15 +136,17 @@ $(document).ready(function() {
 		$('#messages-popup').show();
 	})
 
-	/* SEBAS */
+	// change location to the profile and change the default interests inside the change interests popup
 	$('#profile-btn').click(function (){
 		window.location="profile.html";
 
+		// read the cookies
 		let val=check_loged("loged");
 		let values=getCookie(val);
 		let cookie = values.split(",");
 		var interest = "";
 		var ii = 10;
+		// change the
 		for (var i = 5; i < ii; i++) {
 			if (cookie[i] != ""){
 				$interest = $("#default-interest").clone();
@@ -186,30 +188,34 @@ $(document).ready(function() {
 	} );*/
 
 	//--------PROFILE-----------------
-	/* SEBAS */
+	// change window to my_exp.html
 	$("#exp-but-link").click(function () {
 		window.location = "my_exp.html"
 	})
 
-	/* SEBAS */
+	// change window to my_exp.html
 	$("#change-pfp-begin").click(function () {
-		$("#change-pfp").css("display", "block");
+		$("#change-pfp").show();
 	})
 
+	// show modify profile popup
 	$("#mod-but").click(function () {
-		$("#modify-profile").css("display", "block");
+		$("#modify-profile").show();
 	})
 
+	// show change interests popup
 	$("#inter-but").click(function () {
-		$("#change-interests").css("display", "block");
+		$("#change-interests").show();
 	})
 
+	// in the change profile picture, after a new picture is selected, show the user which image he has selected
 	$('#new-pfp-in').on('input', function() {
 		var pic = document.getElementById('new-pfp-in').files[0];
 		pic = URL.createObjectURL(pic);
 		$("#pfpp-2").prop("src", pic);
 	});
 
+	// after submiting the profile picture change, we execute the "update_image" function
 	var e = new Event("look", {"cancelable":true});
 	$("#new-picture").submit(function(e) {
 		var pic = document.getElementById('new-pfp-in').files[0];
@@ -218,17 +224,18 @@ $(document).ready(function() {
 		$("#change-pfp").hide();
 	})
 
-	/* SEBAS */
+	// this function will take the inputs from the modify profile popup and will modify only those inputs which were filled
 	$("#form-profile-info").submit(function (e) {
 		e.preventDefault();
-		var new_username = $("#form-username").value();
-		var new_email = $("#form-email").value();
-		var new_birth = $("#form-birth").value();
-		var new_password = $("#form-password").value();
+		var new_username = $("#form-username").val();
+		var new_email = $("#form-email").val();
+		var new_birth = $("#form-birth").val();
+		var new_password = $("#form-password").val();
 
 		var list = [new_username, new_email, new_birth, new_password];
 		list.forEach((item,i) => {
 			if (item != ""){
+				// check for data and replace the cookie
 				let val = check_loged("loged");
 				let values=getCookie(val);
 				let data = values.split(",");
@@ -254,9 +261,11 @@ $(document).ready(function() {
 				}
 			}
 		});
+		$("#modify-profile").hide();
+		location = location;
 	})
 
-	/* SEBAS */
+	// this function will delete a interest from the cookies after clicking the delte interest button in the change interests popup
 	$(".delete-interest-modify").click(function () {
 		$(this).parent().remove();
 		let val = check_loged("loged");
@@ -274,6 +283,7 @@ $(document).ready(function() {
 		});
 	})
 
+	// take the user input and add a new interest to the cookies
 	$("#new-interest-form").submit(function (e) {
 		e.preventDefault()
 		let val = check_loged("loged");
@@ -287,11 +297,13 @@ $(document).ready(function() {
 		var yes = 0;
 		cookie.forEach((item, i) => {
 			if (item == "") {
-				cookie.splice(i, 0, interest)
+				cookie.splice(i, 0, interest);
+				// in order for this function to work properly, in this line we should use a "continue",
+				// but ".forEach" is not a loop and therefore we cannot use it
 			}
 		});
-
 		document.cookie = val + "=" + cookie + ";" + expires + ";path=/";
+		$("#change-interests").hide()
 	})
 
 	//--------EXPERIENCES-----------------
