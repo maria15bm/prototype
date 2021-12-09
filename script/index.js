@@ -159,6 +159,10 @@ $(document).ready(function() {
 		window.location="profile.html"
 	})
 
+	$("#exp-but-link").click(function () {
+		window.location = "my_exp.html"
+	})
+
 	$('#link-sign').click(function() {
 		$("#sign-popup").show();
 		$("#login-popup").hide();
